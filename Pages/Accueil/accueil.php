@@ -75,7 +75,7 @@ include ('../barre/barre.php');
 <body>
 
     <div class="hero">
-        <img src="images/Audi1.jpg" alt="Voiture de luxe">
+        <img src="../../assets/images/Audi1.jpg" alt="Voiture de luxe">
         <h1>Roulez avec classe.</h1>
     </div>
 

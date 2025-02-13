@@ -14,7 +14,7 @@
   <div class="container-fluid">
     <a class="navbar-brand  text-white" href="#" >
       <!--insertion logo-->
-      <img src="../../images/logo.PNG"  width="70" height="70" > SUPERCAR</a>
+      <img src="../../assets/images/logo.PNG"  width="70" height="70" > SUPERCAR</a>
    
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
