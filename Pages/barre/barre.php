@@ -27,14 +27,14 @@
         </li>
        
         <li class="nav-item">
-          <a class="nav-link active text-white" >Nos voitures</a>
+          <a class="nav-link active text-white" href="#">Nos voitures</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active text-white" >Services</a>
+          <a class="nav-link active text-white" href="#">Services</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Demande d'essaie</a>
+          <a class="nav-link text-white" href="#">Demande d'essai</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#">Contactez-Nous</a>
