@@ -26,22 +26,18 @@
           <a class="nav-link active text-white" aria-current="page" href=".../Accueil/accueil.php">Accueil</a>
         </li>
        
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Voitures
-          </a>
-          <ul class="dropdown-menu text-white">
-            <li><a class="dropdown-item" href="#">Modèles</a></li>
-            <li><a class="dropdown-item" href="#">Demande d'essai</a></li>
-            <li><hr class="dropdown-divider"></li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link active text-white" href="#">Nos voitures</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active text-white" href="../Contacts/signer.php" >Contacts</a>
+          <a class="nav-link active text-white" >Contacts</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Services</a>
+          <a class="nav-link text-white" href="#">Demande d'essai</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Contactez-Nous</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
