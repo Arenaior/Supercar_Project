@@ -41,7 +41,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Services</a>
+          <a class="nav-link text-white" href="#">Client</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
