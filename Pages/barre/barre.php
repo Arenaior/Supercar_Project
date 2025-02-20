@@ -26,15 +26,8 @@
           <a class="nav-link active text-white" aria-current="page" href="#">Accueil</a>
         </li>
        
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Voitures
-          </a>
-          <ul class="dropdown-menu text-white">
-            <li><a class="dropdown-item" href="#">Modèles</a></li>
-            <li><a class="dropdown-item" href="#">Demande d'essai</a></li>
-            <li><hr class="dropdown-divider"></li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link active text-white" >Nos voitures</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active text-white" >Services</a>
