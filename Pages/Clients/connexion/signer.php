@@ -1,5 +1,5 @@
 <?php
-include ("../../Accueil/barre.php");
+include ("../../barre/barre.php");
 ?>
 <head> <body> 
 
