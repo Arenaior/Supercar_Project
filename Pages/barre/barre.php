@@ -37,11 +37,14 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link active text-white" >Contacts</a>
+          <a class="nav-link active text-white" >Services</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Client</a>
+          <a class="nav-link text-white" href="#">Demande d'essaie</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Contactez-Nous</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
