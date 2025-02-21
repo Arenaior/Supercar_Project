@@ -21,22 +21,22 @@
     </button>
     
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-3 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active text-white" aria-current="page" href=".../Accueil/accueil.php">Accueil</a>
+          <a class="nav-link active text-white mx-3" aria-current="page" href="../Accueil/accueil.php">Accueil</a>
         </li>
        
-        <li class="nav-item">
+        <li class="nav-item mx-3">
           <a class="nav-link active text-white" href="#">Nos voitures</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active text-white" >Contacts</a>
+        <li class="nav-item mx-3">
+          <a class="nav-link active text-white" href="#">Services</a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">Demande d'essai</a>
+        <li class="nav-item mx-3">
+          <a class="nav-link text-white" href="../Clients/inscription/signer.php">Demande d'essai</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item mx-3">
           <a class="nav-link text-white" href="#">Contactez-Nous</a>
         </li>
       </ul>

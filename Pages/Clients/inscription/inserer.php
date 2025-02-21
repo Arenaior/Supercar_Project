@@ -1,15 +1,15 @@
 <?php
     include ("bdconnect.php");
-    include ("../../Accueil/barre.php");
+    include ("../../barre/barre.php");
 
-    $nom     =$_POST["nom"];
-    $adresse    =$_POST["adresse"];
-    $email       =$_POST["email"];
-    $numéro          = $_POST["numéro"];
-    $Mdp = $_POST["Mdp"];
+    $nom  =$_POST["nom"];
+    $prénom  =$_POST["prénom"];
+    $mdp = $_POST["mdp"];
+    $mail =$_POST["email"];
+   
 
-    $ajouter = "insert into Clients (nom,adresse,email,numéro,Mdp) values 
-    ('$nom','$adresse','$email','$numéro','$Mdp')";
+    $ajouter = "insert into Client (Nom,Prénom,Mdp,Mail) values 
+    ('$nom','$prénom','$mdp','$mail')";
     mysqli_query($bdd, $ajouter);
     mysqli_close($bdd);
 
@@ -21,6 +21,8 @@
 
     <head>
         <meta charset = "UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         .H2{
@@ -45,9 +47,11 @@
     </head>
 <body>
 <p>
+<div class="container text-center mt-5">
     <H2 class='H2'> Bienvenue <?php echo $nom ?>.
 
     </h2>
+    </div>
 
 </p>
 </body>

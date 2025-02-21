@@ -1,118 +1,52 @@
 <?php
 include ("../../barre/barre.php");
 ?>
-<head> <body> 
-
-<Font face ='Arial'>
-<!DOCTYPE HTML>
-<html lang=fr>
-
-<style>
-    H3{
-        margin-top:-700px;
-        margin-left:250px;
-    }
-    </style>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Responsive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   
 
 <style>
-    .rectangle {
-            width: 600px; /* Largeur du rectangle */
-            height: 900px; /* Hauteur du rectangle */
-            background-color: #000000 ; /* Couleur de fond */
-            border: 0px solid #000; /* Bordure */
-            margin: 10px; /* Marge autour du rectangle */
-			margin-left:-1200px;
-			margin-top:0px;
-            /* transition: transform 0.3s ease; */
-
-        }
-        /* .rectangle:hover {
-  /* transform: scale(1.1); /* Agrandit l'élément de 10% */
-} */ 
-    </style>
-
-<style>
-    H4{
-        margin-top:-270px;
+    .text1{
         margin-left:300px;
-        font-size:30px;
+    }
+
+    .données{
+        width:500px;
+    }
+
+    .checkbox{
+        margin-left:-90px;
     }
     </style>
 
-<style>
-    H5{font-size: 30px;
-        margin-left:-1350px;
-        margin-top:-100px;
-    color:white;}
-</style>
-
-<style>
-    .H6{font-size:20px;
-    margin-left:-1150px;
-margin-top:-35px;
-color:white;}
-</style>
-
-
-</head>
-<style>
-    .image1{width:40px;
-    margin-left:-1600px;
-margin-top:-350px;}
-</style>
-
-<style>
-    .H7{font-size:20px;
-    margin-left:-1280px;
-margin-top:-35px;
-color:white;}
-</style>
-
-
-
-<meta charset="utf-8" />
-<center>
-
-<div class="rectangle">
-
+    <div class="container mt-5">
+        <h2 class="text1">Connectez-vous pour pouvoir avoir accès à nos services</h2>
 </div>
 
-    <H3>
-<form action="identification.php" method="post" >
+   <br><br>
+    <center>
+        <form action="inserer.php" method="POST">
+            <input type="text" class="form-control données" placeholder="Entrez votre nom" name ="nom">
+            <br>
+            <input type="text" class="form-control données" placeholder="Entrez votre prénom" name="prénom" >
+            <br>
+            <input type="password" class="form-control données" placeholder="Entrez votre mot de passe" name="mot de passe">
+            <br>
+            <input type="mail" class="form-control données" placeholder="Entrez votre adresse mail">
+            <br>
+            <input type="checkbox" class="checkbox"> J'accepte les conditions d'utilisation de mes données*
 
-Nom: <input type="text" name="nom">
-<br /><br />
-Mdp: <input type="password" name="Mdp">
-<br /><br />
+            <br><br><br>
+            <button type="submit" class="btn btn-dark">Envoyer</button>
+            <button type="reset" class="btn btn-secondary-emphasis">Annuler</button>
 
- <input type = "submit" value = "OK">
-<input type = "reset" value = "Effacer">
-</form>
-</H3>
-<H4>
-    Connectez-vous pour pouvoir 
-    <br>accéder de nos services 
-</H4>
+            <br><br> <br>Vous n'avez pas encore un compte ? <a href="../inscription/signer.php"> Inscription </a>
 
-
-<H5>Un seul compte pour 
-<br>tout vos services: </H5>
-
-<img src='../2.png' class=image1 >
-
-<H6 class='H6'>
-    Faites un essai de votre future voiture </H6>
-
-    <br><br>
- <img src='../3.png' class=image1 >
-
-<H6 class='H7'>
-    Accédez à nos services </H6>
-
-
-
-
-</center>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
