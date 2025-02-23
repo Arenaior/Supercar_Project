@@ -1,5 +1,5 @@
 <?php
-include ("../Accueil/barre.php");
+include ("../barre/barre.php");
 ?>
 
 
@@ -7,127 +7,111 @@ include ("../Accueil/barre.php");
 
 
 <!DOCTYPE HTML>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contacts Supercar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <html lang=fr>
 
-<style>
-    H3{
-        margin-top:-400px;
-        margin-left:-450px;
-    }
-    </style>
-
-<style>
-    .rectangle {
-            width: 1200px; /* Largeur du rectangle */
-            height: 500px; /* Hauteur du rectangle */
-            background-color: #F5F5F5 ; /* Couleur de fond */
-            border: 0px solid #000; /* Bordure */
-            margin: 10px; /* Marge autour du rectangle */
-			margin-left:275px;
-			margin-top:100px;
-            /* transition: transform 0.3s ease; */
-
+<head>
+    <style>
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 50vh; /* Prend toute la hauteur de l'écran */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
         }
-        /* .rectangle:hover {
-  /* transform: scale(1.1); /* Agrandit l'élément de 10% */
-} */ 
-    </style>
 
-<style>
-    H4{
-        margin-top:0px;
-        margin-left:1000px;
-    }
-    </style>
+        /* Image responsive */
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ajuste l'image sans déformation */
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
 
-<style>
-    H5{
-        margin-top:-350px;
-        margin-left:1000px;
-        font-size:25px;
-    }
-    </style>
+        .H2{
+            font-size:50px;
+        }
 
+        .H8{
+            font-size:20px;
+            color:#514C4B;
+        }
 
-<style>
- .button1 {
-      width: 300px;         /* Largeur fixe du bouton */
-      height: 80px;         /* Hauteur fixe du bouton */
-      padding: 10px 20px;   /* Espacement intérieur pour ajuster la taille du contenu */
-      font-size: 18px;      /* Taille du texte à l'intérieur */
-      background-color: #000000;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top:100px;
-      margin-left:200px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour l'agrandissement */
+        .H1{
+            font-size:25px;
+            margin-left:400px;
+            animation: slideIn 2s forwards; /* Appelle l'animation */
+        }
 
-    }
-     /* Effet de gonflement au survol */
-     .button1:hover {
-      transform: scale(1.1);      /* Agrandir le bouton de 10% */
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Ombre pour ajouter de la profondeur */
-    }
+        /* Animation pour faire glisser le texte */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    .button1 img {
-      margin-right: 10px;           /* Espacement entre l'icône et le texte */
-      width: 20px;                  /* Taille de l'icône */
-      height: 20px;                 /* Taille de l'icône */
-    } 
-    
+        .img1{
+            width:25px;
+        }
 
- </style>
+        .H9{
+            margin-left:800px;
+            margin-top:-400px;
+        }
 
+        </style>
+        </head>
 
+<div class="hero">
+        <img src="/supercar_project/assets/images/Contacts-1.jpg" alt="Voiture de luxe">
+       
+    </div>
 
-</head>
+    <div class="container mt-5">
+        <h1 class="H8" >Contactez Supercar pour plus d'</h1><h2 class="H2"> Informations, pour obtenir de l'aide ou pour vos suggestions.</h2>
+    </div>
 
-<body>
-<font face = Arial>
-<meta charset="utf-8" />
-<div class='rectangle'></div>
-<center>
-    <H3>
-<form action="inserer.php" method="post" >
+    <hr>
 
-Nom: <input type="text" name="nom">
-<br /><br />
-Adresse: <input type="text" name="adresse">
-<br /><br />
-Email: <input type="text" name="email">
-<br /><br />
-URL: <input type="text" name="url">
-<br /><br />
-Commentaires: <textarea cols="40" rows="5" name="commentaires"></textarea>
-<br /><br />
+    <br><br><br><br>
+    <div class="container mt-5 ">
+       <h1 class="H1"> Nous sommes là pour vous aider <img src="/supercar_project/assets/images/sourire.png" class="img1"> </h1>
 
-<input type = "submit" value = "OK">
-<input type = "reset" value = "Effacer">
-</form>
-</H3>
-</center>
-<br/>
-<H5>
-    Où nous trouver ?
-</H5>
+    </div>
 
-<H4>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2759.351178474387!2d57.48817801165706!3d-20.244420722809444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2smu!4v1734848647885!5m2!1sfr!2smu" 
-    width="350" height="200" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-    </H4>
+    <br>
 
-<br><br><br>
-<a href='https://www.whatsapp.com/?lang=fr_FR'><button class='button1'> <img src="images/phone.png"> +230 5935 3043 </button></a>
-<a href='https://workspace.google.com/intl/fr/gmail/'><button class='button1'><img src="images/mail.png">supercar@gmail.com</button></a>
-<a href='http://localhost:8888/TPHTML/Supercar/Contacts/signer.php'><button class='button1'><img src="images/web.png">Supercar.com/mu/mauritius</button></a>
+    <div class="container mt-5">
+    <form action="identification.php" method="POST">
+            <input type="text" class="form-control données w-50" placeholder="Entrez votre nom" name ="nom">
+            <br>
+            <input type="text" class="form-control données w-50" placeholder="Entrez votre prénom" name="prénom" >
+            <br>
+            <input type="mail" class="form-control données w-50" placeholder="Entrez votre adresse mail" name='mail'>
+            <br>
+            <input type="mail" class="form-control données w-50" placeholder="Entrez votre commentaire" name='commentaire'>
+            
+         <br><br>
+            <button type="submit" class="btn btn-dark">Envoyer</button>
+            <button type="reset" class="btn btn-secondary-emphasis">Annuler</button>
 
+        
+    </div>
+        <br><br><br>
 
+        <!-- <div class="container mt-5">
+            <H1> Où nous trouver ? </H1> -->
 
-
-
-
-</body>
-</html>

@@ -6,7 +6,7 @@ include ("../../barre/barre.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Page Responsive</title>
+    <title>Connexion Supercar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
    
 
@@ -30,14 +30,14 @@ include ("../../barre/barre.php");
 
    <br><br>
     <center>
-        <form action="inserer.php" method="POST">
+        <form action="identification.php" method="POST">
             <input type="text" class="form-control données" placeholder="Entrez votre nom" name ="nom">
             <br>
             <input type="text" class="form-control données" placeholder="Entrez votre prénom" name="prénom" >
             <br>
-            <input type="password" class="form-control données" placeholder="Entrez votre mot de passe" name="mot de passe">
+            <input type="password" class="form-control données" placeholder="Entrez votre mot de passe" name="mdp">
             <br>
-            <input type="mail" class="form-control données" placeholder="Entrez votre adresse mail">
+            <input type="mail" class="form-control données" placeholder="Entrez votre adresse mail" name='mail'>
             <br>
             <input type="checkbox" class="checkbox"> J'accepte les conditions d'utilisation de mes données*
 

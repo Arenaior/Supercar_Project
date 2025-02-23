@@ -14,7 +14,7 @@
   <div class="container-fluid">
     <a class="navbar-brand  text-white" href="#" >
       <!--insertion logo-->
-      <img src="../../assets/images/barre-logo.PNG"  width="70" height="70" > SUPERCAR</a>
+      <img src="/supercar_project/assets/images/barre-logo.PNG"  width="70" height="70" > SUPERCAR</a>
    
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -23,7 +23,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-3 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active text-white mx-3" aria-current="page" href="../Accueil/accueil.php">Accueil</a>
+          <a class="nav-link active text-white mx-3" aria-current="page" href="/supercar_project/Pages/Accueil/accueil.php">Accueil</a>
         </li>
        
         <li class="nav-item mx-3">
@@ -34,10 +34,10 @@
         </li>
 
         <li class="nav-item mx-3">
-          <a class="nav-link text-white" href="../Clients/inscription/signer.php">Demande d'essai</a>
+          <a class="nav-link text-white" href="/supercar_project/Pages/Clients/connexion/signer.php">Demande d'essai</a>
         </li>
         <li class="nav-item mx-3">
-          <a class="nav-link text-white" href="#">Contactez-Nous</a>
+          <a class="nav-link text-white" href="/supercar_project/Pages/Contacts/signer.php">Contactez-Nous</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
