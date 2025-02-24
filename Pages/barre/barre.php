@@ -6,6 +6,13 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+  .img1{
+    width:25px;
+    margin-left:-25px;
+  }
+  </style>
 </head>
 
 <body>
@@ -40,6 +47,8 @@
           <a class="nav-link text-white" href="/supercar_project/Pages/Contacts/signer.php">Contactez-Nous</a>
         </li>
       </ul>
+
+      <a href="/supercar_project/Pages/Clients/connexion/signer.php"> <img src="/supercar_project/assets/images/barre-personne.png" class="img1 mx-5"> </a>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>

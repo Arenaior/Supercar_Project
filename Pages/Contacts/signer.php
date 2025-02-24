@@ -63,7 +63,7 @@ include ("../barre/barre.php");
             }
         }
 
-        .img1{
+        .img2{
             width:25px;
         }
 
@@ -72,30 +72,44 @@ include ("../barre/barre.php");
             margin-top:-400px;
         }
 
+        .p1{
+            font-size:20px;
+        }
+
+        footer{
+            height:200px;
+            width:100%;
+        }
+
+        .f1{
+            font-size:20px;
+            margin-left:80px;
+            color:#939393 ;
+        }
         </style>
         </head>
 
 <div class="hero">
-        <img src="/supercar_project/assets/images/Contacts-1.jpg" alt="Voiture de luxe">
+        <img src="/supercar_project/assets/images/Contacts-1.jpg" >
        
     </div>
 
     <div class="container mt-5">
-        <h1 class="H8" >Contactez Supercar pour plus d'</h1><h2 class="H2"> Informations, pour obtenir de l'aide ou pour vos suggestions.</h2>
+        <h1 class="H8" >Contactez Supercar </h1> <h2 class="H2"> Pour plus d informations, obtenir de l'aide ou pour vos suggestions.</h2>
     </div>
 
     <hr>
 
     <br><br><br><br>
     <div class="container mt-5 ">
-       <h1 class="H1"> Nous sommes là pour vous aider <img src="/supercar_project/assets/images/sourire.png" class="img1"> </h1>
+       <h1 class="H1"> Nous sommes là pour vous aider <img src="/supercar_project/assets/images/sourire.png" class="img2"> </h1>
 
     </div>
 
     <br>
 
     <div class="container mt-5">
-    <form action="identification.php" method="POST">
+    <form action="inserer.php" method="POST">
             <input type="text" class="form-control données w-50" placeholder="Entrez votre nom" name ="nom">
             <br>
             <input type="text" class="form-control données w-50" placeholder="Entrez votre prénom" name="prénom" >
@@ -112,6 +126,23 @@ include ("../barre/barre.php");
     </div>
         <br><br><br>
 
-        <!-- <div class="container mt-5">
-            <H1> Où nous trouver ? </H1> -->
+        <div class="container mt-5">
+            <H1> Où nous trouver ? </H1>
+            <br><br>
+            <p clase="p1"> SuperCar est une entreprise innovante située à Ébène, Maurice, spécialisée dans la vente et la location de voitures haut de gamme. Avec un service client exceptionnel et une flotte de véhicules de luxe, SuperCar s'engage à offrir une expérience unique à ses clients, alliant performance, élégance et confort.</p>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2759.351178474387!2d57.48817801165706!3d-20.244420722809444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2smu!4v1734848647885!5m2!1sfr!2smu" 
+                width="350" height="200" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+            </div>
+
+  <br><br><br><br><br><br><br><br><br>
+  <footer class="bg-dark text-white py-3 w-100">
+    <center>© 2025 SuperCar - Tous droits réservés</center>
+                <br><br>
+    <a href="https://accounts.google.com/v3/signin/identifier?hl=fr&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S-398638576%3A1740380656317057&ddm=1" class="f1"> <img src="/supercar_project/assets/images/e-mail.png" class="img2">supercar@gmail.com </a>
+    <br><br>
+    <a href="https://www.whatsapp.com/?lang=fr_FR" class="f1"> <img src="/supercar_project/assets/images/whatsapp.png" class="img2">+230 123 4567  </a>
+
+</footer>
 
