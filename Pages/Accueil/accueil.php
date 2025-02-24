@@ -73,6 +73,14 @@ include ('../barre/barre.php');
         .H1{
             font-size:35px;
         }
+
+        .gonflement {
+  transition: transform 0.3s ease-in-out;
+}
+
+.gonflement:hover {
+  transform: scale(1.1); /* Augmente la taille de 10% */
+}
     </style>
 </head>
 <body>
@@ -86,9 +94,9 @@ include ('../barre/barre.php');
     <section class="container my-5">
     <h2 class="text-center">Découvrez nos marques</h2>
     <div class="row text-center">
-        <div class="col-md-4">
+        <div class="col-md-4 gonflement">
             <div class="card h-100">
-                <img src="../../assets/images/Accueil-Mercedes1.jpg" class="card-img-top">
+                <img src="../../assets/images/Accueil-Mercedes2.jpg" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title">Mercedes</h5>
                     <p>Puissance et élégance réunies.</p>
@@ -96,7 +104,7 @@ include ('../barre/barre.php');
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 gonflement">
             <div class="card">
                 <img src="../../assets/images/Accueil-Golf1.jpg" class="card-img-top">
                 <div class="card-body">
@@ -106,7 +114,7 @@ include ('../barre/barre.php');
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 gonflement">
             <div class="card">
                 <img src="../../assets/images/Accueil-Audi3.jpg" class="card-img-top">
                 <div class="card-body">
