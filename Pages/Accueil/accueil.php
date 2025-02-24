@@ -70,6 +70,9 @@ include ('../barre/barre.php');
                 font-size: 9vw;
             }
         }
+        .H1{
+            font-size:35px;
+        }
     </style>
 </head>
 <body>
@@ -78,6 +81,44 @@ include ('../barre/barre.php');
         <img src="../../assets/images/Accueil-Audi1.jpg" alt="Voiture de luxe">
         <h1>Roulez avec classe.</h1>
     </div>
+
+
+    <section class="container my-5">
+    <h2 class="text-center">Découvrez nos marques</h2>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="../../assets/images/Accueil-Mercedes1.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Mercedes</h5>
+                    <p>Puissance et élégance réunies.</p>
+                    <a href="#" class="btn btn-dark">Voir les modèles</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="../../assets/images/Accueil-Golf1.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Volkswagen</h5>
+                    <p>Des performances inégalées.</p>
+                    <a href="#" class="btn btn-dark">Voir les modèles</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="../../assets/images/Accueil-Audi3.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Audi</h5>
+                    <p>Un design qui ne passe pas inaperçu.</p>
+                    <a href="#" class="btn btn-dark">Voir les modèles</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

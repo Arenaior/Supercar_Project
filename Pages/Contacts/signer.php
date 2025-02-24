@@ -81,11 +81,6 @@ include ("../barre/barre.php");
             width:100%;
         }
 
-        .f1{
-            font-size:20px;
-            margin-left:80px;
-            color:#939393 ;
-        }
         </style>
         </head>
 
@@ -137,12 +132,9 @@ include ("../barre/barre.php");
             </div>
 
   <br><br><br><br><br><br><br><br><br>
-  <footer class="bg-dark text-white py-3 w-100">
-    <center>© 2025 SuperCar - Tous droits réservés</center>
-                <br><br>
-    <a href="https://accounts.google.com/v3/signin/identifier?hl=fr&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S-398638576%3A1740380656317057&ddm=1" class="f1"> <img src="/supercar_project/assets/images/e-mail.png" class="img2">supercar@gmail.com </a>
-    <br><br>
-    <a href="https://www.whatsapp.com/?lang=fr_FR" class="f1"> <img src="/supercar_project/assets/images/whatsapp.png" class="img2">+230 123 4567  </a>
-
-</footer>
+  </html>
+  
+  <?php
+  include ("../footage/footage.php");
+    ?>
 
