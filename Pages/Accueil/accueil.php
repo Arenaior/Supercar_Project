@@ -81,6 +81,28 @@ include ('../barre/barre.php');
 .gonflement:hover {
   transform: scale(1.1); /* Augmente la taille de 10% */
 }
+
+.img-caroussel{
+    border-radius: 10px;
+}
+
+.Voir{
+    margin-top:-120px;
+    margin-left:990px;
+}
+
+.offre{
+    font-size: 45px;
+
+}
+
+.lien{
+    text-decoration: none;
+    font-size:20px;
+    margin-top:-60px;
+    margin-left:200px;
+    color:white;
+}
     </style>
 </head>
 <body>
@@ -93,6 +115,7 @@ include ('../barre/barre.php');
 
     <section class="container my-5">
     <h2 class="text-center">Découvrez nos marques</h2>
+    <br><br>
     <div class="row text-center">
         <div class="col-md-4 gonflement">
             <div class="card h-100">
@@ -125,7 +148,65 @@ include ('../barre/barre.php');
             </div>
         </div>
     </div>
+    <br><br><br><br>
+    <div class="container-mt-5">
+    <h2 class="text-center"> Nos modèles les plus convoités </h2>
+    <br><br>
+
+<!-- Carousel -->
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+  <div id="Tiguan" class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../../assets/images/Accueil-Tiguan.jpg" class="d-block w-100 img-caroussel">
+      <a href="#" class="btn btn-outline-light Voir">Voir le modèle</a>
+    </div>
+    <div class="carousel-item">
+      <img src="../../assets/images/Accueil-MercedesAMG.jpg" class="d-block w-100 img-caroussel">
+      <a href="#" class="btn btn-outline-light Voir">Voir le modèle</a>
+    </div>
+    <div class="carousel-item">
+      <img src="../../assets/images/Accueil-Audi4.jpg" class="d-block w-100 img-caroussel" alt="Image 3">
+      <a href="#" class="btn btn-outline-light Voir">Voir le modèle</a>
+    </div>
+  </div>
+
+  <!-- Boutons de navigation -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+    <span class="visually-hidden">Précédent</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+    <span class="visually-hidden">Suivant</span>
+  </button>
+</div>
+
 </section>
+<hr>
+<div class="container mt-5 text-center">
+    <h2 class="offre">Découvrez</h2>
+    <br><br>
+    <div class="row text-center">
+        <div class="col-md-4 gonflement">
+            <div class="card position-relative">
+                <img src="../../assets/images/Accueil-Services.jpg" class="card-img-top">
+                <a href="#" class="lien">Services-></a>
+            </div>
+        </div>
+        <div class="col-md-4 gonflement">
+            <div class="card position-relative">
+                <img src="../../assets/images/Accueil-Demande.jpg" class="card-img-top">
+                <a href="#" class="lien">Demande d'essai-></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<br><br><br><br>
+                
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
