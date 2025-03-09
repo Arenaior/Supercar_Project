@@ -14,7 +14,7 @@ include ('../barre/barre.php');
         .hero {
             position: relative;
             width: 100%;
-            height: 100vh; /* Prend toute la hauteur de l'écran */
+            height: 80vh; /* Prend toute la hauteur de l'écran */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -37,7 +37,8 @@ include ('../barre/barre.php');
             font-size: 5vw; /* Taille relative à la largeur de l'écran */
             font-weight: bold;
             color: white;
-            text-align: center;
+            margin-left: 80px;
+            margin-top:100px;
             z-index: 2;
             text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* Ombre pour lisibilité */
             position: relative;
@@ -108,7 +109,7 @@ include ('../barre/barre.php');
 <body>
 
     <div class="hero">
-        <img src="../../assets/images/Accueil-Audi1.jpg" alt="Voiture de luxe">
+        <img src="../../assets/images/Accueil-Range.jpg" alt="Voiture de luxe">
         <h1>Roulez avec classe.</h1>
     </div>
 
@@ -202,10 +203,8 @@ include ('../barre/barre.php');
     </div>
 </div>
 
-
-
-
 <br><br><br><br>
+
                 
 
 
