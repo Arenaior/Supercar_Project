@@ -45,7 +45,7 @@ include ("../../barre/barre.php");
             <button type="submit" class="btn btn-dark">Envoyer</button>
             <button type="reset" class="btn btn-secondary-emphasis">Annuler</button>
 
-            <br><br> <br>Vous avez déà un compte ? <a href="../Connexion/signer.php"> Connexion </a>
+            <br><br> <br>Vous avez déjà un compte ? <a href="../Connexion/connexion.php"> Connexion </a>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

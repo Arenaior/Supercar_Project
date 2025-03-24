@@ -90,7 +90,7 @@ include ("../barre/barre.php");
     </div>
 
     <div class="container mt-5">
-        <h1 class="H8" >Contactez Supercar </h1> <h2 class="H2"> Pour plus d informations, obtenir de l'aide ou pour vos suggestions.</h2>
+        <h1 class="H8" >Contactez Supercar </h1> <h2 class="H2"> Pour plus d'informations, obtenir de l'aide ou pour vos suggestions.</h2>
     </div>
 
     <hr>
