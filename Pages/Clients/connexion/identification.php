@@ -4,11 +4,11 @@
     include ("../../barre/barre.php");
     $nom= $_POST['nom'];
     $prénom= $_POST['prénom'];
-    $Mdp= $_POST['mdp'];
-    $Mail=$_POST['mail'];
+    $mdp= $_POST['mdp'];
+    $mail=$_POST['mail'];
 
     
-    $sql= "SELECT * FROM Client WHERE Nom='$nom' AND Prénom='$prénom' AND Mdp='$Mdp' AND Mail='$Mail'";
+    $sql= "SELECT * FROM Client WHERE Mail='$mail' AND Mdp='$mdp' ";
   $result = $bdd->query($sql);?>
 
 <!DOCTYPE HTML>
@@ -56,7 +56,7 @@
         <?php else : ?>
             <div class="container text-center mt-5">
                 <H1 class='H1'> Nom d'utilisateur ou mot de passe incorrect.</H1>
-        <br> <a href='signer.php' class='H2'><u>Veuillez réessayer</u> </a>
+        <br> <a href='connexion.php' class='H2'><u>Veuillez réessayer</u> </a>
         </div>
         
          <?php endif; ?>

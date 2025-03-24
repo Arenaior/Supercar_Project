@@ -37,18 +37,18 @@
           <a class="nav-link active text-white" href="/supercar_project/Pages/Voiture/Voiture-Accueil.php">Voitures</a>
         </li>
         <li class="nav-item mx-3">
-          <a class="nav-link active text-white" href="#">Services</a>
+          <a class="nav-link active text-white" href="/supercar_project/Pages/Service/service.php">Services</a>
         </li>
 
         <li class="nav-item mx-3">
-          <a class="nav-link text-white" href="/supercar_project/Pages/Clients/connexion/signer.php">Demande d'essai</a>
+          <a class="nav-link text-white" href="/supercar_project/Pages/Clients/connexion/connexion.php">Demande d'essai</a>
         </li>
         <li class="nav-item mx-3">
-          <a class="nav-link text-white" href="/supercar_project/Pages/Contacts/signer.php">Contactez-Nous</a>
+          <a class="nav-link text-white" href="/supercar_project/Pages/Contacts/commentaire.php">Contactez-Nous</a>
         </li>
       </ul>
 
-      <a href="/supercar_project/Pages/Clients/connexion/signer.php"> <img src="/supercar_project/assets/images/barre-personne.png" class="img1 mx-5"> </a>
+      <a href="/supercar_project/Pages/Clients/connexion/connexion.php"> <img src="/supercar_project/assets/images/barre-personne.png" class="img1 mx-5"> </a>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Rechercher</button>

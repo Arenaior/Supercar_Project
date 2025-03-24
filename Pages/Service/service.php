@@ -1,0 +1,154 @@
+<?php 
+include ('../barre/barre.php');
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="service.css">
+    <title>Document</title>
+</head>
+<body>
+<header>
+        <div>
+        <center><h1 class="titre">Nos Services</h1></center>
+        <div class="descri">SuperCar, c’est l’excellence au service de votre passion automobile.<br>
+            Nous vous offrons des services haut de gamme pour une expérience unique, alliant performance, prestige et savoir-faire.</div>
+        </div>
+</header>
+<center><div class="service">Découvrez nos services</div></center>
+<main>
+<div class="container">
+    <div class="carre">
+        <div class="container3">
+            <img src="../../assets/images/livraison.png">
+        </div>
+        <p class="type">LIVRAISON GRATUITE PARTOUT A MAURICE</p>
+        <p class="description">
+            "Recevez votre voiture où que vous soyez à Maurice, 
+            avec une livraison gratuite rapide et sécurisée directement à votre porte !"
+        </p>
+        <div class="container3"><img src="../../assets/images/barre-logo.PNG">
+        </div>
+        
+        
+
+    </div>
+    <div class="carre">
+        <div class="container3">
+            <img src="../../assets/images/Cartebank.png">
+        </div>
+        <p class="type">FACILITER DE PAIEMENT</p>
+        <p class="description">
+            "Votre rêve de conduire une voiture de luxe devient une réalité, sans tracas !
+            Profitez de nos options de paiement flexibles pour rendre l'achat de votre voiture aussi simple que possible"
+            
+        </p>
+        <div class="container3"><img src="../../assets/images/barre-logo.PNG">
+        </div>
+
+    </div>
+    <div class="carre">
+        <div class="container3">
+            <img src="../../assets/images/garantie.png">
+        </div>
+        <p class="type">GARANTIE SUPERCAR DE 6 MOIS</p>
+        <p class="description">
+            "Roulez en toute tranquillité avec la garantie Supercar de 6 mois. 
+            Votre voiture est couverte pour une sécurité maximale après chaque achat."
+        </p>
+        <div class="container3"><img src="../../assets/images/barre-logo.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="container2">
+    <div class="carre2">
+        <div class="container3">
+            <img src="../../assets/images/essaie.png">
+        </div>
+        <p class="type">COACHING D'ACHAT AUTOMOBILE </p>
+        <p class="description">
+            "Faites le bon choix sans stress ! 
+            Bénéficiez d’un accompagnement personnalisé par nos experts pour trouver la voiture idéale, négocier le meilleur prix et éviter les pièges courants"
+        </p>
+        <div class="container3"><img src="../../assets/images/barre-logo.PNG">
+        </div>
+    </div>
+    <div class="carre2">
+        <div class="container3">
+            <img src="../../assets/images/entretient.png">
+        </div>
+        <p class="type">ENTRETIENT GRATUITE</p>
+        <p class="description">
+            "Votre voiture mérite ce qu'il y a de mieux. Entretien gratuit pendant 6 mois pour garantir que votre véhicule reste en parfait état, sans frais supplémentaires."
+        </p>
+        <div class="container3"><img src="../../assets/images/barre-logo.PNG">
+        </div>
+    </div>
+    <div class="carre2">
+        <div class="container3">
+            <img src="../../assets/images/advice.png">
+        </div>
+        <p class="type">CONSEILLER CLIENT</p>
+        <p class="description">
+            "Notre équipe de conseillers experts est là pour vous accompagner à chaque étape de votre achat, 
+            répondre à toutes vos questions et vous aider à choisir la voiture qui vous correspond le mieux."
+        </p>
+        <div class="container3"><img src="../../assets/images/barre-logo.PNG">
+        </div>
+    </div>
+</div>
+<div class="container4">
+    <div class="promo-box">
+        <div class="promo">15% DE RÉDUCTION</div>
+        <p class="instruction">OFFRE SPECIALE POUR LES NOUVEAUX MEMBRES</p>
+        <a href="../Contacts/signer.php" class="bouton">Réserver des maintenant</a>
+    </div>
+</div>
+
+
+
+</main>
+<footer>
+<!DOCTYPE html> 
+<html lang="fr">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>footage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .f1{
+            font-size:20px;
+            margin-left:80px;
+            color:#939393 ;
+        }
+
+
+        .imgf1{
+        width:25px;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+
+     <footer class="bg-dark text-white py-3 w-100">
+    <center>© 2025 SuperCar - Tous droits réservés</center>
+                <br><br>
+    <a href="https://accounts.google.com/v3/signin/identifier?hl=fr&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S-398638576%3A1740380656317057&ddm=1" class="f1"> <img src="/supercar_project/assets/images/e-mail.png" class="imgf1">supercar@gmail.com </a>
+    <br><br>
+    <a href="https://www.whatsapp.com/?lang=fr_FR" class="f1"> <img src="/supercar_project/assets/images/whatsapp.png" class="imgf1">+230 123 4567  </a>
+
+</footer>
+</body>
+</htmlt>
+</footer>
+    
+</body>
+</html>
