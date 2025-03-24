@@ -115,44 +115,53 @@ include ('../barre/barre.php');
 
 
     <section class="container my-5">
-    <h2 class="text-center">Découvrez nos marques</h2>
-    <br><br>
-    <div class="row text-center">
-        <div class="col-md-4 gonflement">
-            <div class="card h-100">
-                <img src="../../assets/images/Accueil-Mercedes2.jpg" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Mercedes</h5>
-                    <p>Puissance et élégance réunies.</p>
-                    <a href="#" class="btn btn-dark">Voir les modèles</a>
+
+            <h2 class="H1">Bienvenue chez Supercar</h2>
+            <br>
+            <H4> Qui sommes-nous ?</h4>
+            <p>SuperCar est une entreprise spécialisée dans la vente de voitures haut de gamme et de prestige. Forte d’une large gamme de véhicules des plus grandes marques automobiles, telles que Mercedes, Audi, Volkswagen, BMW et bien d’autres, SuperCar s’impose comme un acteur incontournable pour les passionnés d’automobiles d’exception.
+            Grâce à un service client sur-mesure et une expertise approfondie du marché, SuperCar accompagne ses clients dans l’acquisition du véhicule idéal, alliant performance, confort et élégance. Que ce soit pour une berline de luxe, un SUV moderne ou une sportive puissante, SuperCar propose une sélection exclusive répondant aux plus hautes exigences.</p>
+            
+            <hr>
+            <br><br><br><br>
+            <h2 class="text-center">Découvrez nos marques</h2>
+            <br><br>
+            <div class="row text-center">
+                <div class="col-md-4 gonflement">
+                    <div class="card h-100">
+                        <img src="../../assets/images/Accueil-Mercedes2.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Mercedes</h5>
+                            <p>Puissance et élégance réunies.</p>
+                            <a href="#" class="btn btn-dark">Voir les modèles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 gonflement">
+                    <div class="card">
+                        <img src="../../assets/images/Accueil-Golf1.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Volkswagen</h5>
+                            <p>Des performances inégalées.</p>
+                            <a href="#" class="btn btn-dark">Voir les modèles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 gonflement">
+                    <div class="card">
+                        <img src="../../assets/images/Accueil-Audi3.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Audi</h5>
+                            <p>Un design qui ne passe pas inaperçu.</p>
+                            <a href="#" class="btn btn-dark">Voir les modèles</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4 gonflement">
-            <div class="card">
-                <img src="../../assets/images/Accueil-Golf1.jpg" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Volkswagen</h5>
-                    <p>Des performances inégalées.</p>
-                    <a href="#" class="btn btn-dark">Voir les modèles</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 gonflement">
-            <div class="card">
-                <img src="../../assets/images/Accueil-Audi3.jpg" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Audi</h5>
-                    <p>Un design qui ne passe pas inaperçu.</p>
-                    <a href="#" class="btn btn-dark">Voir les modèles</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br><br><br><br>
-    <div class="container-mt-5">
-    <h2 class="text-center"> Nos modèles les plus convoités </h2>
-    <br><br>
+            <br><br><br><br>
+            <div class="container-mt-5">
+            <h2 class="text-center"> Nos modèles les plus convoités </h2>
+            <br><br>
 
 <!-- Carousel -->
 <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
@@ -209,5 +218,9 @@ include ('../barre/barre.php');
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<?php
+include ('../footage/footage.php');
+?>
 </body>
 </html>

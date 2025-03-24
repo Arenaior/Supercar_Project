@@ -50,8 +50,8 @@
 
       <a href="/supercar_project/Pages/Clients/connexion/signer.php"> <img src="/supercar_project/assets/images/barre-personne.png" class="img1 mx-5"> </a>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Rechercher</button>
       </form>
     </div>
   </div>
