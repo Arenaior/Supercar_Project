@@ -37,7 +37,7 @@
           <a class="nav-link active text-white" href="/supercar_project/Pages/Voiture/Voiture-Accueil.php">Voitures</a>
         </li>
         <li class="nav-item mx-3">
-          <a class="nav-link active text-white" href="#">Services</a>
+          <a class="nav-link active text-white" href="/supercar_project/Pages/Service/service.php">Services</a>
         </li>
 
         <li class="nav-item mx-3">
