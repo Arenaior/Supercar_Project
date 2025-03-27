@@ -2,8 +2,6 @@
 
     include ("bdconnect.php");
     include ("../../barre/barre.php");
-    $nom= $_POST['nom'];
-    $prénom= $_POST['prénom'];
     $mdp= $_POST['mdp'];
     $mail=$_POST['mail'];
 
@@ -50,7 +48,7 @@
     <?php if ($result->num_rows === 1) :?>
 
         <div class="container text-center mt-5">
-              <H1 class='H1'> Bienvenue  <?php echo  $nom;?> ! </H1> 
+              <H1 class='H1'> Bienvenue  <?php echo  $mail;?> ! </H1> 
     </div>
     
         <?php else : ?>
