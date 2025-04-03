@@ -143,7 +143,7 @@ include ('../barre/barre.php');
                         <div class="card-body">
                             <h5 class="card-title">Volkswagen</h5>
                             <p>Des performances inégalées.</p>
-                            <a href="#" class="btn btn-dark">Voir les modèles</a>
+                            <a href="../Voiture/Volkswagen.php" class="btn btn-dark">Voir les modèles</a>
                         </div>
                     </div>
                 </div>
@@ -168,7 +168,7 @@ include ('../barre/barre.php');
   <div id="Tiguan" class="carousel-inner">
     <div class="carousel-item active">
       <img src="../../assets/images/Accueil-Tiguan.jpg" class="d-block w-100 img-caroussel">
-      <a href="#" class="btn btn-outline-light Voir">Voir le modèle</a>
+      <a href="../Voitures/Volkswagen/" class="btn btn-outline-light Voir">Voir le modèle</a>
     </div>
     <div class="carousel-item">
       <img src="../../assets/images/Accueil-MercedesAMG.jpg" class="d-block w-100 img-caroussel">

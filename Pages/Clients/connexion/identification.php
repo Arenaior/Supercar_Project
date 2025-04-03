@@ -42,6 +42,7 @@
                 margin-top:150px;
     
             }
+
         </style>
 
 
@@ -49,18 +50,64 @@
 
         <div class="container text-center mt-5">
               <H1 class='H1'> Bienvenue  <?php echo  $mail;?> ! </H1> 
+
+              <hr>
+         
+         <div class="container mt-5">
+    <h1 class="h4 text-center mb-4">Veuillez remplir ce formulaire pour finaliser votre demande d'essai</h1>
+
+    <div class="row align-items-center gap-4">
+        <div class="col-md-4">
+            <img src="/supercar_project/assets/images/DE2.jpg" class="img-fluid rounded shadow" alt="Voiture Volkswagen">
+        </div>
+
+        <div class="col-md-6">
+            <form>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Nom">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="mail">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Adresse">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Marque de la voiture">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Modèle de la voiture">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Date d'essai">
+                </div>
+                <a href="#" class="btn btn-primary">Envoyer</a> <a class="btn btn-secondary" href="Accueil-DE.php">Retour</a>
+            </form>
+        </div>
+    </div>
+</div>
+
     </div>
     
+    
+    
+    
+    <!----CONDITION ELSE----->
         <?php else : ?>
             <div class="container text-center mt-5">
                 <H1 class='H1'> Nom d'utilisateur ou mot de passe incorrect.</H1>
         <br> <a href='connexion.php' class='H2'><u>Veuillez réessayer</u> </a>
         </div>
+        <hr>
         
          <?php endif; ?>
 
+        
 
 <?php $bdd->close(); ?>
+
 </body>
 </html>
+
+
 
