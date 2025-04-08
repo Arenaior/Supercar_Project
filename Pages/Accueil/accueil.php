@@ -168,7 +168,7 @@ include ('../barre/barre.php');
   <div id="Tiguan" class="carousel-inner">
     <div class="carousel-item active">
       <img src="../../assets/images/Accueil-Tiguan.jpg" class="d-block w-100 img-caroussel">
-      <a href="../Voitures/Volkswagen/" class="btn btn-outline-light Voir">Voir le modèle</a>
+      <a href="/supercar_project/Pages/Voiture/Volkswagen.php" class="btn btn-outline-light Voir">Voir le modèle</a>
     </div>
     <div class="carousel-item">
       <img src="../../assets/images/Accueil-MercedesAMG.jpg" class="d-block w-100 img-caroussel">

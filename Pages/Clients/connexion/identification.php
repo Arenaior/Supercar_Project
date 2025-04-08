@@ -62,27 +62,29 @@
         </div>
 
         <div class="col-md-6">
-            <form>
-                <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Nom">
-                </div>
-                <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="mail">
-                </div>
-                <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Adresse">
-                </div>
-                <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Marque de la voiture">
-                </div>
-                <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Modèle de la voiture">
-                </div>
-                <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Date d'essai">
-                </div>
-                <a href="#" class="btn btn-primary">Envoyer</a> <a class="btn btn-secondary" href="Accueil-DE.php">Retour</a>
-            </form>
+                <form method="POST" action="Confirmation.php">
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Nom" name="Nom">
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Mail" name="Mail">
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Adresse" name="Adresse">
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Marque de la voiture" name="Marque">
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Modèle de la voiture" name="Modele">
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Date d'essai" name="Jour">
+            </div>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+            <a class="btn btn-secondary" href="identification.php">Retour</a>
+        </form>
+
         </div>
     </div>
 </div>
