@@ -36,7 +36,7 @@ include("../barre/barre.php");
 <body>
   <div class="container-fluid vh-100 d-flex align-items-center justify-content-center">
     <div class="row w-100 h-100 bg-dark-section align-items-center">
-        <!-- Texte fixe -->
+        
         <div class="col-md-4 text-section">
             <h2>TROUVEZ LA MARQUE QUI <span style="color: #1B3765;">VOUS CORRESPOND</span></h2>
             <p>Puissance, élégance, exclusivité… Quelle Supercar fera vibrer votre âme de pilote ? Faites votre choix et vivez l’exceptionnel.</p>
@@ -44,15 +44,15 @@ include("../barre/barre.php");
             <button class="btn btn-dark">Contactez-nous</button>
         </div>
 
-        <!-- Carrousel -->
+        
         <div class="col-md-8">
             <div id="carouselVoitures" class="carousel slide w-100 h-100" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row">
-                            <div class="col-md-4"><a href="#"><img src="../../assets/images/Voitures-Accueil-Mercedes.jpg" class="d-block w-100 h-100 object-fit-cover" ></a> </div>
-                            <div class="col-md-4"><a href="#"><img src="../../assets/images/Voitures-Accueil-Audi1.jpg" class="d-block w-100 h-100 object-fit-cover" ></a> </div>
-                            <div class="col-md-4"><a href="Volkswagen.php"><img src="../../assets/images/Voitures-Accueil-Golf1.jpg" class="d-block w-100 h-100 object-fit-cover"></a> </div>
+                            <div class="col-md-4"><img src="../../assets/images/Voitures-Accueil-Mercedes.jpg" class="d-block w-100 h-100 object-fit-cover" ></div>
+                            <div class="col-md-4"><img src="../../assets/images/Voitures-Accueil-Audi1.jpg" class="d-block w-100 h-100 object-fit-cover" ></div>
+                            <div class="col-md-4"><img src="../../assets/images/Voitures-Accueil-Golf1.jpg" class="d-block w-100 h-100 object-fit-cover"></div>
                         </div>
                     </div>
                     <div class="carousel-item">
