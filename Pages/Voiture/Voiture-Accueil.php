@@ -50,9 +50,9 @@ include("../barre/barre.php");
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row">
-                            <div class="col-md-4"><img src="../../assets/images/Voitures-Accueil-Mercedes.jpg" class="d-block w-100 h-100 object-fit-cover" ></div>
+                            <div class="col-md-4"><a href="mercedes.php"><img src="../../assets/images/Voitures-Accueil-Mercedes.jpg" class="d-block w-100 h-100 object-fit-cover" ></a></div>
                             <div class="col-md-4"><img src="../../assets/images/Voitures-Accueil-Audi1.jpg" class="d-block w-100 h-100 object-fit-cover" ></div>
-                            <div class="col-md-4"><img src="../../assets/images/Voitures-Accueil-Golf1.jpg" class="d-block w-100 h-100 object-fit-cover"></div>
+                            <div class="col-md-4"><a href="Volkswagen.php"><img src="../../assets/images/Voitures-Accueil-Golf1.jpg" class="d-block w-100 h-100 object-fit-cover"></a></div>
                         </div>
                     </div>
                     <div class="carousel-item">
