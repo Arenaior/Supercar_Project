@@ -57,14 +57,14 @@ include ('../barre/barre.php');
         }
 
         .car-card {
-            width: 30%;
+            width: 400px;
             background: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             overflow: hidden;
             transition: transform 0.3s ease-in-out;
             text-align: center;
-            margin-top:-150px;
+            margin:0 auto;
         }
 
         .car-card:hover {
