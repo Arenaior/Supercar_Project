@@ -46,33 +46,15 @@ include("../barre/barre.php");
 
         
         <div class="col-md-8">
-        <div id="carouselVoitures" class="carousel slide w-100 h-100" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <div class="row">
-                <div class="col-md-4">
-                    
-                    <a href="mercedes.php">
-                        <img src="../../assets/images/Voitures-Accueil-Mercedes.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Mercedes">
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    
-                    <a href="audi.php">
-                        <img src="../../assets/images/Voitures-Accueil-Audi1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Audi">
-                    </a>
-                </div>
-                <div class="col-md-4">
-                
-                    <a href="golf.php">
-                        <img src="../../assets/images/Voitures-Accueil-Golf1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Golf">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
+            <div id="carouselVoitures" class="carousel slide w-100 h-100" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4"><img src="../../assets/images/Voitures-Accueil-Mercedes.jpg" class="d-block w-100 h-100 object-fit-cover" ></div>
+                            <div class="col-md-4"><img src="../../assets/images/Voitures-Accueil-Audi1.jpg" class="d-block w-100 h-100 object-fit-cover" ></div>
+                            <div class="col-md-4"><img src="../../assets/images/Voitures-Accueil-Golf1.jpg" class="d-block w-100 h-100 object-fit-cover"></div>
+                        </div>
+                    </div>
                     <div class="carousel-item">
                         <div class="row">
                             <div class="col-md-4"><img src="../../assets/images/Voitures-Accueil-Range.jpg" class="d-block w-100 h-100 object-fit-cover" ></div>
