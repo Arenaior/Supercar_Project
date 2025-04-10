@@ -6,7 +6,7 @@ include ('../barre/barre.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="service.css">
+    <link rel="stylesheet" href="Services.css">
     <title>Document</title>
 </head>
 <body>
@@ -15,7 +15,7 @@ include ('../barre/barre.php');
         <center><h1 class="titre">Nos Services</h1></center>
         <div class="descri">SuperCar, c’est l’excellence au service de votre passion automobile.<br>
             Nous vous offrons des services haut de gamme pour une expérience unique, alliant performance, prestige et savoir-faire.</div>
-        </div>
+       </div>
 </header>
 <center><div class="service">Découvrez nos services</div></center>
 <main>
@@ -63,8 +63,8 @@ include ('../barre/barre.php');
     </div>
 </div>
 
-<div class="container2">
-    <div class="carre2">
+<div class="container">
+    <div class="carre">
         <div class="container3">
             <img src="../../assets/images/essaie.png">
         </div>
@@ -76,7 +76,7 @@ include ('../barre/barre.php');
         <div class="container3"><img src="../../assets/images/barre-logo.PNG">
         </div>
     </div>
-    <div class="carre2">
+    <div class="carre">
         <div class="container3">
             <img src="../../assets/images/entretient.png">
         </div>
@@ -87,7 +87,7 @@ include ('../barre/barre.php');
         <div class="container3"><img src="../../assets/images/barre-logo.PNG">
         </div>
     </div>
-    <div class="carre2">
+    <div class="carre">
         <div class="container3">
             <img src="../../assets/images/advice.png">
         </div>
@@ -104,7 +104,7 @@ include ('../barre/barre.php');
     <div class="promo-box">
         <div class="promo">15% DE RÉDUCTION</div>
         <p class="instruction">OFFRE SPECIALE POUR LES NOUVEAUX MEMBRES</p>
-        <a href="../Contacts/signer.php" class="bouton">Réserver des maintenant</a>
+        <a href="../Voiture/Voiture-Accueil.php" class="bouton">Réserver des maintenant</a>
     </div>
 </div>
 
