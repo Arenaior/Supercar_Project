@@ -64,7 +64,8 @@ include ('../barre/barre.php');
             overflow: hidden;
             transition: transform 0.3s ease-in-out;
             text-align: center;
-            margin:0 auto;
+            
+            
         }
 
         .car-card:hover {
@@ -116,7 +117,7 @@ include ('../barre/barre.php');
         .h2{
             font-size:50px;
             color:black;
-            margin-top:-200px;
+            margin-top:20px;
         }
 
         H5{
@@ -170,25 +171,22 @@ include ('../barre/barre.php');
             </div>
 
             <!-- Modal pour Golf 8 -->
-            <div class="modal fade" id="Golf8" tabindex="-1" aria-labelledby="modalLabel">
-                <div class="modal-dialog">
-                    <div class="modal-content text-center">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="modalLabel">Golf 8</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="../../assets/images/Voitures-Volkswagen-Golf8.jpg"  class="img-fluid rounded">
-                            <br><br>
-                            <p class="mt-3 p5">La Volkswagen Golf 8 incarne l'évolution d'un modèle emblématique, alliant design moderne, technologie avancée et performances optimisées. Elle reste fidèle à son ADN tout en s'adaptant aux nouvelles exigences de la mobilité.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                        </div>
+                    <div id="Golf8" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close">&times;</a>
+                    <h2>À propos de la Golf8 </h2>
+                    <p>La Volkswagen Golf 8 allie design moderne, technologies innovantes et plaisir de conduite au quotidien.</p>
+                    <div class="voiture-cadre">
+                        <img src="/supercar_project/assets/images/Voitures-Volkswagen-Golf8.jpg" alt="Mercedes classe a ">
+                    </div>
+                    <br>
+                    <div class="tittle">
+                    <li><strong>Motorisations</strong> : Essence, diesel, hybride</li>
+                    <li><strong>Puissance</strong> : 110 à 320 ch</li>
+                    <li><strong>Transmission</strong> : Manuelle ou automatique (DSG)</li>
                     </div>
                 </div>
             </div>
-        
 
 
 
@@ -205,21 +203,19 @@ include ('../barre/barre.php');
                 </div>
 
                 <!-- Modal pour Tiguan -->
-                        <div class="modal fade" id="Tiguan" tabindex="-1" aria-labelledby="modalLabel">
-                            <div class="modal-dialog">
-                                <div class="modal-content text-center">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="modalLabel">Tiguan</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <img src="../../assets/images/Voitures-Volkswagen-Tiguan.jpg"  class="img-fluid rounded">
-                                        <br><br>
-                                        <p class="mt-3 p5">Le Volkswagen Tiguan R-Line 2020 est la version dynamique et sportive du célèbre SUV allemand. Avec son design affirmé, ses technologies modernes et ses performances optimisées, il séduit ceux qui recherchent un SUV à la fois pratique et puissant.</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                                    </div>
+                            <div id="Tiguan" class="modal">
+                            <div class="modal-content">
+                                <a href="#" class="close">&times;</a>
+                                <h2>À propos de la Tiguan R-Line</h2>
+                                <p>Un SUV dynamique au look sportif et au confort premium.</p>
+                                <div class="voiture-cadre">
+                                    <img src="/supercar_project/assets/images/Voitures-Volkswagen-Tiguan.jpg" alt="Mercedes classe a ">
+                                </div>
+                                <br>
+                                <div class="tittle">
+                                <li><strong>Motorisations</strong> : Essence ou diesel</li>
+                                <li><strong>Puissance</strong> : Environ 150 à 200 ch</li>
+                                <li><strong>Transmission</strong> :  Automatique (DSG), 4Motion disponible</li>
                                 </div>
                             </div>
                         </div>
@@ -240,21 +236,19 @@ include ('../barre/barre.php');
                 </div>
 
                         <!-- Modal pour Tayron -->
-                        <div class="modal fade" id="Tayron" tabindex="-1" aria-labelledby="modalLabel">
-                            <div class="modal-dialog">
-                                <div class="modal-content text-center">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="modalLabel">Tayron</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <img src="../../assets/images/Voitures-Volkswagen-Tayron.jpg"  class="img-fluid rounded">
-                                        <br><br>
-                                        <p class="mt-3 p5">Le Volkswagen Tayron est un SUV familial qui combine design moderne, confort et technologie avancée. Conçu principalement pour le marché chinois, il partage plusieurs éléments avec le Tiguan, tout en offrant un look plus robuste et raffiné.</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                                    </div>
+                                    <div id="Tayron" class="modal">
+                            <div class="modal-content">
+                                <a href="#" class="close">&times;</a>
+                                <h2>À propos de la Volkswagen Tayron</h2>
+                                <p>Un SUV familial au design élégant, réservé à certains marchés comme la Chine.</p>
+                                <div class="voiture-cadre">
+                                    <img src="/supercar_project/assets/images/Voitures-Volkswagen-Tayron.jpg" alt="Mercedes classe a ">
+                                </div>
+                                <br>
+                                <div class="tittle">
+                                <li><strong>Motorisations</strong> : Essence principalement</li>
+                                <li><strong>Puissance</strong> : 150 à 220 ch</li>
+                                <li><strong>Transmission</strong> : Automatique, possible 4 roues motrices</li>
                                 </div>
                             </div>
                         </div>
@@ -279,21 +273,19 @@ include ('../barre/barre.php');
                     </div>
 
                     <!-- Modal pour POLO -->
-                    <div class="modal fade" id="Polo" tabindex="-1" aria-labelledby="modalLabel">
-                            <div class="modal-dialog">
-                                <div class="modal-content text-center">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="modalLabel">Polo 5</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <img src="../../assets/images/Voitures-Volkswagen-Polo5.jpg"  class="img-fluid rounded">
-                                        <br><br>
-                                        <p class="mt-3 p5">La Volkswagen Polo 5 (ou Polo V, génération 2009-2017) est une citadine compacte qui a su conquérir le marché grâce à son design sobre, sa fiabilité et son agrément de conduite. Elle est idéale pour la ville tout en étant capable d’assurer des trajets plus longs avec confort.</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                                    </div>
+                                <div id="Polo" class="modal">
+                            <div class="modal-content">
+                                <a href="#" class="close">&times;</a>
+                                <h2>À propos de la Polo 5 </h2>
+                                <p>Une citadine polyvalente et fiable, parfaite pour la ville.</p>
+                                <div class="voiture-cadre">
+                                    <img src="/supercar_project/assets/images/Voitures-Volkswagen-Polo5.jpg" alt="Mercedes classe a ">
+                                </div>
+                                <br>
+                                <div class="tittle">
+                                <li><strong>Motorisations</strong> : Essence ou diesel</li>
+                                <li><strong>Puissance</strong> : 60 à 110 ch</li>
+                                <li><strong>Transmission</strong> : Manuelle ou automatique (DSG)</li>
                                 </div>
                             </div>
                         </div>
@@ -315,26 +307,19 @@ include ('../barre/barre.php');
                 </div>
 
                  <!-- Modal pour TOUAREG -->
-                 <div class="modal fade" id="Touareg" tabindex="-1" aria-labelledby="modalLabel">
-                            <div class="modal-dialog">
-                                <div class="modal-content text-center">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="modalLabel">Touareg</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <img src="../../assets/images/Voitures-Volkswagen-Touareg.jpg"  class="img-fluid rounded">
-                                        <br><br>
-                                        <p class="mt-3 p5">- Diesel (TDI)
-                                                            - 3.0 V6 TDI 231 ch / 286 ch – moteur coupleux et économique (~7L/100 km).
-                                                            <br>- Essence (TSI) 3.0 V6 TSI 340 ch – performances impressionnantes.
-                                                            <br>- Hybride Rechargeable (eHybrid)
-                                                            <br>- 3.0 V6 TSI + moteur électrique – 381 ch / 462 ch (Touareg R PHEV).
-                                                            <br>- Autonomie électrique ~50 km en mode 100% électrique.</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                                    </div>
+                            <div id="Touareg" class="modal">
+                            <div class="modal-content">
+                                <a href="#" class="close">&times;</a>
+                                <h2>À propos de la Touareg </h2>
+                                <p>Un SUV haut de gamme puissant et confortable pour les longs trajets.</p>
+                                <div class="voiture-cadre">
+                                    <img src="/supercar_project/assets/images/Voitures-Volkswagen-Touareg.jpg" alt="Mercedes classe a ">
+                                </div>
+                                <br>
+                                <div class="tittle">
+                                <li><strong>Motorisations</strong> :  Diesel, hybride rechargeable</li>
+                                <li><strong>Puissance</strong> : 231 à 462 ch</li>
+                                <li><strong>Transmission</strong> : Automatique (Tiptronic), transmission intégrale</li>
                                 </div>
                             </div>
                         </div>
@@ -360,30 +345,22 @@ include ('../barre/barre.php');
 
 
                         <!-- Modal pour PASSAT -->
-                        <div class="modal fade" id="Passat" tabindex="-1" aria-labelledby="modalLabel">
-                            <div class="modal-dialog">
-                                <div class="modal-content text-center">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="modalLabel">Passat</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <img src="../../assets/images/Voitures-Volkswagen-Passat.jpg"  class="img-fluid rounded">
-                                        <br><br>
-                                        <p class="mt-3 p5">- Diesel (TDI)
-                                                            - 3.0 V6 TDI 231 ch / 286 ch – moteur coupleux et économique (~7L/100 km).
-                                                            <br>- Essence (TSI) 3.0 V6 TSI 340 ch – performances impressionnantes.
-                                                            <br>- Hybride Rechargeable (eHybrid)
-                                                            <br>- 3.0 V6 TSI + moteur électrique – 381 ch / 462 ch (Touareg R PHEV).
-                                                            <br>- Autonomie électrique ~50 km en mode 100% électrique.</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                                    </div>
+                                    <div id="Passat" class="modal">
+                            <div class="modal-content">
+                                <a href="#" class="close">&times;</a>
+                                <h2>À propos de la Passat </h2>
+                                <p>Une grande berline élégante et idéale pour les trajets professionnels.</p>
+                                <div class="voiture-cadre">
+                                    <img src="/supercar_project/assets/images/Voitures-Volkswagen-Passat.jpg" alt="Mercedes classe a ">
+                                </div>
+                                <br>
+                                <div class="tittle">
+                                <li><strong>Motorisations</strong> : Essence, diesel, hybride rechargeable</li>
+                                <li><strong>Puissance</strong> : 120 à 218 ch</li>
+                                <li><strong>Transmission</strong> : Manuelle ou automatique</li>
                                 </div>
                             </div>
                         </div>
-
     
     
     
@@ -399,32 +376,25 @@ include ('../barre/barre.php');
                         <div class="content">
                             <h3>T-Roc</h3>
                             <p> à partir de 27 540 € </p>
-                            <a href="#" class="btn" data-bs-toogle="modal" data-bs-target="#T-Roc">Voir plus...</a> <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
+                            <a href="#" class="btn " data-bs-toogle="modal" data-bs-target="#T-Roc">Voir plus...</a> <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
                         </div>
                     </div>
 
 
                     <!-- Modal pour T-ROC -->
-                    <div class="modal fade" id="T-Roc" tabindex="-1" aria-labelledby="modalLabel">
-                            <div class="modal-dialog">
-                                <div class="modal-content text-center">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="modalLabel">T-Roc</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <img src="../../assets/images/Voitures-Volkswagen-T-Roc.jpg"  class="img-fluid rounded">
-                                        <br><br>
-                                        <p class="mt-3 p5">- Diesel (TDI)
-                                                            - 3.0 V6 TDI 231 ch / 286 ch – moteur coupleux et économique (~7L/100 km).
-                                                            <br>- Essence (TSI) 3.0 V6 TSI 340 ch – performances impressionnantes.
-                                                            <br>- Hybride Rechargeable (eHybrid)
-                                                            <br>- 3.0 V6 TSI + moteur électrique – 381 ch / 462 ch (Touareg R PHEV).
-                                                            <br>- Autonomie électrique ~50 km en mode 100% électrique.</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                                    </div>
+                                <div id="T-Roc" class="modal">
+                            <div class="modal-content">
+                                <a href="#" class="close">&times;</a>
+                                <h2>À propos de la T-Roc </h2>
+                                <p> Un SUV compact stylé, pratique en ville comme sur route.</p>
+                                <div class="voiture-cadre">
+                                    <img src="/supercar_project/assets/images/Voitures-Volkswagen-T-Roc.jpg" alt="Mercedes classe a ">
+                                </div>
+                                <br>
+                                <div class="tittle">
+                                <li><strong>Motorisations</strong> : Essence, diesel</li>
+                                <li><strong>Puissance</strong> : 110 à 190 ch</li>
+                                <li><strong>Transmission</strong> : Manuelle ou automatique (DSG)</li>
                                 </div>
                             </div>
                         </div>
@@ -447,30 +417,23 @@ include ('../barre/barre.php');
                         </div>
                     </div>
 
-                    <!-- Modal pour T-ROC -->
-                    <div class="modal fade" id="T-Cross" tabindex="-1" aria-labelledby="modalLabel">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content text-center">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="modalLabel">T-Cross</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <img src="../../assets/images/Voitures-Volkswagen-T-Cross.jpg"  class="img-fluid rounded">
-                                                    <br><br>
-                                                    <p class="mt-3 p5">- Diesel (TDI)
-                                                                        - 3.0 V6 TDI 231 ch / 286 ch – moteur coupleux et économique (~7L/100 km).
-                                                                        <br>- Essence (TSI) 3.0 V6 TSI 340 ch – performances impressionnantes.
-                                                                        <br>- Hybride Rechargeable (eHybrid)
-                                                                        <br>- 3.0 V6 TSI + moteur électrique – 381 ch / 462 ch (Touareg R PHEV).
-                                                                        <br>- Autonomie électrique ~50 km en mode 100% électrique.</p>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <!-- Modal pour T-CRoss -->
+                            <div id="T-Cross" class="modal">
+                        <div class="modal-content">
+                            <a href="#" class="close">&times;</a>
+                            <h2>À propos de la T-Cross</h2>
+                            <p>Un mini SUV urbain, maniable et fun à conduire.</p>
+                            <div class="voiture-cadre">
+                                <img src="/supercar_project/assets/images/Voitures-Volkswagen-T-Cross.jpg" alt="Mercedes classe a ">
+                            </div>
+                            <br>
+                            <div class="tittle">
+                            <li><strong>Motorisations</strong> : Essence</li>
+                            <li><strong>Puissance</strong> : 95 à 115 ch</li>
+                            <li><strong>Transmission</strong> : Manuelle ou automatique</li>
+                            </div>
+                        </div>
+                    </div>
 
          
          
@@ -488,29 +451,22 @@ include ('../barre/barre.php');
                     </div>
 
                     <!-- Modal pour JETTA -->
-                    <div class="modal fade" id="Jetta" tabindex="-1" aria-labelledby="modalLabel">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content text-center">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="modalLabel">Jetta</h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <img src="../../assets/images/Voitures-Volkswagen-Jetta.jpg"  class="img-fluid rounded">
-                                                        <br><br>
-                                                        <p class="mt-3 p5">- Diesel (TDI)
-                                                                            - 3.0 V6 TDI 231 ch / 286 ch – moteur coupleux et économique (~7L/100 km).
-                                                                            <br>- Essence (TSI) 3.0 V6 TSI 340 ch – performances impressionnantes.
-                                                                            <br>- Hybride Rechargeable (eHybrid)
-                                                                            <br>- 3.0 V6 TSI + moteur électrique – 381 ch / 462 ch (Touareg R PHEV).
-                                                                            <br>- Autonomie électrique ~50 km en mode 100% électrique.</p>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div id="Jetta" class="modal">
+                            <div class="modal-content">
+                                <a href="#" class="close">&times;</a>
+                                <h2>À propos de la Jetta </h2>
+                                <p>Une berline classique et sobre, surtout populaire hors Europe.</p>
+                                <div class="voiture-cadre">
+                                    <img src="/supercar_project/assets/images/Voitures-Volkswagen-Jetta.jpg" alt="Mercedes classe a ">
+                                </div>
+                                <br>
+                                <div class="tittle">
+                                <li><strong>Motorisations</strong> :Principalement essence</li>
+                                <li><strong>Puissance</strong> : Environ 110 à 150 ch </li>
+                                <li><strong>Transmission</strong> : Manuelle ou automatique</li>
+                                </div>
+                            </div>
+                        </div>
 
     <br><br>
 

@@ -51,6 +51,9 @@
     <H2 class='H2'> Bienvenue <?php echo $nom ?>.
 
     </h2>
+
+    <hr>
+    <a href="/Supercar_Project/Pages/Clients/connexion/connexion.php" class="btn btn-primary">Se connecter</a>
     </div>
 
 </p>

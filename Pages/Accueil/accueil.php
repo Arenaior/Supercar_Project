@@ -133,7 +133,7 @@ include ('../barre/barre.php');
                         <div class="card-body">
                             <h5 class="card-title">Mercedes</h5>
                             <p>Puissance et élégance réunies.</p>
-                            <a href="#" class="btn btn-dark">Voir les modèles</a>
+                            <a href="../Voiture/mercedes.php" class="btn btn-dark">Voir les modèles</a>
                         </div>
                     </div>
                 </div>
