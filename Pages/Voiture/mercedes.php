@@ -132,7 +132,7 @@ include ('../barre/barre.php');
         <div class="modal-content">
             <a href="#" class="close">&times;</a>
             <h2>À propos de la Mercedes GLC</h2>
-            <p>Le Mercedes GLC est un SUV haut de gamme offrant luxe et performance.Un design audacieux, 
+            <p>Le Mercedes LC est un SUV haut de gamme offrant luxe et performance.Un design audacieux, 
                 une technologie de pointe et des performances incomparables.</p>
                 <div class="voiture-cadre">
                 <img src="../../assets/images/modalglc.jpg" alt="Mercedes classe a ">
