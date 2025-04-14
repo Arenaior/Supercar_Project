@@ -8,11 +8,15 @@
     $Marque =$_POST['Marque'];
     $Modele =$_POST['Modele'];
     $jour =$_POST['Jour'];
+    $Heure =$_POST['Heure'];
+    $Retour =$_POST['Retour'];
+    $Dretour =$_POST['D-Retour'];
 
     
-    $sql = "INSERT INTO Demandes (Nom, Mail, Adresse, Marque, Modele, Jour) 
-        VALUES ('$nom', '$mail', '$Adresse', '$Marque', '$Modele', '$jour')";
-  $result = $bdd->query($sql);?>
+    $sql = "INSERT INTO Demandes (`Nom`, `Mail`, `Adresse`, `Marque`, `Modele`, `Jour`, `Heure de récupération`, `Heure de dépôt`, `Jour de retour`) 
+    VALUES ('$nom', '$mail', '$Adresse', '$Marque', '$Modele', '$jour', '$Heure', '$Retour', '$Dretour')";
+$result = $bdd->query($sql);
+?>
 
 <!DOCTYPE HTML>
 <html lang=fr>
