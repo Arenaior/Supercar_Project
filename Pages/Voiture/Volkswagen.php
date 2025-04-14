@@ -150,130 +150,28 @@ include ('../barre/barre.php');
     </div>
     
     <div class="container">
-        <H2 class="h2">Découvrez nos modèles de Volkswagen</H2>
-    </div> 
-    <hr>
+    <h2 class="h2 text-center">Découvrez nos modèles de Volkswagen</h2>
+</div> 
+<hr>
 
+<div class="container">
+    <div class="row justify-content-center">
 
-    <!--Première ligne de voitures-->
-    <div class="container">
-   
-   <!--GOLF--------------------->
-
-            <!-- Première carte -->
+        <!-- GOLF 8 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
             <div class="car-card">
                 <img src="../../assets/images/Voitures-Volkswagen-Golf8.jpg" alt="Volkswagen">
                 <div class="content">
                     <h3>Golf 8</h3>
                     <p>à partir de 27 000 €</p>
-                    <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Golf8">Voir plus...</a> <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
+                    <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Golf8">Voir plus...</a> 
+                    <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
                 </div>
             </div>
+        </div>
 
-            <!-- Modal pour Golf 8 -->
-                    <div id="Golf8" class="modal">
-                <div class="modal-content">
-                    <a href="#" class="close">&times;</a>
-                    <h2>À propos de la Golf8 </h2>
-                    <p>La Volkswagen Golf 8 allie design moderne, technologies innovantes et plaisir de conduite au quotidien.</p>
-                    <div class="voiture-cadre">
-                        <img src="/supercar_project/assets/images/Voitures-Volkswagen-Golf8.jpg" alt="Mercedes classe a ">
-                    </div>
-                    <br>
-                    <div class="tittle">
-                    <li><strong>Motorisations</strong> : Essence, diesel, hybride</li>
-                    <li><strong>Puissance</strong> : 110 à 320 ch</li>
-                    <li><strong>Transmission</strong> : Manuelle ou automatique (DSG)</li>
-                    </div>
-                </div>
-            </div>
-
-
-
-        <!---TIGUAN---------->
-        
-        <!--Deuxième carte-->
-                <div class="car-card">
-                    <img src="../../assets/images/Voitures-Volkswagen-Tiguan.jpg" alt="Audi">
-                    <div class="content">
-                        <h3>Tiguan R-Line 2020</h3>
-                        <p> à partir de 50.000€</p>
-                        <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Tiguan">Voir plus...</a> <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
-                    </div>
-                </div>
-
-                <!-- Modal pour Tiguan -->
-                            <div id="Tiguan" class="modal">
-                            <div class="modal-content">
-                                <a href="#" class="close">&times;</a>
-                                <h2>À propos de la Tiguan R-Line</h2>
-                                <p>Un SUV dynamique au look sportif et au confort premium.</p>
-                                <div class="voiture-cadre">
-                                    <img src="/supercar_project/assets/images/Voitures-Volkswagen-Tiguan.jpg" alt="Mercedes classe a ">
-                                </div>
-                                <br>
-                                <div class="tittle">
-                                <li><strong>Motorisations</strong> : Essence ou diesel</li>
-                                <li><strong>Puissance</strong> : Environ 150 à 200 ch</li>
-                                <li><strong>Transmission</strong> :  Automatique (DSG), 4Motion disponible</li>
-                                </div>
-                            </div>
-                        </div>
-
-       
-       
-         <!--TAYRON----------->
-                
-                            <!--Troisième carte-->
-                    <div class="car-card">
-                        <img src="../../assets/images/Voitures-Volkswagen-Tayron.jpg" alt="BMW">
-                        <div class="content">
-                            <h3>Volkswagen Tayron</h3>
-                            <p>à partir de 40 800 €</p>
-                            <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Tayron">Voir plus...</a> <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
-                        </div>
-                    </div>
-                </div>
-
-                        <!-- Modal pour Tayron -->
-                                    <div id="Tayron" class="modal">
-                            <div class="modal-content">
-                                <a href="#" class="close">&times;</a>
-                                <h2>À propos de la Volkswagen Tayron</h2>
-                                <p>Un SUV familial au design élégant, réservé à certains marchés comme la Chine.</p>
-                                <div class="voiture-cadre">
-                                    <img src="/supercar_project/assets/images/Voitures-Volkswagen-Tayron.jpg" alt="Mercedes classe a ">
-                                </div>
-                                <br>
-                                <div class="tittle">
-                                <li><strong>Motorisations</strong> : Essence principalement</li>
-                                <li><strong>Puissance</strong> : 150 à 220 ch</li>
-                                <li><strong>Transmission</strong> : Automatique, possible 4 roues motrices</li>
-                                </div>
-                            </div>
-                        </div>
-
-    
-    
-    
-    
-    <!--Deuxième ligne de voitures-->
-    <div class="container">
-
-            <!--POLO------>
-     
-                <!--Première carte-->
-                    <div class="car-card">
-                        <img src="../../assets/images/Voitures-Volkswagen-Polo5.jpg" alt="Volkswagen">
-                        <div class="content">
-                            <h3>Polo5</h3>
-                            <p>prix débutant à 18 015 €</p>
-                            <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Polo">Voir plus...</a> <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
-                        </div>
-                    </div>
-
-                    <!-- Modal pour POLO -->
-                                <div id="Polo" class="modal">
+        <!-- Modal pour GOLF 8 -->
+          <div id="Golf8" class="modal">
                             <div class="modal-content">
                                 <a href="#" class="close">&times;</a>
                                 <h2>À propos de la Polo 5 </h2>
@@ -291,182 +189,184 @@ include ('../barre/barre.php');
                         </div>
 
 
-
-
-
-         <!-----TOUAREG------>
-         
-                 <!--Deuxième carte-->
-                <div class="car-card">
-                    <img src="../../assets/images/Voitures-Volkswagen-Touareg.jpg">
-                    <div class="content">
-                        <h3>Touareg</h3>
-                        <p> à partir de  60 000 €</p>
-                        <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Touareg">Voir plus...</a> <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
-                    </div>
+        <!-- TIGUAN -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
+            <div class="car-card">
+                <img src="../../assets/images/Voitures-Volkswagen-Tiguan.jpg" alt="Tiguan">
+                <div class="content">
+                    <h3>Tiguan R-Line 2020</h3>
+                    <p>à partir de 50 000 €</p>
+                    <a href="#" class="btn">Voir plus...</a>
+                    <a href="#" class="btn-dark">Essayer</a>
                 </div>
+            </div>
+        </div>
 
-                 <!-- Modal pour TOUAREG -->
-                            <div id="Touareg" class="modal">
-                            <div class="modal-content">
-                                <a href="#" class="close">&times;</a>
-                                <h2>À propos de la Touareg </h2>
-                                <p>Un SUV haut de gamme puissant et confortable pour les longs trajets.</p>
-                                <div class="voiture-cadre">
-                                    <img src="/supercar_project/assets/images/Voitures-Volkswagen-Touareg.jpg" alt="Mercedes classe a ">
-                                </div>
-                                <br>
-                                <div class="tittle">
-                                <li><strong>Motorisations</strong> :  Diesel, hybride rechargeable</li>
-                                <li><strong>Puissance</strong> : 231 à 462 ch</li>
-                                <li><strong>Transmission</strong> : Automatique (Tiptronic), transmission intégrale</li>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-
-
-        <!----PASSAT------->
-        
-                    <!--Troisième carte-->
-                    <div class="car-card">
-                        <img src="../../assets/images/Voitures-Volkswagen-Passat.jpg" alt="BMW">
-                        <div class="content">
-                            <h3>Passat</h3>
-                            <p>à partir de  34 030 €</p>
-                            <a class="btn" data-bs-toggle="modal" data-bs-target="#Passat">Voir plus...</a> <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
-                        </div>
-                    </div>
+        <!-- TAYRON -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
+            <div class="car-card">
+                <img src="../../assets/images/Voitures-Volkswagen-Tayron.jpg" alt="Tayron">
+                <div class="content">
+                    <h3>Volkswagen Tayron</h3>
+                    <p>à partir de 40 800 €</p>
+                    <a href="#" class="btn">Voir plus...</a>
+                    <a href="#" class="btn-dark">Essayer</a>
                 </div>
+            </div>
+        </div>
+
+        <!-- Continue avec les autres voitures ici de la même façon -->
+
+    </div>
+</div>
 
 
-
-                        <!-- Modal pour PASSAT -->
-                                    <div id="Passat" class="modal">
-                            <div class="modal-content">
-                                <a href="#" class="close">&times;</a>
-                                <h2>À propos de la Passat </h2>
-                                <p>Une grande berline élégante et idéale pour les trajets professionnels.</p>
-                                <div class="voiture-cadre">
-                                    <img src="/supercar_project/assets/images/Voitures-Volkswagen-Passat.jpg" alt="Mercedes classe a ">
-                                </div>
-                                <br>
-                                <div class="tittle">
-                                <li><strong>Motorisations</strong> : Essence, diesel, hybride rechargeable</li>
-                                <li><strong>Puissance</strong> : 120 à 218 ch</li>
-                                <li><strong>Transmission</strong> : Manuelle ou automatique</li>
-                                </div>
-                            </div>
-                        </div>
     
     
     
     
-                        <!-- Troisième ligne de voitures -->
+    <!--Deuxième ligne de voitures-->
     <div class="container">
-        
-       <!--T-ROC----->
-       
-            <!--Première carte-->    
-                    <div class="car-card">
-                        <img src="../../assets/images/Voitures-Volkswagen-T-Roc.jpg" alt="Volkswagen">
-                        <div class="content">
-                            <h3>T-Roc</h3>
-                            <p> à partir de 27 540 € </p>
-                            <a href="#" class="btn " data-bs-toogle="modal" data-bs-target="#T-Roc">Voir plus...</a> <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
-                        </div>
-                    </div>
+    <div class="row justify-content-center">
 
+        <!-- POLO 5 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
+            <div class="car-card">
+                <img src="../../assets/images/Voitures-Volkswagen-Polo5.jpg" alt="Volkswagen Polo5">
+                <div class="content">
+                    <h3>Polo5</h3>
+                    <p>prix débutant à 18 015 €</p>
+                    <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Polo">Voir plus...</a>
+                    <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
+                </div>
+            </div>
+        </div>
 
-                    <!-- Modal pour T-ROC -->
-                                <div id="T-Roc" class="modal">
-                            <div class="modal-content">
-                                <a href="#" class="close">&times;</a>
-                                <h2>À propos de la T-Roc </h2>
-                                <p> Un SUV compact stylé, pratique en ville comme sur route.</p>
-                                <div class="voiture-cadre">
-                                    <img src="/supercar_project/assets/images/Voitures-Volkswagen-T-Roc.jpg" alt="Mercedes classe a ">
-                                </div>
-                                <br>
-                                <div class="tittle">
-                                <li><strong>Motorisations</strong> : Essence, diesel</li>
-                                <li><strong>Puissance</strong> : 110 à 190 ch</li>
-                                <li><strong>Transmission</strong> : Manuelle ou automatique (DSG)</li>
-                                </div>
-                            </div>
-                        </div>
+        <!-- TOUAREG -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
+            <div class="car-card">
+                <img src="../../assets/images/Voitures-Volkswagen-Touareg.jpg" alt="Volkswagen Touareg">
+                <div class="content">
+                    <h3>Touareg</h3>
+                    <p>à partir de 60 000 €</p>
+                    <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Touareg">Voir plus...</a>
+                    <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
+                </div>
+            </div>
+        </div>
 
+        <!-- PASSAT -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
+            <div class="car-card">
+                <img src="../../assets/images/Voitures-Volkswagen-Passat.jpg" alt="Volkswagen Passat">
+                <div class="content">
+                    <h3>Passat</h3>
+                    <p>à partir de 34 030 €</p>
+                    <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Passat">Voir plus...</a>
+                    <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
+                </div>
+            </div>
+        </div>
 
+    </div>
+</div>
+</div>
+    
+    
+    
+    
+<!-- Troisième ligne de voitures -->
+<div class="container">
 
+<!-- T-ROC -->
+<div class="car-card">
+    <img src="../../assets/images/Voitures-Volkswagen-T-Roc.jpg" alt="Volkswagen T-Roc">
+    <div class="content">
+        <h3>T-Roc</h3>
+        <p>À partir de 27 540 €</p>
+        <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#T-Roc">Voir plus...</a>
+        <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
+    </div>
+</div>
 
+<!-- Modal T-Roc -->
+<div id="T-Roc" class="modal">
+    <div class="modal-content">
+        <a href="#" class="close">&times;</a>
+        <h2>À propos de la T-Roc</h2>
+        <p>Un SUV compact stylé, pratique en ville comme sur route.</p>
+        <div class="voiture-cadre">
+            <img src="/supercar_project/assets/images/Voitures-Volkswagen-T-Roc.jpg" alt="Volkswagen T-Roc">
+        </div>
+        <br>
+        <div class="tittle">
+            <li><strong>Motorisations</strong> : Essence, diesel</li>
+            <li><strong>Puissance</strong> : 110 à 190 ch</li>
+            <li><strong>Transmission</strong> : Manuelle ou automatique (DSG)</li>
+        </div>
+    </div>
+</div>
 
+<!-- T-CROSS -->
+<div class="car-card">
+    <img src="../../assets/images/Voitures-Volkswagen-T-Cross.jpg" alt="Volkswagen T-Cross">
+    <div class="content">
+        <h3>T-Cross</h3>
+        <p>À partir de 24 000 €</p>
+        <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#T-Cross">Voir plus...</a>
+        <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
+    </div>
+</div>
 
+<!-- Modal T-Cross -->
+<div id="T-Cross" class="modal">
+    <div class="modal-content">
+        <a href="#" class="close">&times;</a>
+        <h2>À propos de la T-Cross</h2>
+        <p>Un mini SUV urbain, maniable et fun à conduire.</p>
+        <div class="voiture-cadre">
+            <img src="/supercar_project/assets/images/Voitures-Volkswagen-T-Cross.jpg" alt="Volkswagen T-Cross">
+        </div>
+        <br>
+        <div class="tittle">
+            <li><strong>Motorisations</strong> : Essence</li>
+            <li><strong>Puissance</strong> : 95 à 115 ch</li>
+            <li><strong>Transmission</strong> : Manuelle ou automatique</li>
+        </div>
+    </div>
+</div>
 
-         <!---T-CROSS----->
-         
-                    <!--Deuxième carte-->
-                    <div class="car-card">
-                        <img src="../../assets/images/Voitures-Volkswagen-T-Cross.jpg" alt="Audi">
-                        <div class="content">
-                            <h3>T-Cross</h3>
-                            <p> à partir de  24 000 €</p>
-                            <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#T-Cross">Voir plus...</a> <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
-                        </div>
-                    </div>
+<!-- JETTA -->
+<div class="car-card">
+    <img src="../../assets/images/Voitures-Volkswagen-Jetta.jpg" alt="Volkswagen Jetta">
+    <div class="content">
+        <h3>Jetta</h3>
+        <p>À partir de 12 030 €</p>
+        <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Jetta">Voir plus...</a>
+        <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
+    </div>
+</div>
 
-                    <!-- Modal pour T-CRoss -->
-                            <div id="T-Cross" class="modal">
-                        <div class="modal-content">
-                            <a href="#" class="close">&times;</a>
-                            <h2>À propos de la T-Cross</h2>
-                            <p>Un mini SUV urbain, maniable et fun à conduire.</p>
-                            <div class="voiture-cadre">
-                                <img src="/supercar_project/assets/images/Voitures-Volkswagen-T-Cross.jpg" alt="Mercedes classe a ">
-                            </div>
-                            <br>
-                            <div class="tittle">
-                            <li><strong>Motorisations</strong> : Essence</li>
-                            <li><strong>Puissance</strong> : 95 à 115 ch</li>
-                            <li><strong>Transmission</strong> : Manuelle ou automatique</li>
-                            </div>
-                        </div>
-                    </div>
+</div> <!-- fin du .container -->
 
-         
-         
-        <!---JETTA-------->
-        
-                        <!--Troisième carte-->
-                        <div class="car-card">
-                            <img src="../../assets/images/Voitures-Volkswagen-Jetta.jpg" alt="BMW">
-                            <div class="content">
-                                <h3>Jetta</h3>
-                                <p>à partir de  12 030 €</p>
-                                <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Jetta">Voir plus...</a> <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
-                            </div>
-                        </div>
-                    </div>
+<!-- Modal Jetta -->
+<div id="Jetta" class="modal">
+<div class="modal-content">
+    <a href="#" class="close">&times;</a>
+    <h2>À propos de la Jetta</h2>
+    <p>Une berline classique et sobre, surtout populaire hors Europe.</p>
+    <div class="voiture-cadre">
+        <img src="/supercar_project/assets/images/Voitures-Volkswagen-Jetta.jpg" alt="Volkswagen Jetta">
+    </div>
+    <br>
+    <div class="tittle">
+        <li><strong>Motorisations</strong> : Principalement essence</li>
+        <li><strong>Puissance</strong> : Environ 110 à 150 ch</li>
+        <li><strong>Transmission</strong> : Manuelle ou automatique</li>
+    </div>
+</div>
+</div>
 
-                    <!-- Modal pour JETTA -->
-                                <div id="Jetta" class="modal">
-                            <div class="modal-content">
-                                <a href="#" class="close">&times;</a>
-                                <h2>À propos de la Jetta </h2>
-                                <p>Une berline classique et sobre, surtout populaire hors Europe.</p>
-                                <div class="voiture-cadre">
-                                    <img src="/supercar_project/assets/images/Voitures-Volkswagen-Jetta.jpg" alt="Mercedes classe a ">
-                                </div>
-                                <br>
-                                <div class="tittle">
-                                <li><strong>Motorisations</strong> :Principalement essence</li>
-                                <li><strong>Puissance</strong> : Environ 110 à 150 ch </li>
-                                <li><strong>Transmission</strong> : Manuelle ou automatique</li>
-                                </div>
-                            </div>
-                        </div>
 
     <br><br>
 
