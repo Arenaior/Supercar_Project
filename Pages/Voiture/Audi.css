@@ -1,3 +1,4 @@
+
 header {
     height: 800px;
     padding: 20px 0; 
@@ -7,7 +8,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../../assets/images/mercofond1.png');
+    background-image: url('../../assets/images/Illustration.avif');
     
     background-size: cover;
     background-position: center;
@@ -99,7 +100,7 @@ header .Header {
 .button:hover {
     background-color: #555;
 }
-.tittle {
+.specif {
     font-size: 20px; /* Agrandir le texte */
     font-weight: 500; /* Rendre le texte plus classe */
     font-family: "Arial", sans-serif; /* Changer la police pour plus d’élégance */
@@ -110,14 +111,14 @@ header .Header {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
 }
 
-.tittle li {
+.specif li {
     margin-bottom: 10px; 
     list-style: none; 
     position: relative;
     padding-left: 25px; 
 }
 
-.tittle li::before {
+.specif li::before {
     content: "✓"; 
     color: #007bff; 
     font-size: 22px;
@@ -131,12 +132,12 @@ header .Header {
     
 /* Style du modal (invisible par défaut) */
 .modal {
-    display: none; /* caché par défaut */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
-    width: 350px
-    height:350px
+    width: 350px;
+    height:350px;
     background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
 }
@@ -144,29 +145,20 @@ header .Header {
 .modal-content {
     background: white;
     padding: 20px;
-    width: 300px; /* taille fixe ou utilise max-width si tu veux responsive */
-    max-width: 70%;
+    width: 50%;
+    margin: 10% auto;
     border-radius: 10px;
     position: relative;
-    text-align: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-.voiture-Cadre img {
-    max-width: 500px;
-    height: 300px;
-    border-radius: 10px;
 }
 
 .close {
     position: absolute;
     top: 10px;
-    right: 15px;
-    font-size: 24px;
-    font-weight: bold;
+    right: 20px;
+    font-size: 20px;
     text-decoration: none;
     color: black;
 }
-
 
 /* Afficher le modal lorsque ciblé */
 #modal-c63:target,
