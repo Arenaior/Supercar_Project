@@ -51,6 +51,9 @@ echo "<th> Adresse</th>";
 echo "<th> Marque</th>";
 echo "<th> Modele</th>";
 echo "<th> Jour</th>";
+echo "<th> Heure de récupération</th>";
+echo "<th> Heure de dépôt</th>";
+echo "<th> Jour de retour</th>";
 echo "</tr>";
 
 while ($row = mysqli_fetch_assoc($curseur)) {
@@ -61,6 +64,9 @@ while ($row = mysqli_fetch_assoc($curseur)) {
     $Marque = $row["Marque"];
     $Modele = $row["Modele"];
     $Jour = $row["Jour"];
+    $Heure = $row["Heure de récupération"];
+    $Retour = $row["Heure de dépôt"];
+    $Dretour = $row["Jour de retour"];
 
     echo "<tr>";
     echo "<td>$id</td>";
@@ -70,6 +76,9 @@ while ($row = mysqli_fetch_assoc($curseur)) {
     echo "<td>$Marque</td>";
     echo "<td>$Modele</td>";
     echo "<td>$Jour</td>";
+    echo "<td>$Heure</td>";
+    echo "<td>$Retour</td>";
+    echo "<td>$Dretour</td>";
     echo "</tr>";
 }
 
