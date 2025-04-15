@@ -72,7 +72,7 @@
             <a href="" alt="facebook" title="facebook" class="logofacebook"><i class="fa-brands fa-facebook"></i></a>
             <a href="" alt="instagram" title="instagram" class="logoinstagram"><i class="fa-brands fa-instagram"></i></a>
             <a href="" alt="whatsapp" title="whatsapp" class="logowhatsapp"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="" alt="mail" title="mail" class="logoemail"><i class="fa-regular fa-envelope"></i></a>
+            <a href="" alt="mail" title="email" class="logoemail"><i class="fa-regular fa-envelope"></i></a>
         </div>
     </div> 
     
