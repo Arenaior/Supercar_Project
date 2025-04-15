@@ -116,7 +116,7 @@ include ('../barre/barre.php');
             <a href="#" class="close">&times;</a>
             <h2>À propos de la Mercedes Classe A </h2>
             <p>La Mercedes Classe A est une berline compacte haut de gamme qui allie élégance, innovation et performances.</p>
-            <div class="voiture-cadre">
+            <div class="voiture-Cadre">
                 <img src="../../assets/images/modalclassea.jpg" alt="Mercedes classe a ">
             </div>
             <br>
@@ -132,9 +132,9 @@ include ('../barre/barre.php');
         <div class="modal-content">
             <a href="#" class="close">&times;</a>
             <h2>À propos de la Mercedes GLC</h2>
-            <p>Le Mercedes LC est un SUV haut de gamme offrant luxe et performance.Un design audacieux, 
+            <p>Le Mercedes GLC est un SUV haut de gamme offrant luxe et performance.Un design audacieux, 
                 une technologie de pointe et des performances incomparables.</p>
-                <div class="voiture-cadre">
+                <div class="voiture-Cadre">
                 <img src="../../assets/images/modalglc.jpg" alt="Mercedes classe a ">
             </div>
             <br>

@@ -131,7 +131,7 @@ include ("../barre/barre.php");
             <p clase="p1"> SuperCar est une entreprise innovante située à Ébène, Maurice, spécialisée dans la vente et la location de voitures haut de gamme. Avec un service client exceptionnel et une flotte de véhicules de luxe, SuperCar s'engage à offrir une expérience unique à ses clients, alliant performance, élégance et confort.</p>
             <br>
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2759.351178474387!2d57.48817801165706!3d-20.244420722809444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2smu!4v1734848647885!5m2!1sfr!2smu" 
-                width="350" height="200" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade">
+                width="660" height="400" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade">
   </iframe>
             </div>
 
