@@ -6,7 +6,7 @@ $host="localhost";
 // nom utilisateur
 $login="root";
 // mot de passe
-$pass="root";
+$pass="";
 // nom de la base de données
 $dbname="Supercar";
 // créer la connexion avec la base de données
