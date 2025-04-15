@@ -73,7 +73,7 @@ include ('../barre/barre.php');
                 <div class="voiture-titre">Mercedes Maybach S-class</div>
                 <div class="voiture-titre">Á partir de 267.186€</div>
                 <div class="voiture-button">
-                    <a href="modal-maybach" class="btn btn-dark">Voir plus...</a>
+                    <a href="#modal-maybach" class="btn btn-dark">Voir plus...</a>
                     <a href="../Clients/connexion/connexion.php"class="btn btn-dark">Essayer</a>
                 </div>
             </div>
@@ -82,7 +82,7 @@ include ('../barre/barre.php');
                 <div class="voiture-titre">Mercedes GLS</div>
                 <div class="voiture-titre">Á partir de 126.250€</div>
                 <div class="voiture-button">
-                    <a href="modal-gls" class="btn btn-dark">Voir plus...</a>
+                    <a href="#modal-gls" class="btn btn-dark">Voir plus...</a>
                     <a href="../Clients/connexion/connexion.php"class="btn btn-dark">Essayer</a>
                 </div>
             </div>
@@ -91,7 +91,7 @@ include ('../barre/barre.php');
                 <div class="voiture-titre">Mercedes Mansory S580</div>
                 <div class="voiture-titre">Á partir de 210.000€</div>
                 <div class="voiture-button">
-                    <a href="modal-mansory" class="btn btn-dark">Voir plus...</a>
+                    <a href="#modal-mansory" class="btn btn-dark">Voir plus...</a>
                     <a href="../Clients/connexion/connexion.php"class="btn btn-dark">Essayer</a>
                 </div>
             </div>
@@ -100,7 +100,7 @@ include ('../barre/barre.php');
                 <div class="voiture-titre">Mercedes GLE</div>
                 <div class="voiture-titre">Á partir de 105.550€</div>
                 <div class="voiture-button">
-                    <a href="modal-gle" class="btn btn-dark">Voir plus...</a>
+                    <a href="#modal-gle" class="btn btn-dark">Voir plus...</a>
                     <a href="../Clients/connexion/connexion.php"class="btn btn-dark">Essayer</a>
                 </div>
             </div>
@@ -132,7 +132,7 @@ include ('../barre/barre.php');
         <div class="modal-content">
             <a href="#" class="close">&times;</a>
             <h2>À propos de la Mercedes GLC</h2>
-            <p>Le Mercedes GLC est un SUV haut de gamme offrant luxe et performance.Un design audacieux, 
+            <p>Le Mercedes LC est un SUV haut de gamme offrant luxe et performance.Un design audacieux, 
                 une technologie de pointe et des performances incomparables.</p>
                 <div class="voiture-cadre">
                 <img src="../../assets/images/modalglc.jpg" alt="Mercedes classe a ">

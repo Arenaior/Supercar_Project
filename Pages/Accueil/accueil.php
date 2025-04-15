@@ -110,7 +110,7 @@ include ('../barre/barre.php');
 
     <div class="hero">
         <img src="../../assets/images/Accueil-Range.jpg" alt="Voiture de luxe">
-        <h1>Roulez avec classe.</h1>
+        <h1>Une nouvelle dimension de la conduite.</h1>
     </div>
 
 

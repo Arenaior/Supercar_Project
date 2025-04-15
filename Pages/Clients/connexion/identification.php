@@ -81,6 +81,16 @@
             <div class="mb-3">
                 <input type="text" class="form-control" placeholder="Date d'essai" name="Jour">
             </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Heure" name="Heure">
+            </div>
+
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Date de retour" name="D-Retour">
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Heure Retour" name="Retour">
+            </div>
             <button type="submit" class="btn btn-primary">Envoyer</button>
             <a class="btn btn-secondary" href="identification.php">Retour</a>
         </form>
