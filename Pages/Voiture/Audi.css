@@ -8,7 +8,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../../assets/images/mercofond1.png');
+    background-image: url('../../assets/images/Illustration.avif');
     
     background-size: cover;
     background-position: center;
@@ -100,7 +100,7 @@ header .Header {
 .button:hover {
     background-color: #555;
 }
-.tittle {
+.specif {
     font-size: 20px; /* Agrandir le texte */
     font-weight: 500; /* Rendre le texte plus classe */
     font-family: "Arial", sans-serif; /* Changer la police pour plus d’élégance */
@@ -111,14 +111,14 @@ header .Header {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
 }
 
-.tittle li {
+.specif li {
     margin-bottom: 10px; 
     list-style: none; 
     position: relative;
     padding-left: 25px; 
 }
 
-.tittle li::before {
+.specif li::before {
     content: "✓"; 
     color: #007bff; 
     font-size: 22px;
@@ -137,7 +137,7 @@ header .Header {
     top: 0;
     left: 0;
     width: 350px;
-    height: 350px;
+    height:350px;
     background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
 }
