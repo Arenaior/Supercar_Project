@@ -62,7 +62,7 @@
     <h4 class="h4"> VOITURES </h4>
     <a href="/supercar_project/Pages/Admin/Admin-AjouterVoiture-Formulaire.php">Ajouter une voiture</a>
     <a href="/supercar_project/Pages/Admin/Admin-VoirVoitures.php">Voir les voiture</a>
-    <a href="#">Supprimer une voiture</a>
+    <a href="/supercar_project/Pages/Admin/Admin-SupprimerVoiture-Formulaire.php">Supprimer une voiture</a>
   </nav>
 
   
