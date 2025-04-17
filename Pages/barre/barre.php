@@ -12,6 +12,9 @@
     width:25px;
     margin-left:-25px;
   }
+  .nom{
+    color: #ddd;
+  }
   </style>
 </head>
 
@@ -41,18 +44,65 @@
         </li>
 
         <li class="nav-item mx-3">
-          <a class="nav-link text-white" href="/supercar_project/Pages/Clients/connexion/connexion.php">Demande d'essai</a>
+          <a class="nav-link text-white" href="/supercar_project/Pages/connexion/pageconnexion.php">Demande d'essai</a>
         </li>
         <li class="nav-item mx-3">
           <a class="nav-link text-white" href="/supercar_project/Pages/Contacts/commentaire.php">Contactez-Nous</a>
         </li>
       </ul>
 
-      <a href="/supercar_project/Pages/Clients/connexion/connexion.php"> <img src="/supercar_project/assets/images/barre-personne.png" class="img1 mx-5"> </a>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Rechercher</button>
-      </form>
+
+      <div class="user-info" style="float: right; margin-right: 20px;">
+    <?php
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();  // Démarre la session si elle n'est pas déjà démarrée
+    }
+
+    // Vérifie si les données de l'utilisateur sont présentes dans la session
+    if (isset($_SESSION['prenom']) && isset($_SESSION['nom'])) {
+        // Récupère les initiales de l'utilisateur
+        $initiales = strtoupper(substr($_SESSION['prenom'], 0, 1) . substr($_SESSION['nom'], 0, 1));
+    ?>
+        <div style="display: flex; align-items: center;">
+            <!-- Affiche les initiales de l'utilisateur -->
+            <div style="
+                background-color: #ddd;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                margin-right: 10px;
+            ">
+                <?php echo $initiales; ?>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <!-- Affiche le prénom de l'utilisateur -->
+                <span class="nom">Bonjour, <?php echo htmlspecialchars($_SESSION['prenom']); ?></span>
+                <!-- Lien pour se déconnecter -->
+                <a href="/supercar_project/Pages/connexion/deconnection.php" style="font-size: 12px; color: red; text-decoration: none; margin-top: 2px;">
+                    Se déconnecter
+                </a>
+            </div>
+        </div>
+    <?php } else { ?>
+        <!-- Affiche le bouton de connexion si l'utilisateur n'est pas connecté -->
+        <a href="/supercar_project/Pages/connexion/pageconnexion.php">
+            <img src="/supercar_project/assets/images/barre-personne.png"
+                 class="img1 mx-5"
+                 alt="Connexion"
+                 style="width: 40px; height: 40px;">
+        </a>
+    <?php } ?>
+</div>
+
+
+
+
+
+      
     </div>
   </div>
 </nav>

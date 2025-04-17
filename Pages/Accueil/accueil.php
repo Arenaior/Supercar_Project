@@ -206,7 +206,7 @@ include ('../barre/barre.php');
         <div class="col-md-4 gonflement">
             <div class="card position-relative">
                 <img src="../../assets/images/Accueil-Demande.jpg" class="card-img-top">
-                <a href="../Clients/connexion/connexion.php" class="lien">Demande d'essai-></a>
+                <a href="../connexion/pageconnexion.php" class="lien">Demande d'essai-></a>
             </div>
         </div>
     </div>

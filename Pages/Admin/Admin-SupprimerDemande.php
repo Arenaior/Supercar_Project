@@ -1,7 +1,7 @@
 
   <?php 
   include("Admin-Navbar.php");
-  include("bdconnect.php");
+  include("../requetedb/bdconnect.php");
   ?>
 
   

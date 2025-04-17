@@ -1,7 +1,7 @@
 <?php
 
 include ("../barre/barre.php");
-    include ("bdconnect.php");
+    include ("../requetedb/bdconnect.php");
 
     $nom     =$_POST["nom"];
     $prénom   =$_POST["prénom"];

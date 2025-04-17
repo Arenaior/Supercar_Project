@@ -135,8 +135,8 @@ header .Header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 350px
-    height:350px
+    width: 350px;
+    height:350px;
     background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
 }

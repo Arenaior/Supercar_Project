@@ -145,23 +145,33 @@ header .Header {
 .modal-content {
     background: white;
     padding: 20px;
-    width: 50%;
-    margin: 10% auto;
+    width: 300px; /* taille fixe ou utilise max-width si tu veux responsive */
+    max-width: 70%;
     border-radius: 10px;
     position: relative;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
+
+.voiture-cadre img {
+    max-width: 500px;
+    height: 300px;
+    border-radius: 10px;
+}
+
 
 .close {
     position: absolute;
     top: 10px;
-    right: 20px;
-    font-size: 20px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
     text-decoration: none;
     color: black;
 }
 
 /* Afficher le modal lorsque ciblé */
-#modal-c63:target,
+#modal-rsq8:target,
 #modal-glc:target,
 #modal-classeg:target,
 #modal-amg:target {

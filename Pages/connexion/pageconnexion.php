@@ -1,5 +1,5 @@
 <?php
-include ("../../barre/barre.php");
+include ("../barre/barre.php");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -31,7 +31,7 @@ include ("../../barre/barre.php");
     <br><br>
     <center>
         <form action="identification.php" method="POST">
-            <input type="mail" class="form-control données" placeholder="Entrez votre adresse mail" name='mail'>
+            <input type="mail" class="form-control données" placeholder="Entrez votre adresse mail" name='email'>
             <br>
             <input type="password" class="form-control données" placeholder="Entrez votre mot de passe" name="mdp">
             <br>
@@ -40,7 +40,7 @@ include ("../../barre/barre.php");
             <button type="submit" class="btn btn-dark">Connexion</button>
             
 
-            <br><br> <br>Vous n'avez pas encore un compte ? <a href="../inscription/formulaire.php"> Inscription </a>
+            <br><br> <br>Vous n'avez pas encore un compte ? <a href="../inscription/formulaireinscription.php"> Inscription </a>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

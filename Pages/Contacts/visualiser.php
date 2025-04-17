@@ -6,7 +6,7 @@
 </head>
 <body>
 <?php
-include ("bdconnect.php");
+include ("../requetedb/bdconnect.php");
 
 $sql= "select * from Contacts"; $curseur = mysqli_query($bdd,$sql);
 echo ("<H2>Visualiser mes contacts!</H2>"); 

@@ -1,13 +1,46 @@
 <?php
+session_start();
+include("../../requetedb/bdconnect.php");
+include("../barre/barre.php");
 
-    include ("../requetedb/../requetedb/bdconnect.php");
-    include ("../barre/barre.php");
-    $mdp= $_POST['mdp'];
-    $mail=$_POST['mail'];
+if (!empty($_POST['email']) && !empty($_POST['mdp'])) {
+    $mail = $_POST['email'];
+    $mdp = $_POST['mdp'];
 
-    
-    $sql= "SELECT * FROM Client WHERE Mail='$mail' AND Mdp='$mdp' ";
-  $result = $bdd->query($sql);?>
+    $requete = $bdd->prepare("SELECT * FROM client WHERE adresse_email = ?");
+    $requete->execute([$mail]);        
+    $utilisateur = $requete->fetch(PDO::FETCH_ASSOC);
+
+    if ($utilisateur) {
+        // Vérification du mot de passe
+        if ($mdp == $utilisateur['mot_de_passe']) {
+            // Connexion réussie
+            $_SESSION['email'] = $utilisateur['adresse_email'];
+            $_SESSION['nom'] = $utilisateur['nom'];
+            $_SESSION['prenom'] = $utilisateur['prenom'];
+            $_SESSION['telephone'] = $utilisateur['telephone'];
+            
+            header("Location: page_bienvenue.php"); // Redirection vers la page de bienvenue après la connexion
+            exit();
+        } else {
+            // Mot de passe incorrect
+            echo "<div class='container text-center mt-5'>
+                    <h1 class='H1'>Mot de passe incorrect.</h1>
+                    <a href='pageconnexion.php' class='H2'><u>Veuillez réessayer</u></a>
+                  </div><hr>";
+        }
+    } else {
+        echo "<div class='container text-center mt-5'>
+                <h1 class='H1'>Utilisateur inexistant.</h1>
+                <a href='pageconnexion.php' class='H2'><u>Retour</u></a>
+              </div><hr>";
+    }
+} else {
+    echo "Veuillez remplir le formulaire.";
+}
+?>
+
+
 
 <!DOCTYPE HTML>
 <html lang=fr>
@@ -45,12 +78,9 @@
         </style>
 
 
-    <?php if ($result->num_rows === 1) :?>
+ 
 
-        <div class="container text-center mt-5">
-              <H1 class='H1'> Bienvenue  <?php echo  $mail;?> ! </H1> 
-
-              <hr>
+        
          
          <div class="container mt-5">
     <h1 class="h4 text-center mb-4">Veuillez remplir ce formulaire pour finaliser votre demande d'essai</h1>
@@ -100,25 +130,5 @@
 
     </div>
     
-    
-    
-    
-    <!----CONDITION ELSE----->
-        <?php else : ?>
-            <div class="container text-center mt-5">
-                <H1 class='H1'> Nom d'utilisateur ou mot de passe incorrect.</H1>
-        <br> <a href='pageconnexion.php' class='H2'><u>Veuillez réessayer</u> </a>
-        </div>
-        <hr>
-        
-         <?php endif; ?>
-
-        
-
-<?php $bdd->close(); ?>
-
 </body>
 </html>
-
-
-
