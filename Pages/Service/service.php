@@ -68,7 +68,7 @@ include ('../barre/barre.php');
         <div class="container3">
             <img src="../../assets/images/essaie.png">
         </div>
-        <p class="type">COACHING D'ACHAT AUTOMOBILE </p>
+        <center><p class="type">COACHING D'ACHAT AUTOMOBILE </p></center>
         <p class="description">
             "Faites le bon choix sans stress ! 
             Bénéficiez d’un accompagnement personnalisé par nos experts pour trouver la voiture idéale, négocier le meilleur prix et éviter les pièges courants"
@@ -104,7 +104,7 @@ include ('../barre/barre.php');
     <div class="promo-box">
         <div class="promo">15% DE RÉDUCTION</div>
         <p class="instruction">OFFRE SPECIALE POUR LES NOUVEAUX MEMBRES</p>
-        <a href="../Voiture/Voiture-Accueil.php" class="bouton">Réserver des maintenant</a>
+        <a href="../Voiture/Voiture-Accueil.php" class="bouton">S'inscrire</a>
     </div>
 </div>
 

@@ -110,7 +110,7 @@ include ('../barre/barre.php');
 
     <div class="hero">
         <img src="../../assets/images/Accueil-Range.jpg" alt="Voiture de luxe">
-        <h1>Une nouvelle dimension de la conduite.</h1>
+        <h1>Une nouvelle dimension de la conduite</h1>
     </div>
 
 
@@ -172,7 +172,7 @@ include ('../barre/barre.php');
     </div>
     <div class="carousel-item">
       <img src="../../assets/images/Accueil-MercedesAMG.jpg" class="d-block w-100 img-caroussel">
-      <a href="#" class="btn btn-outline-light Voir">Voir le modèle</a>
+      <a href="../Voiture/mercedes.php" class="btn btn-outline-light Voir">Voir le modèle</a>
     </div>
     <div class="carousel-item">
       <img src="../../assets/images/Accueil-Audi4.jpg" class="d-block w-100 img-caroussel" alt="Image 3">
@@ -200,13 +200,13 @@ include ('../barre/barre.php');
         <div class="col-md-4 gonflement">
             <div class="card position-relative">
                 <img src="../../assets/images/Accueil-Services.jpg" class="card-img-top">
-                <a href="#" class="lien">Services-></a>
+                <a href="../service/service.php" class="lien">Services-></a>
             </div>
         </div>
         <div class="col-md-4 gonflement">
             <div class="card position-relative">
                 <img src="../../assets/images/Accueil-Demande.jpg" class="card-img-top">
-                <a href="#" class="lien">Demande d'essai-></a>
+                <a href="../connexion/pageconnexion.php" class="lien">Demande d'essai-></a>
             </div>
         </div>
     </div>

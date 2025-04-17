@@ -1,5 +1,10 @@
 <?php 
+session_start();
 include ('../barre/barre.php');
+$prenom = htmlspecialchars($_SESSION['prenom']);
+$nom = htmlspecialchars($_SESSION['nom']);
+$telephone = htmlspecialchars($_SESSION['telephone']);
+$mail = htmlspecialchars($_SESSION['email']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +40,7 @@ include ('../barre/barre.php');
                 <div class="voiture-titre">Á partir de 39.250€</div>
                 <div class="voiture-button">
                     <a href="#modal-c63" class="btn btn-dark">Voir plus...</a>
-                    <a href="../Clients/connexion/connexion.php"class="btn btn-dark">Essayer</a>
+                    <a href="../connexion/pageconnexion.php"class="btn btn-dark">Essayer</a>
                 </div>
             </div>
             <div class="voiture-cadre">
@@ -44,7 +49,7 @@ include ('../barre/barre.php');
                 <div class="voiture-titre">Á partir de 65.000€</div>
                 <div class="voiture-button">
                     <a href="#modal-glc" class="btn btn-dark">Voir plus...</a>
-                    <a href="../Clients/connexion/connexion.php"class="btn btn-dark">Essayer</a>
+                    <a href="../connexion/pageconnexion.php"class="btn btn-dark">Essayer</a>
                 </div>
             </div>
             <div class="voiture-cadre">
@@ -53,7 +58,7 @@ include ('../barre/barre.php');
                 <div class="voiture-titre">Á partir de 77.842€</div>
                 <div class="voiture-button">
                     <a href="#modal-classeg" class="btn btn-dark">Voir plus...</a>
-                    <a href="../Clients/connexion/connexion.php"class="btn btn-dark">Essayer</a>
+                    <a href="../connexion/pageconnexion.php"class="btn btn-dark">Essayer</a>
                 </div>
             </div>
             <div class="voiture-cadre">
@@ -62,7 +67,7 @@ include ('../barre/barre.php');
                 <div class="voiture-titre">Á partir de 121.150€</div>
                 <div class="voiture-button">
                     <a href="#modal-amg" class="btn btn-dark">Voir plus...</a>
-                    <a href="../Clients/connexion/connexion.php"class="btn btn-dark">Essayer</a>
+                    <a href="../connexion/pageconnexion.php"class="btn btn-dark">Essayer</a>
                 </div>
             </div>
         </div>
@@ -74,7 +79,7 @@ include ('../barre/barre.php');
                 <div class="voiture-titre">Á partir de 267.186€</div>
                 <div class="voiture-button">
                     <a href="#modal-maybach" class="btn btn-dark">Voir plus...</a>
-                    <a href="../Clients/connexion/connexion.php"class="btn btn-dark">Essayer</a>
+                    <a href="../connexion/pageconnexion.php"class="btn btn-dark">Essayer</a>
                 </div>
             </div>
             <div class="voiture-cadre">
@@ -83,7 +88,7 @@ include ('../barre/barre.php');
                 <div class="voiture-titre">Á partir de 126.250€</div>
                 <div class="voiture-button">
                     <a href="#modal-gls" class="btn btn-dark">Voir plus...</a>
-                    <a href="../Clients/connexion/connexion.php"class="btn btn-dark">Essayer</a>
+                    <a href="../connexion/pageconnexion.php"class="btn btn-dark">Essayer</a>
                 </div>
             </div>
             <div class="voiture-cadre">
@@ -92,7 +97,7 @@ include ('../barre/barre.php');
                 <div class="voiture-titre">Á partir de 210.000€</div>
                 <div class="voiture-button">
                     <a href="#modal-mansory" class="btn btn-dark">Voir plus...</a>
-                    <a href="../Clients/connexion/connexion.php"class="btn btn-dark">Essayer</a>
+                    <a href="../connexion/pageconnexion.php"class="btn btn-dark">Essayer</a>
                 </div>
             </div>
             <div class="voiture-cadre">
@@ -101,7 +106,7 @@ include ('../barre/barre.php');
                 <div class="voiture-titre">Á partir de 105.550€</div>
                 <div class="voiture-button">
                     <a href="#modal-gle" class="btn btn-dark">Voir plus...</a>
-                    <a href="../Clients/connexion/connexion.php"class="btn btn-dark">Essayer</a>
+                    <a href="../connexion/pageconnexion.php"class="btn btn-dark">Essayer</a>
                 </div>
             </div>
         </div>
@@ -116,7 +121,7 @@ include ('../barre/barre.php');
             <a href="#" class="close">&times;</a>
             <h2>À propos de la Mercedes Classe A </h2>
             <p>La Mercedes Classe A est une berline compacte haut de gamme qui allie élégance, innovation et performances.</p>
-            <div class="voiture-cadre">
+            <div class="voiture-Cadre">
                 <img src="../../assets/images/modalclassea.jpg" alt="Mercedes classe a ">
             </div>
             <br>
@@ -132,9 +137,9 @@ include ('../barre/barre.php');
         <div class="modal-content">
             <a href="#" class="close">&times;</a>
             <h2>À propos de la Mercedes GLC</h2>
-            <p>Le Mercedes LC est un SUV haut de gamme offrant luxe et performance.Un design audacieux, 
+            <p>Le Mercedes GLC est un SUV haut de gamme offrant luxe et performance.Un design audacieux, 
                 une technologie de pointe et des performances incomparables.</p>
-                <div class="voiture-cadre">
+                <div class="voiture-Cadre">
                 <img src="../../assets/images/modalglc.jpg" alt="Mercedes classe a ">
             </div>
             <br>
@@ -239,12 +244,6 @@ include ('../barre/barre.php');
 
 
    
-
-
-
-    
-    
-
 </body>
 </html>
 

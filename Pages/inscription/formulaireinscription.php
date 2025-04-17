@@ -1,5 +1,5 @@
 <?php
-include ("../../barre/barre.php");
+include ("../barre/barre.php");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -31,13 +31,16 @@ include ("../../barre/barre.php");
    <br><br>
     <center>
         <form action="inserer.php" method="POST">
-            <input type="text" class="form-control données" placeholder="Entrez votre nom" name="nom">
+            <input type="text" class="form-control données" placeholder="Entrez votre Nom" name="nom">
             <br>
-            <input type="text" class="form-control données" placeholder="Entrez votre prénom" name="prénom">
+            <input type="text" class="form-control données" placeholder="Entrez votre Prénom" name="prenom">
             <br>
-            <input type="password" class="form-control données" placeholder="Entrez votre mot de passe" name="mdp">
+            <input type="telephone" class="form-control données" placeholder="Entrez votre Numero telephone" name="telephone">
             <br>
-            <input type="mail" class="form-control données" placeholder="Entrez votre adresse mail" name="email">
+            <input type="mail" class="form-control données" placeholder="Entrez votre Adresse email" name="email">
+            <br>
+            <input type="password" class="form-control données" placeholder="Entrez un Mot de passe" name="mdp">
+            <br>
             <br>
             <input type="checkbox" class="checkbox"> J'accepte les conditions d'utilisation de mes données*
 
@@ -45,7 +48,7 @@ include ("../../barre/barre.php");
             <button type="submit" class="btn btn-dark">Envoyer</button>
             <button type="reset" class="btn btn-secondary-emphasis">Annuler</button>
 
-            <br><br> <br>Vous avez déjà un compte ? <a href="../Connexion/connexion.php"> Connexion </a>
+            <br><br> <br>Vous avez déjà un compte ? <a href="../Connexion/pageconnexion.php"> Connexion </a>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
