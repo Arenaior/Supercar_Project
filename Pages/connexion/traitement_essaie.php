@@ -14,7 +14,7 @@ $telephone = $_POST['telephone'];
 $email = $_POST['adresse_email'];
 $date_essai = $_POST['date_essai'];
 
-$req = $conn->prepare("INSERT INTO essais (id_client, nom, prenom, telephone, aemail, date_essai)
+$req = $conn->prepare("INSERT INTO essais (id_client, nom, prenom, telephone, adresse_email, date_essai)
                        VALUES (?, ?, ?, ?, ?, ?)");
 $req->execute([$id_client, $nom, $prenom, $telephone, $email, $date_essai]);
 
