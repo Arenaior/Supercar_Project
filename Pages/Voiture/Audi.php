@@ -42,7 +42,7 @@ include ('../barre/barre.php');
                               $nom = htmlspecialchars($_SESSION['nom']);
                               $telephone = htmlspecialchars($_SESSION['telephone']);
                               $mail = htmlspecialchars($_SESSION['email']);?>
-                        <a href="../connexion/essaie.php"class="btn btn-dark">Essayer</a>
+                        <a href="../connexion/formulaire_essaie.php"class="btn btn-dark">Essayer</a>
                     <?php endif;?>
                 </div>
             </div>
@@ -63,7 +63,7 @@ include ('../barre/barre.php');
                               $nom = htmlspecialchars($_SESSION['nom']);
                               $telephone = htmlspecialchars($_SESSION['telephone']);
                               $mail = htmlspecialchars($_SESSION['email']);?>
-                        <a href="../connexion/page_bienvenue.php"class="btn btn-dark">Essayer</a>
+                        <a href="../connexion/formulaire_essaie.php"class="btn btn-dark">Essayer</a>
                     <?php endif;?>
                 </div>
             </div>
@@ -84,7 +84,7 @@ include ('../barre/barre.php');
                               $nom = htmlspecialchars($_SESSION['nom']);
                               $telephone = htmlspecialchars($_SESSION['telephone']);
                               $mail = htmlspecialchars($_SESSION['email']);?>
-                        <a href="../connexion/page_bienvenue.php"class="btn btn-dark">Essayer</a>
+                        <a href="../connexion/formulaire_essaie.php"class="btn btn-dark">Essayer</a>
                     <?php endif;?>
                 </div>
             </div>
@@ -105,7 +105,7 @@ include ('../barre/barre.php');
                               $nom = htmlspecialchars($_SESSION['nom']);
                               $telephone = htmlspecialchars($_SESSION['telephone']);
                               $mail = htmlspecialchars($_SESSION['email']);?>
-                        <a href="../connexion/page_bienvenue.php"class="btn btn-dark">Essayer</a>
+                        <a href="../connexion/formulaire_essaie.php"class="btn btn-dark">Essayer</a>
                     <?php endif;?>
                 </div>
             </div>
@@ -126,7 +126,7 @@ include ('../barre/barre.php');
                               $nom = htmlspecialchars($_SESSION['nom']);
                               $telephone = htmlspecialchars($_SESSION['telephone']);
                               $mail = htmlspecialchars($_SESSION['email']);?>
-                        <a href="../connexion/page_bienvenue.php"class="btn btn-dark">Essayer</a>
+                        <a href="../connexion/formulaire_essaie.php"class="btn btn-dark">Essayer</a>
                     <?php endif;?>
                 </div>
             </div>

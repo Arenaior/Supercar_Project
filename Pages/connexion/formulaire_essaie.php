@@ -29,6 +29,12 @@ $client = $requete->fetch();
     <label>Email :</label>
     <input type="email" name="email" value="<?= htmlspecialchars($client['adresse_email']) ?>" required><br>
 
+    <label>Marque :</label>
+    <input type="" name="" value="" required><br>
+
+    <label>Modèle :</label>
+    <input type="" name="" value="" required><br>
+
     <label>Date de l'essai :</label>
     <input type="date" name="date_essai" required><br>
 

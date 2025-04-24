@@ -108,7 +108,7 @@ include ("../barre/barre.php");
     <br>
 
     <div class="container mt-5">
-    <form action="inserer.php" method="POST">
+    <form action="insertion_formulaire.php" method="POST">
             <input type="text" class="form-control données w-50" placeholder="Entrez votre nom" name ="nom">
             <br>
             <input type="text" class="form-control données w-50" placeholder="Entrez votre prénom" name="prénom" >

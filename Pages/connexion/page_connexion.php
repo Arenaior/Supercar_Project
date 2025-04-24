@@ -22,7 +22,7 @@ include ("../barre/barre.php");
     .checkbox{
         margin-left:-90px;
     }
-    </style>
+</style>
 
     <div class="container mt-5">
         <h2 class="text1">Connectez-vous pour pouvoir avoir accès à nos services</h2>
@@ -40,13 +40,14 @@ include ("../barre/barre.php");
             <button type="submit" class="btn btn-dark">Connexion</button>
             
 
-            <br><br> <br>Vous n'avez pas encore un compte ? <a href="../inscription/formulaireinscription.php"> Inscription </a>
+            <br><br> <br>Vous n'avez pas encore un compte ? <a href="../inscription/formulaire_inscription.php"> Inscription </a>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
 <?php
 include ('../footage/footage.php');
 ?>
-</body>
-</html>
 
 

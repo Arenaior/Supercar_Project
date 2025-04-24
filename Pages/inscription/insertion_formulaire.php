@@ -1,5 +1,5 @@
 <?php
-include ("../../requetedb/bdconnect.php");
+
 include ("../barre/barre.php");
 if(isset($_POST["nom"]) && isset($_POST["prenom"]) && isset($_POST["mdp"]) && isset($_POST["telephone"]) && isset($_POST["email"])){
     $nom  = $_POST["nom"];
@@ -11,19 +11,15 @@ if(isset($_POST["nom"]) && isset($_POST["prenom"]) && isset($_POST["mdp"]) && is
     $verification = $bdd->prepare('SELECT COUNT(*) FROM client WHERE adresse_email = :email');
     $verification->bindValue(":email", $mail);
     $verification->execute();
+    $verification->fetch();
     
-    
-    if ($verification->fetch()) {
-        echo "L'utilisateur existe déjà.";
+    if ($verification) {
+        echo "L'adresse email est déjà utilisé par un autre utilisateur";
     } else {
+        
         $requete = $bdd->prepare('INSERT INTO client(nom, prenom, telephone, adresse_email, mot_de_passe) VALUES(?, ?, ?, ?, ?)') or die(print_r($bdd->errorInfo()));
         $requete->execute(array($nom, $prenom, $telephone, $mail, $mdp));
-    }
-    
-    
-}
-?>
-
+        ?>
 <!DOCTYPE HTML>
 <html lang=fr>
 <Font face ='Arial'>
@@ -68,4 +64,11 @@ if(isset($_POST["nom"]) && isset($_POST["prenom"]) && isset($_POST["mdp"]) && is
 </p>
 </body>
 </html>
+    <?php }
+    
+    
+}
+?>
+
+
 
