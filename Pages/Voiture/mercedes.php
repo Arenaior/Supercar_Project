@@ -40,7 +40,7 @@ $mail = htmlspecialchars($_SESSION['email']);
                 <div class="voiture-titre">Á partir de 39.250€</div>
                 <div class="voiture-button">
                     <a href="#modal-c63" class="btn btn-dark">Voir plus...</a>
-                    <a href="../connexion/pageconnexion.php"class="btn btn-dark">Essayer</a>
+                    <a href="../connexion/page_connexion.php"class="btn btn-dark">Essayer</a>
                 </div>
             </div>
             <div class="voiture-cadre">
@@ -49,7 +49,7 @@ $mail = htmlspecialchars($_SESSION['email']);
                 <div class="voiture-titre">Á partir de 65.000€</div>
                 <div class="voiture-button">
                     <a href="#modal-glc" class="btn btn-dark">Voir plus...</a>
-                    <a href="../connexion/pageconnexion.php"class="btn btn-dark">Essayer</a>
+                    <a href="../connexion/page_connexion.php"class="btn btn-dark">Essayer</a>
                 </div>
             </div>
             <div class="voiture-cadre">
@@ -58,7 +58,7 @@ $mail = htmlspecialchars($_SESSION['email']);
                 <div class="voiture-titre">Á partir de 77.842€</div>
                 <div class="voiture-button">
                     <a href="#modal-classeg" class="btn btn-dark">Voir plus...</a>
-                    <a href="../connexion/pageconnexion.php"class="btn btn-dark">Essayer</a>
+                    <a href="../connexion/page_connexion.php"class="btn btn-dark">Essayer</a>
                 </div>
             </div>
             <div class="voiture-cadre">
@@ -67,7 +67,7 @@ $mail = htmlspecialchars($_SESSION['email']);
                 <div class="voiture-titre">Á partir de 121.150€</div>
                 <div class="voiture-button">
                     <a href="#modal-amg" class="btn btn-dark">Voir plus...</a>
-                    <a href="../connexion/pageconnexion.php"class="btn btn-dark">Essayer</a>
+                    <a href="../connexion/page_connexion.php"class="btn btn-dark">Essayer</a>
                 </div>
             </div>
         </div>
@@ -79,7 +79,7 @@ $mail = htmlspecialchars($_SESSION['email']);
                 <div class="voiture-titre">Á partir de 267.186€</div>
                 <div class="voiture-button">
                     <a href="#modal-maybach" class="btn btn-dark">Voir plus...</a>
-                    <a href="../connexion/pageconnexion.php"class="btn btn-dark">Essayer</a>
+                    <a href="../connexion/page_connexion.php"class="btn btn-dark">Essayer</a>
                 </div>
             </div>
             <div class="voiture-cadre">
@@ -88,7 +88,7 @@ $mail = htmlspecialchars($_SESSION['email']);
                 <div class="voiture-titre">Á partir de 126.250€</div>
                 <div class="voiture-button">
                     <a href="#modal-gls" class="btn btn-dark">Voir plus...</a>
-                    <a href="../connexion/pageconnexion.php"class="btn btn-dark">Essayer</a>
+                    <a href="../connexion/page_connexion.php"class="btn btn-dark">Essayer</a>
                 </div>
             </div>
             <div class="voiture-cadre">
@@ -97,7 +97,7 @@ $mail = htmlspecialchars($_SESSION['email']);
                 <div class="voiture-titre">Á partir de 210.000€</div>
                 <div class="voiture-button">
                     <a href="#modal-mansory" class="btn btn-dark">Voir plus...</a>
-                    <a href="../connexion/pageconnexion.php"class="btn btn-dark">Essayer</a>
+                    <a href="../connexion/page_connexion.php"class="btn btn-dark">Essayer</a>
                 </div>
             </div>
             <div class="voiture-cadre">
@@ -106,7 +106,7 @@ $mail = htmlspecialchars($_SESSION['email']);
                 <div class="voiture-titre">Á partir de 105.550€</div>
                 <div class="voiture-button">
                     <a href="#modal-gle" class="btn btn-dark">Voir plus...</a>
-                    <a href="../connexion/pageconnexion.php"class="btn btn-dark">Essayer</a>
+                    <a href="../connexion/page_connexion.php"class="btn btn-dark">Essayer</a>
                 </div>
             </div>
         </div>

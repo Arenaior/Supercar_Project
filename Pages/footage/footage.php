@@ -26,11 +26,6 @@
     font-size:10px;
 }
 
-.image {
-    left: 12px;
-    position: absolute;
-    width: 80px;
-}
 
 .conteneur {
     display: flex;
@@ -67,7 +62,6 @@
     <footer class="bg-dark text-white py-3 w-100">     
   
     <div class="conteneur">
-            <img src="/supercar_project/assets/images/barre-logo.PNG" class="image">
         <div class="logo">
             <a href="" alt="facebook" title="facebook" class="logofacebook"><i class="fa-brands fa-facebook"></i></a>
             <a href="" alt="instagram" title="instagram" class="logoinstagram"><i class="fa-brands fa-instagram"></i></a>
@@ -76,7 +70,7 @@
         </div>
     </div> 
     
-        <hr>
+        
         <center>© 2025 SuperCar - Tous droits réservés</center>
     </footer>
 

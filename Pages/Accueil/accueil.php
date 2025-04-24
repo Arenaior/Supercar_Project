@@ -153,7 +153,7 @@ include ('../barre/barre.php');
                         <div class="card-body">
                             <h5 class="card-title">Audi</h5>
                             <p>Un design qui ne passe pas inaperçu.</p>
-                            <a href="../Voiture/Audi.php" class="btn btn-dark">Voir les modèles</a>
+                            <a href="../Voiture/audi.php" class="btn btn-dark">Voir les modèles</a>
                         </div>
                     </div>
                 </div>
@@ -206,7 +206,7 @@ include ('../barre/barre.php');
         <div class="col-md-4 gonflement">
             <div class="card position-relative">
                 <img src="../../assets/images/Accueil-Demande.jpg" class="card-img-top">
-                <a href="../connexion/pageconnexion.php" class="lien">Demande d'essai-></a>
+                <a href="../connexion/page_connexion.php" class="lien">Demande d'essai-></a>
             </div>
         </div>
     </div>

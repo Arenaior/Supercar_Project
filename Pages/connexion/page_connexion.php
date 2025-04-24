@@ -43,6 +43,9 @@ include ("../barre/barre.php");
             <br><br> <br>Vous n'avez pas encore un compte ? <a href="../inscription/formulaireinscription.php"> Inscription </a>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<?php
+include ('../footage/footage.php');
+?>
 </body>
 </html>
 

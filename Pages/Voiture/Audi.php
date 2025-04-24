@@ -1,17 +1,13 @@
 <?php 
 session_start();
 include ('../barre/barre.php');
-$prenom = htmlspecialchars($_SESSION['prenom']);
-$nom = htmlspecialchars($_SESSION['nom']);
-$telephone = htmlspecialchars($_SESSION['telephone']);
-$mail = htmlspecialchars($_SESSION['email']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Audi.css">
+    <link rel="stylesheet" href="audi.css">
     <title>Modèles Audi</title>
 </head>
 <body>
@@ -27,8 +23,6 @@ $mail = htmlspecialchars($_SESSION['email']);
     </div>
 </center>
 <hr>
-
-
     <main>
         <div class="voiture-container">
             <div class="voiture-cadre">
@@ -41,7 +35,15 @@ $mail = htmlspecialchars($_SESSION['email']);
                 </div>
                 <div class="voiture-button">
                 <a href="#modal-rsq8" class="btn btn-dark">Voir plus...</a>
-                    <a href="../connexion/pageconnexion.php"class="btn btn-dark">Essayer</a>
+                    <?php if (!isset($_SESSION['email'])):?>         
+                        <a href="../connexion/page_connexion.php"class="btn btn-dark">Essayer</a>               
+                    <?php else:?>
+                        <?php $prenom = htmlspecialchars($_SESSION['prenom']);
+                              $nom = htmlspecialchars($_SESSION['nom']);
+                              $telephone = htmlspecialchars($_SESSION['telephone']);
+                              $mail = htmlspecialchars($_SESSION['email']);?>
+                        <a href="../connexion/essaie.php"class="btn btn-dark">Essayer</a>
+                    <?php endif;?>
                 </div>
             </div>
             <div class="voiture-cadre">
@@ -54,7 +56,15 @@ $mail = htmlspecialchars($_SESSION['email']);
                 </div>
                 <div class="voiture-button">
                 <a href="#modal-rs7" class="btn btn-dark">Voir plus...</a>
-                    <a href="../connexion/pageconnexion.php"class="btn btn-dark">Essayer</a>
+                <?php if (!isset($_SESSION['email'])):?>         
+                        <a href="../connexion/page_connexion.php"class="btn btn-dark">Essayer</a>               
+                    <?php else:?>
+                        <?php $prenom = htmlspecialchars($_SESSION['prenom']);
+                              $nom = htmlspecialchars($_SESSION['nom']);
+                              $telephone = htmlspecialchars($_SESSION['telephone']);
+                              $mail = htmlspecialchars($_SESSION['email']);?>
+                        <a href="../connexion/page_bienvenue.php"class="btn btn-dark">Essayer</a>
+                    <?php endif;?>
                 </div>
             </div>
             <div class="voiture-cadre">
@@ -67,7 +77,15 @@ $mail = htmlspecialchars($_SESSION['email']);
                 </div>
                 <div class="voiture-button">
                 <a href="#modal-etron" class="btn btn-dark">Voir plus...</a>
-                    <a href="../connexion/pageconnexion.php"class="btn btn-dark">Essayer</a>
+                <?php if (!isset($_SESSION['email'])):?>         
+                        <a href="../connexion/page_connexion.php"class="btn btn-dark">Essayer</a>               
+                    <?php else:?>
+                        <?php $prenom = htmlspecialchars($_SESSION['prenom']);
+                              $nom = htmlspecialchars($_SESSION['nom']);
+                              $telephone = htmlspecialchars($_SESSION['telephone']);
+                              $mail = htmlspecialchars($_SESSION['email']);?>
+                        <a href="../connexion/page_bienvenue.php"class="btn btn-dark">Essayer</a>
+                    <?php endif;?>
                 </div>
             </div>
             <div class="voiture-cadre">
@@ -80,7 +98,15 @@ $mail = htmlspecialchars($_SESSION['email']);
                 </div>
                 <div class="voiture-button">
                 <a href="#modal-s8" class="btn btn-dark">Voir plus...</a>
-                    <a href="../connexion/pageconnexion.php"class="btn btn-dark">Essayer</a>
+                <?php if (!isset($_SESSION['email'])):?>         
+                        <a href="../connexion/page_connexion.php"class="btn btn-dark">Essayer</a>               
+                    <?php else:?>
+                        <?php $prenom = htmlspecialchars($_SESSION['prenom']);
+                              $nom = htmlspecialchars($_SESSION['nom']);
+                              $telephone = htmlspecialchars($_SESSION['telephone']);
+                              $mail = htmlspecialchars($_SESSION['email']);?>
+                        <a href="../connexion/page_bienvenue.php"class="btn btn-dark">Essayer</a>
+                    <?php endif;?>
                 </div>
             </div>
             <div class="voiture-cadre">
@@ -93,7 +119,15 @@ $mail = htmlspecialchars($_SESSION['email']);
                 </div>
                 <div class="voiture-button">
                 <a href="#modal-sq7" class="btn btn-dark">Voir plus...</a>
-                    <a href="../connexion/pageconnexion.php"class="btn btn-dark">Essayer</a>
+                <?php if (!isset($_SESSION['email'])):?>         
+                        <a href="../connexion/page_connexion.php"class="btn btn-dark">Essayer</a>               
+                    <?php else:?>
+                        <?php $prenom = htmlspecialchars($_SESSION['prenom']);
+                              $nom = htmlspecialchars($_SESSION['nom']);
+                              $telephone = htmlspecialchars($_SESSION['telephone']);
+                              $mail = htmlspecialchars($_SESSION['email']);?>
+                        <a href="../connexion/page_bienvenue.php"class="btn btn-dark">Essayer</a>
+                    <?php endif;?>
                 </div>
             </div>
         </div>
@@ -139,7 +173,7 @@ $mail = htmlspecialchars($_SESSION['email']);
 </div>
 
 <!-- Modal Audi S e-tron -->
-<div id="modal-setron" class="modal">
+<div id="modal-etron" class="modal">
   <div class="modal-content">
     <a href="#" class="close">&times;</a>
     <h2>À propos de l'Audi S e-tron</h2>

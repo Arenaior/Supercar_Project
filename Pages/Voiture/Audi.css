@@ -146,17 +146,14 @@ header .Header {
     background: white;
     padding: 20px;
     width: 300px; /* taille fixe ou utilise max-width si tu veux responsive */
-    max-width: 70%;
     border-radius: 10px;
+    display: inline-block;
+    width: 80%;
     position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     text-align: center;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-
-.voiture-cadre img {
-    max-width: 500px;
-    height: 300px;
-    border-radius: 10px;
 }
 
 
@@ -172,8 +169,9 @@ header .Header {
 
 /* Afficher le modal lorsque ciblé */
 #modal-rsq8:target,
-#modal-glc:target,
-#modal-classeg:target,
-#modal-amg:target {
+#modal-rs7:target,
+#modal-etron:target,
+#modal-s8:target,
+#modal-sq7:target {
     display: block;
 }

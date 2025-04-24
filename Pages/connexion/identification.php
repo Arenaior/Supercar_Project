@@ -1,6 +1,4 @@
 <?php
-session_start();
-include("../../requetedb/bdconnect.php");
 include("../barre/barre.php");
 
 if (!empty($_POST['email']) && !empty($_POST['mdp'])) {
@@ -19,20 +17,20 @@ if (!empty($_POST['email']) && !empty($_POST['mdp'])) {
             $_SESSION['nom'] = $utilisateur['nom'];
             $_SESSION['prenom'] = $utilisateur['prenom'];
             $_SESSION['telephone'] = $utilisateur['telephone'];
-            
+            $_SESSION['id_client'] = $utilisateur['id_client'];
             header("Location: page_bienvenue.php"); // Redirection vers la page de bienvenue après la connexion
             exit();
         } else {
             // Mot de passe incorrect
             echo "<div class='container text-center mt-5'>
                     <h1 class='H1'>Mot de passe incorrect.</h1>
-                    <a href='pageconnexion.php' class='H2'><u>Veuillez réessayer</u></a>
+                    <a href='page_connexion.php' class='H2'><u>Veuillez réessayer</u></a>
                   </div><hr>";
         }
     } else {
         echo "<div class='container text-center mt-5'>
                 <h1 class='H1'>Utilisateur inexistant.</h1>
-                <a href='pageconnexion.php' class='H2'><u>Retour</u></a>
+                <a href='page_connexion.php' class='H2'><u>Retour</u></a>
               </div><hr>";
     }
 } else {

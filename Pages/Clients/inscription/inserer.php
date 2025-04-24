@@ -51,7 +51,7 @@ if(isset($_POST["nom"]) && isset($_POST["prenom"]) && isset($_POST["mdp"]) && is
     </h2>
 
     <hr>
-    <a href="/Supercar_Project/Pages/connexion/pageconnexion.php" class="btn btn-primary">Se connecter</a>
+    <a href="/Supercar_Project/Pages/connexion/page_connexion.php" class="btn btn-primary">Se connecter</a>
     </div>
 
 </p>

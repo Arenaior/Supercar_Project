@@ -7,9 +7,20 @@ if(isset($_POST["nom"]) && isset($_POST["prenom"]) && isset($_POST["mdp"]) && is
     $mdp = $_POST["mdp"];
     $telephone = $_POST["telephone"];
     $mail = $_POST["email"];
+   
+    $verification = $bdd->prepare('SELECT COUNT(*) FROM client WHERE adresse_email = :email');
+    $verification->bindValue(":email", $mail);
+    $verification->execute();
     
-    $requete = $bdd->prepare('INSERT INTO client(nom, prenom, telephone, adresse_email, mot_de_passe) VALUES(?, ?, ?, ?, ?)') or die(print_r($bdd->errorInfo()));
-    $requete->execute(array($nom, $prenom, $telephone, $mail, $mdp));
+    
+    if ($verification->fetch()) {
+        echo "L'utilisateur existe déjà.";
+    } else {
+        $requete = $bdd->prepare('INSERT INTO client(nom, prenom, telephone, adresse_email, mot_de_passe) VALUES(?, ?, ?, ?, ?)') or die(print_r($bdd->errorInfo()));
+        $requete->execute(array($nom, $prenom, $telephone, $mail, $mdp));
+    }
+    
+    
 }
 ?>
 
@@ -51,7 +62,7 @@ if(isset($_POST["nom"]) && isset($_POST["prenom"]) && isset($_POST["mdp"]) && is
     </h2>
 
     <hr>
-    <a href="/Supercar_Project/Pages/connexion/pageconnexion.php" class="btn btn-primary">Se connecter</a>
+    <a href="/Supercar_Project/Pages/connexion/page_connexion.php" class="btn btn-primary">Se connecter</a>
     </div>
 
 </p>

@@ -1,15 +1,15 @@
 <?php
-session_start();
-include('../requetedb/bdconnect.php');
+include("../barre/barre.php");
+include("../../requetedb/bdconnect.php");
 
 if (!isset($_SESSION['id_client'])) {
-    header("Location: ../connexion/pageconnexion.php");
+    header("Location: ../connexion/page_connexion.php");
     exit();
 }
 
 $id_client = $_SESSION['id_client'];
 
-$requete = $conn->prepare("SELECT nom, prenom, email, telephone FROM clients WHERE id = ?");
+$requete = $bdd->prepare("SELECT nom, prenom, telephone, adresse_email FROM client WHERE id_client = ?");
 $requete->execute([$id_client]);
 $client = $requete->fetch();
 ?>
@@ -27,7 +27,7 @@ $client = $requete->fetch();
     <input type="tel" name="telephone" value="<?= htmlspecialchars($client['telephone']) ?>" required><br>
 
     <label>Email :</label>
-    <input type="email" name="email" value="<?= htmlspecialchars($client['email']) ?>" required><br>
+    <input type="email" name="email" value="<?= htmlspecialchars($client['adresse_email']) ?>" required><br>
 
     <label>Date de l'essai :</label>
     <input type="date" name="date_essai" required><br>

@@ -1,10 +1,10 @@
 <?php
-session_start();
+include("../barre/barre.php"); 
 
 // Vérifier si l'utilisateur est connecté
 if (!isset($_SESSION['email'])) {
     // Si l'utilisateur n'est pas connecté, rediriger vers la page de connexion
-    header("Location: pageconnexion.php");
+    header("Location: page_connexion.php");
     exit();
 }
 
@@ -22,9 +22,6 @@ $nom = htmlspecialchars($_SESSION['nom']);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-
-<!-- Barre de navigation -->
-<?php include("../barre/barre.php"); ?>
 
 <div class="container mt-5">
     <h1 class="text-center">Bienvenue, <?php echo $prenom . ' ' . $nom; ?> !</h1>

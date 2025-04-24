@@ -1,7 +1,7 @@
 <?php
-
-    include ("../requetedb/../requetedb/bdconnect.php");
     include ("../barre/barre.php");
+    include ("../requetedb/bdconnect.php");
+    
     $mdp= $_POST['mdp'];
     $mail=$_POST['mail'];
 
@@ -107,7 +107,7 @@
         <?php else : ?>
             <div class="container text-center mt-5">
                 <H1 class='H1'> Nom d'utilisateur ou mot de passe incorrect.</H1>
-        <br> <a href='pageconnexion.php' class='H2'><u>Veuillez réessayer</u> </a>
+        <br> <a href='page_connexion.php' class='H2'><u>Veuillez réessayer</u> </a>
         </div>
         <hr>
         
