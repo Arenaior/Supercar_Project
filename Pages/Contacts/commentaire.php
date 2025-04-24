@@ -137,14 +137,22 @@ include ("../barre/barre.php");
 
             <br><br>
 
-         <div class="container mt-5">
-            <H1 align="center" > Nos coordonnées </H1>
-            <br><br><br><br>
-            <div style="display: flex; justify-content: space-between; width: 100%;">
-                <H5 style="text-align: left;"><img src="/supercar_project/assets/images/telephone.PNG" class="img3">Tel: 12345678</H5>
-                <H5 style="text-align: center;"><img src="/supercar_project/assets/images/gmail.png" class="img2"> Email: supercar@gmail.mu</H5>
-                <H5 style="text-align: right;"><img src="/supercar_project/assets/images/epingle.png" class="img2">Adresse: 1, Rue des Fleurs, Ébène, Maurice</H5>
-            </div>
+            <div class="container mt-5">
+    <h1 align="center">Nos coordonnées</h1>
+    <br><br><br><br>
+    <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+        <h5 style="text-align: left; flex: 1;">
+            <img src="/supercar_project/assets/images/telephone.PNG" class="img3">Tel: 12345678
+        </h5>
+        <h5 style="text-align: center; flex: 1;">
+            <img src="/supercar_project/assets/images/gmail.png" class="img2">Email: supercar@gmail.mu
+        </h5>
+        <h5 style="text-align: right; flex: 1;">
+            <img src="/supercar_project/assets/images/epingle.png" class="img2">Adresse: 1, Rue des Fleurs, Ébène, Maurice
+        </h5>
+    </div>
+</div>
+
 
 
         </div>

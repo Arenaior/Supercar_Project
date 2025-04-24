@@ -46,13 +46,13 @@ echo "<table border='1'>"; // ouverture du tableau
 echo "<tr>";
 echo "<th>ID</th>";
 echo "<th> Marque</th>";
-echo "<th>Modèle</th>";
+echo "<th>Modele</th>";
 echo "</tr>";
 
 while ($row = mysqli_fetch_assoc($curseur)) {
     $id = $row["id"];
     $Marque = $row["Marque"];
-    $Modèle = $row["Modèle"];
+    $Modèle = $row["Modele"];
 
     echo "<tr>";
     echo "<td>$id</td>";

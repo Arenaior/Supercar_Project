@@ -190,7 +190,11 @@ include ('../barre/barre.php');
                     <h3>Golf 8</h3>
                     <p>à partir de 27 000 €</p>
                     <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Golf8">Voir plus...</a> 
+<<<<<<< HEAD
                     <a href="/supercar_project/Pages/connexion/page_connexion.php" class="btn-dark">Essayer</a>
+=======
+                    <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
+>>>>>>> ad09751128c51b1adbf0be5a98e1f36f317a7702
                 </div>
             </div>
         </div>
@@ -224,7 +228,11 @@ include ('../barre/barre.php');
                     <h3>Tiguan R-Line 2020</h3>
                     <p>à partir de 50 000 €</p>
                     <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Tiguan">Voir plus...</a>
+<<<<<<< HEAD
                     <a href="/supercar_project/Pages/connexion/page_connexion.php" class="btn-dark">Essayer</a>
+=======
+                    <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
+>>>>>>> ad09751128c51b1adbf0be5a98e1f36f317a7702
                 </div>
             </div>
         </div>
@@ -258,7 +266,11 @@ include ('../barre/barre.php');
                     <h3>Volkswagen Tayron</h3>
                     <p>à partir de 40 800 €</p>
                     <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Tayron">Voir plus...</a>
+<<<<<<< HEAD
                     <a href="/supercar_project/Pages/connexion/page_connexion.php" class="btn-dark">Essayer</a>
+=======
+                    <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
+>>>>>>> ad09751128c51b1adbf0be5a98e1f36f317a7702
                 </div>
             </div>
         </div>
@@ -305,7 +317,11 @@ include ('../barre/barre.php');
                     <h3>Polo5</h3>
                     <p>prix débutant à 18 015 €</p>
                     <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Polo">Voir plus...</a>
+<<<<<<< HEAD
                     <a href="/supercar_project/Pages/connexion/page_connexion.php" class="btn-dark">Essayer</a>
+=======
+                    <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
+>>>>>>> ad09751128c51b1adbf0be5a98e1f36f317a7702
                 </div>
             </div>
         </div>
@@ -339,7 +355,11 @@ include ('../barre/barre.php');
                     <h3>Touareg</h3>
                     <p>à partir de 60 000 €</p>
                     <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Touareg">Voir plus...</a>
+<<<<<<< HEAD
                     <a href="/supercar_project/Pages/connexion/page_connexion.php" class="btn-dark">Essayer</a>
+=======
+                    <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
+>>>>>>> ad09751128c51b1adbf0be5a98e1f36f317a7702
                 </div>
             </div>
         </div>
@@ -373,7 +393,11 @@ include ('../barre/barre.php');
                     <h3>Passat</h3>
                     <p>à partir de 34 030 €</p>
                     <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Passat">Voir plus...</a>
+<<<<<<< HEAD
                     <a href="/supercar_project/Pages/connexion/page_connexion.php" class="btn-dark">Essayer</a>
+=======
+                    <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
+>>>>>>> ad09751128c51b1adbf0be5a98e1f36f317a7702
                 </div>
             </div>
         </div>
@@ -414,7 +438,11 @@ include ('../barre/barre.php');
                 <h3>T-Roc</h3>
                 <p>À partir de 27 540 €</p>
                 <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#T-Roc">Voir plus...</a>
+<<<<<<< HEAD
                 <a href="/supercar_project/Pages/connexion/page_connexion.php" class="btn-dark">Essayer</a>
+=======
+                <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
+>>>>>>> ad09751128c51b1adbf0be5a98e1f36f317a7702
             </div>
         </div>
 
@@ -443,7 +471,11 @@ include ('../barre/barre.php');
                     <h3>T-Cross</h3>
                     <p>À partir de 24 000 €</p>
                     <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#T-Cross">Voir plus...</a>
+<<<<<<< HEAD
                     <a href="/supercar_project/Pages/connexion/page_connexion.php" class="btn-dark">Essayer</a>
+=======
+                    <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
+>>>>>>> ad09751128c51b1adbf0be5a98e1f36f317a7702
                 </div>
             </div>
 
@@ -472,7 +504,11 @@ include ('../barre/barre.php');
                     <h3>Jetta</h3>
                     <p>À partir de 12 030 €</p>
                     <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Jetta">Voir plus...</a>
+<<<<<<< HEAD
                     <a href="/supercar_project/Pages/connexion/page_connexion.php" class="btn-dark">Essayer</a>
+=======
+                    <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
+>>>>>>> ad09751128c51b1adbf0be5a98e1f36f317a7702
                 </div>
             </div>
 
