@@ -51,8 +51,8 @@
   <nav class="sidebar">
     <a href="/supercar_project/Pages/Admin/Admin-Accueil.php">ADMIN</a>
     <h4 class="h4"> CONTACTS </h4>
-    <a href="/supercar_project/Pages/Admin/Admin-VoirContacts.php">Voir Contacts</a>
-    <a href="/supercar_project/Pages/Admin/Admin-SupprimerContacts-formulaire_inscription.php">Supprimer Contacts</a>
+    <a href="/supercar_project/Pages/admin/Admin-VoirContacts.php">Voir Contacts</a>
+    <a href="/supercar_project/Pages/Admin/Admin-SupprimerContacts.php">Supprimer Contacts</a>
     <h4 class="h4"> COMMENTAIRES </h4>
     <a href="/supercar_project/Pages/Admin/Admin-VoirCommentaires.php">Voir commentaires</a>
     <a href="/supercar_project/Pages/Admin/Admin-SupprimerCommentaires-formulaire_inscription.php">Supprimer commentaires</a>
@@ -60,7 +60,7 @@
     <a href="/supercar_project/Pages/Admin/Admin-VoirDemande.php">Voir demandes d'essai</a>
     <a href="/supercar_project/Pages/Admin/Admin-SupprimerDemande-formulaire_inscription.php">Supprimer demandes d'essai</a>
     <h4 class="h4"> VOITURES </h4>
-    <a href="/supercar_project/Pages/Admin/Admin-AjouterVoiture-formulaire_inscription.php">Ajouter une voiture</a>
+    <a href="/supercar_project/Pages/Admin/Admin-AjouterVoiture-Formulaire.php">Ajouter une voiture</a>
     <a href="/supercar_project/Pages/Admin/Admin-VoirVoitures.php">Voir les voiture</a>
     <a href="/supercar_project/Pages/Admin/Admin-SupprimerVoiture-Formulaire.php">Supprimer une voiture</a>
   </nav>

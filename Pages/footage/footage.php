@@ -9,6 +9,7 @@
     <link href="http://localhost/supercar_project/librairiecss/all.css" rel="stylesheet">
 <style>
     footer{
+        height: 100%;
     font-size:10px; 
 }
 
@@ -27,13 +28,13 @@
 }
 
 
-.conteneur {
+.reseau {
     display: flex;
     position: relative;
     height: 13vh;
 }
 
-.logo {
+.logoreseau {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -61,8 +62,8 @@
 
     <footer class="bg-dark text-white py-3 w-100">     
   
-    <div class="conteneur">
-        <div class="logo">
+    <div class="reseau">
+        <div class="logoreseau">
             <a href="" alt="facebook" title="facebook" class="logofacebook"><i class="fa-brands fa-facebook"></i></a>
             <a href="" alt="instagram" title="instagram" class="logoinstagram"><i class="fa-brands fa-instagram"></i></a>
             <a href="" alt="whatsapp" title="whatsapp" class="logowhatsapp"><i class="fa-brands fa-whatsapp"></i></a>

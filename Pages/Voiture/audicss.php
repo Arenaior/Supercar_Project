@@ -1,5 +1,9 @@
 
-header {
+<?php
+header("Content-type: text/css");
+include ('../voiture/audi.php');
+?>
+.vid {
     height: 800px;
     padding: 20px 0; 
     text-align: center; 
@@ -13,8 +17,8 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
-header .Header {
+
+
     
     position: relative;
     z-index: 1;
@@ -145,7 +149,7 @@ header .Header {
 .modal-content {
     background: white;
     padding: 20px;
-    width: 300px; /* taille fixe ou utilise max-width si tu veux responsive */
+    width: 300px; 
     border-radius: 10px;
     display: inline-block;
     width: 80%;
@@ -168,10 +172,6 @@ header .Header {
 }
 
 /* Afficher le modal lorsque ciblé */
-#modal-rsq8:target,
-#modal-rs7:target,
-#modal-etron:target,
-#modal-s8:target,
-#modal-sq7:target {
+.modal-:target {
     display: block;
 }

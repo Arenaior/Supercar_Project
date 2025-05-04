@@ -10,13 +10,6 @@ include ('../barre/barre.php');
     <title>Document</title>
 </head>
 <body>
-<header>
-        <div>
-        <center><h1 class="titre">Nos Services</h1></center>
-        <div class="descri">SuperCar, c’est l’excellence au service de votre passion automobile.<br>
-            Nous vous offrons des services haut de gamme pour une expérience unique, alliant performance, prestige et savoir-faire.</div>
-       </div>
-</header>
 <center><div class="service">Découvrez nos services</div></center>
 <main>
 <div class="container">

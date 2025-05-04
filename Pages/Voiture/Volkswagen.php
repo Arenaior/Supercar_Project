@@ -1,131 +1,147 @@
-<?php 
+<?php
+session_start();
 include ('../barre/barre.php');
+$requete = $bdd->query("SELECT id_voiture, marque, modele, prix, motorisation, puissance, transmission, image_illustration, img_illustr1, img_illustr2, img_illustr3 FROM voiture WHERE marque = 'Volkswagen'");
+$voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utiliser foreach
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="merco.css">
-    <title>Volkswagen</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+    <!-- <link rel="stylesheet" href="audicss.php"> -->
+    <title>Modèles Audi</title>
+</head>
+<body>
+<style>
+.vid {
+    height: 800px;
+    padding: 20px 0; 
+    text-align: center; 
+    color: rgb(245, 242, 242);
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../assets/images/Voitures-Volkswagen-Tiguan-Accueil.png');
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
-        .hero {
-            position: relative;
-            width: 100%;
-            height: 50vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            text-align: center;
-        }
+.vid .vid1{ 
+    position: relative;
+    z-index: 1;
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 170px;
+    padding: 66px 53px;
+    border-radius: 3px; 
+}
 
-        .hero img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1;
-        }
+.titre {
+    font-size: 70px;
+    font-weight: bold;
+    margin-top: 125px;
+}
 
-        .hero .content {
-            position: relative;
-            z-index: 2;
-            color: white;
-            font-size: 2rem;
-            font-weight: bold;
-        }
 
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-            width: 100%;
-        }
 
-        .car-card {
-            width: 400px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            transition: transform 0.3s ease-in-out;
-            text-align: center;
-            
-            
-        }
+.descri {
+    font-size: 15px; /* Taille de police adaptée pour une lecture fluide */
+    color: rgb(248, 242, 242); 
+    text-align: left; 
+    line-height: 1.8; 
+    max-width: 800px; 
+    margin: 30px 0; 
+    padding-left: 20px; 
+    border-left: 4px solid rgb(248, 242, 242); 
+    font-weight:bold;
+    margin-top: 150px;
+    margin-right:600px;
+}
+.logo{
+    width: 40px;
+    height: 40px;
+}
+.voiture-container {
+    display: ruby;
+}
 
-        .car-card:hover {
-            transform: translateY(-5px);
-        }
+.voiture-cadre {
+    width: 30%;   
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 11px;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
 
-        .car-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
+.voiture-cadre img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
 
-        .car-card .content {
-            padding: 15px;
-        }
+.voiture-titre {
+    font-weight: bold;
+    margin-top: 10px;
+}
 
-        .car-card h3 {
-            margin: 10px 0;
-            font-size: 1.5rem;
-            color: #333;
-        }
+.voiture-button {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
 
-        .car-card p {
-            font-size: 1rem;
-            color: #666;
-        }
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.button:hover {
+    background-color: #0056b3;
+}
 
-        .car-card .btn {
-            display: inline-block;
-            margin-top: 5px;
-            padding: 10px 15px;
-            background: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
+.specif {
+    font-size: 20px; /* Agrandir le texte */
+    font-weight: 500; /* Rendre le texte plus classe */
+    font-family: "Arial", sans-serif; /* Changer la police pour plus d’élégance */
+    color: #333; /* Couleur légèrement assombrie pour un effet premium */
+    background: linear-gradient(to right, #f8f8f8, #e0e0e0); 
+    padding: 15px;
+    border-radius: 10px; /* Coins arrondis pour un effet premium */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
 
-        .car-card .btn:hover {
-            background: #0056b3;
-        }
+.specif li {
+    margin-bottom: 10px; 
+    list-style: none; 
+    position: relative;
+    padding-left: 25px; 
+}
 
-        @media (max-width: 768px) {
-            .car-card {
-                width: 90%;
-            }
-        }
+.specif li::before {
+    content: "✓"; 
+    color: #007bff; 
+    font-size: 22px;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 
-        .h2{
-            font-size:50px;
-            color:black;
-            margin-top:20px;
-        }
 
-        H5{
-            font-size:20px;
-            color:black;
-        }
-
-        .modal {
+    
+/* Style du modal (invisible par défaut) */
+.modal {
     display: none;
     position: fixed;
     top: 0;
@@ -136,412 +152,119 @@ include ('../barre/barre.php');
     text-align: center;
 }
 
-.modal-content {
+.modal-cont {
     background: white;
     padding: 20px;
-    width: 50%;
-    margin: 10% auto;
+    width: 300px; 
     border-radius: 10px;
+    display: inline-block;
+    width: 80%;
     position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
+
 
 .close {
     position: absolute;
     top: 10px;
-    right: 20px;
-    font-size: 20px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
     text-decoration: none;
     color: black;
 }
 
-.p5{
-    font-size:20px;
-    color:black;
+/* Afficher le modal lorsque ciblé */
+.modal:target {
+    display: block;
 }
 
+.test{
+  display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+}
 
+</style>
+<div class="vid">
+<div class="vid1">
+<center><h1 class="titre">VOLKSWAGEN</h1></center>
+    <div class="descri">
+    La fiabilité allemande dans toute sa splendeur.
+Découvrez l'alliance parfaite entre innovation, confort et sobriété signée Volkswagen.
+Prenez la route avec style et sécurité, et entrez dans l’univers de ceux qui avancent avec confiance.
+Choisissez la route de la modernité, choisissez Volkswagen.
+    </div></div>
+</div>
 
-
-
-    </style>
-</head>
-<body>
-
-    <div class="hero">
-        <img src="../../assets/images/Voitures-Volkswagen-Tiguan-Accueil.jpg" alt="Voiture de luxe">
-        <div class="content">
-            <h1>Bienvenue chez Volkswagen</h1>
-        </div>
+<center>
+    <div class="css">
+        <h1>Découvrez nos modèles avec Volkswagen</h1>
+        <img src="../../assets/images/logovolkswagen.svg" style="width: 150px; height: auto;">
     </div>
-    
-    <div class="container">
-    <h2 class="h2 text-center">Découvrez nos modèles de Volkswagen</h2>
-</div> 
+</center>
+
 <hr>
 
-<div class="container">
-    <div class="row justify-content-center">
+<main>
 
-        <!-- GOLF 8 -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
-            <div class="car-card">
-                <img src="../../assets/images/Voitures-Volkswagen-Golf8.jpg" alt="Volkswagen">
-                <div class="content">
-                    <h3>Golf 8</h3>
-                    <p>à partir de 27 000 €</p>
-                    <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Golf8">Voir plus...</a> 
-<<<<<<< HEAD
-                    <a href="/supercar_project/Pages/connexion/page_connexion.php" class="btn-dark">Essayer</a>
-=======
-                    <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
->>>>>>> ad09751128c51b1adbf0be5a98e1f36f317a7702
-                </div>
+<?php foreach ($voitures as $voiture): ?>
+  <div class="voiture-container">    
+        <div class="voiture-cadre">
+            <img src="<?= $voiture['image_illustration'] ?>" alt="<?= $voiture['modele'] ?>">
+            <div class="voiture-titre">
+                <?= $voiture['marque'] . ' ' . $voiture['modele']; ?>
+            </div>
+            <div class="voiture-titre">
+                À partir de <?= $voiture['prix'] ?> RS
+            </div>
+            <div class="voiture-button">
+                <a href="#modal-<?= $voiture['id_voiture'] ?>" class="btn btn-dark">Voir plus...</a>
+                <?php if (!isset($_SESSION['email'])): ?>
+                    <a href="../connexion/page_connexion.php" class="btn btn-dark">Essayer</a>
+                <?php else: ?>
+                    <a href="../connexion/formulaire_essaie.php" class="btn btn-dark">Essayer</a>
+                <?php endif; ?>
             </div>
         </div>
-
-        <!-- Modal pour GOLF 8 -->
-          <!-- Modals -->
-          <div id="Golf8" class="modal">
-                <div class="modal-content">
-                    <a href="#" class="close">&times;</a>
-                    <h2>À propos de la Volkswagen Golf 8</h2>
-                    <p>La Volkswagen Golf 8 est une compacte moderne et polyvalente, offrant une conduite confortable, des technologies avancées et un large choix de motorisations.</p>
-                    <div class="voiture-cadre">
-                        <img src="/supercar_project/assets/images/Voitures-Volkswagen-Golf8.jpg" alt="Volkswagen Golf 8">
-                    </div>
-                    <br>
-                    <div class="tittle">
-                        <li><strong>Motorisations</strong> : Essence (TSI), Diesel (TDI), Hybride léger (eTSI) et Hybride rechargeable (GTE)</li>
-                        <li><strong>Puissance</strong> : De 110 ch (1.0 TSI) à 320 ch (Golf R)</li>
-                        <li><strong>Transmission</strong> : Boîte manuelle ou automatique DSG à 7 rapports</li>
-                    </div>
-                </div>
-            </div>
-
-
-
-        <!-- TIGUAN -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
-            <div class="car-card">
-                <img src="../../assets/images/Voitures-Volkswagen-Tiguan.jpg" alt="Tiguan">
-                <div class="content">
-                    <h3>Tiguan R-Line 2020</h3>
-                    <p>à partir de 50 000 €</p>
-                    <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Tiguan">Voir plus...</a>
-<<<<<<< HEAD
-                    <a href="/supercar_project/Pages/connexion/page_connexion.php" class="btn-dark">Essayer</a>
-=======
-                    <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
->>>>>>> ad09751128c51b1adbf0be5a98e1f36f317a7702
-                </div>
-            </div>
-        </div>
-
-                    <!-- Modal pour Tiguan-->
-          <!-- Modals -->
-          <div id="Tiguan" class="modal">
-                <div class="modal-content">
-                    <a href="#" class="close">&times;</a>
-                    <h2>À propos du Volkswagen Tiguan</h2>
-                    <p>Le Volkswagen Tiguan est un SUV familial élégant et polyvalent, reconnu pour son confort, sa technologie embarquée et sa sécurité.</p>
-                    <div class="voiture-cadre">
-                        <img src="/supercar_project/assets/images/Voitures-Volkswagen-Tiguan.jpg" alt="Volkswagen Tiguan">
-                    </div>
-                    <br>
-                    <div class="tittle">
-                        <li><strong>Motorisations</strong> : Essence (TSI), Diesel (TDI), et Hybride rechargeable (eHybrid)</li>
-                        <li><strong>Puissance</strong> : De 130 ch à 320 ch (Tiguan R)</li>
-                        <li><strong>Transmission</strong> : Boîte manuelle ou automatique DSG, transmission intégrale 4MOTION disponible</li>
-                    </div>
-                </div>
-        </div>
-
-
-
-        <!-- TAYRON -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
-            <div class="car-card">
-                <img src="../../assets/images/Voitures-Volkswagen-Tayron.jpg" alt="Tayron">
-                <div class="content">
-                    <h3>Volkswagen Tayron</h3>
-                    <p>à partir de 40 800 €</p>
-                    <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Tayron">Voir plus...</a>
-<<<<<<< HEAD
-                    <a href="/supercar_project/Pages/connexion/page_connexion.php" class="btn-dark">Essayer</a>
-=======
-                    <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
->>>>>>> ad09751128c51b1adbf0be5a98e1f36f317a7702
-                </div>
-            </div>
-        </div>
-
-
-                         <!-- Modal pour Tayron -->
-                    <div id="Tayron" class="modal">
-                        <div class="modal-content">
-                            <a href="#" class="close">&times;</a>
-                            <h2>À propos du Volkswagen Tayron</h2>
-                            <p>Le Volkswagen Tayron est un SUV spacieux et élégant, conçu pour offrir confort, technologie et polyvalence. Il s'adresse principalement au marché asiatique et propose une conduite dynamique avec un bon niveau de sécurité.</p>
-                            <div class="voiture-cadre">
-                                <img src="/supercar_project/assets/images/Voitures-Volkswagen-Tayron.jpg" alt="Volkswagen Tayron">
-                            </div>
-                            <br>
-                            <div class="tittle">
-                                <li><strong>Motorisations</strong> : Essence (TSI), parfois hybride selon les marchés</li>
-                                <li><strong>Puissance</strong> : De 186 ch à 220 ch</li>
-                                <li><strong>Transmission</strong> : Boîte automatique DSG à 7 rapports, transmission intégrale disponible</li>
-                            </div>
-                        </div>
-                    </div>
-
-
-       
-
     </div>
-</div>
 
-
-    
-    
-    
-    
-    <!--Deuxième ligne de voitures-->
-    <div class="container">
-    <div class="row justify-content-center">
-
-        <!-- POLO 5 -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
-            <div class="car-card">
-                <img src="../../assets/images/Voitures-Volkswagen-Polo5.jpg" alt="Volkswagen Polo5">
-                <div class="content">
-                    <h3>Polo5</h3>
-                    <p>prix débutant à 18 015 €</p>
-                    <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Polo">Voir plus...</a>
-<<<<<<< HEAD
-                    <a href="/supercar_project/Pages/connexion/page_connexion.php" class="btn-dark">Essayer</a>
-=======
-                    <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
->>>>>>> ad09751128c51b1adbf0be5a98e1f36f317a7702
-                </div>
+    <!-- Modal -->
+    <div id="modal-<?= $voiture['id_voiture'] ?>" class="modal">
+        <div class="modal-cont">
+            <a href="#" class="close">&times;</a>
+            <h2>À propos de l'<?= $voiture['marque'] . ' ' . $voiture['modele']; ?></h2>
+            <p>Le SUV sportif ultime d'Audi, alliant performance et luxe.</p>
+            <div class="test">
+            <div class="voiture-cadre">
+                <img src="<?= $voiture['img_illustr1'] ?>" alt="<?= $voiture['marque'] . ' ' . $voiture['modele']; ?>">
+            </div>
+            <div class="voiture-cadre">
+                <img src="<?= $voiture['img_illustr2'] ?>" alt="<?= $voiture['marque'] . ' ' . $voiture['modele']; ?>">
+            </div>
+            <div class="voiture-cadre">
+                <img src="<?= $voiture['img_illustr3'] ?>" alt="<?= $voiture['marque'] . ' ' . $voiture['modele']; ?>">
+            </div>
+            </div>
+            <br>
+            <div class="specif">
+                <li><strong>Motorisation :</strong> <?= $voiture['motorisation'] ?></li>
+                <li><strong>Puissance :</strong> <?= $voiture['puissance'] ?></li>
+                <li><strong>Transmission :</strong> <?= $voiture['transmission'] ?></li>
             </div>
         </div>
+    </div>
 
-                     <!-- Modal pour Polo 5 -->
-          <!-- Modals -->
-                    <div id="Polo" class="modal">
-                <div class="modal-content">
-                    <a href="#" class="close">&times;</a>
-                    <h2>À propos de la Polo 5</h2>
-                    <p>La Volkswagen Polo 5 est une citadine polyvalente et fiable. Elle combine compacité, confort et technologies pratiques, idéale pour la conduite urbaine et périurbaine.</p>
-                    <div class="voiture-cadre">
-                        <img src="/supercar_project/assets/images/Voitures-Volkswagen-Polo5.jpg" alt="Volkswagen Polo 5">
-                    </div>
-                    <br>
-                    <div class="tittle">
-                        <li><strong>Motorisations</strong> : Essence (MPI, TSI) ou Diesel (TDI)</li>
-                        <li><strong>Puissance</strong> : De 60 ch à 192 ch (GTI)</li>
-                        <li><strong>Transmission</strong> : Boîte manuelle ou automatique DSG</li>
-                    </div>
-                </div>
-            </div>
+<?php endforeach; ?>
+</main>
 
-
-
-        <!-- TOUAREG -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
-            <div class="car-card">
-                <img src="../../assets/images/Voitures-Volkswagen-Touareg.jpg" alt="Volkswagen Touareg">
-                <div class="content">
-                    <h3>Touareg</h3>
-                    <p>à partir de 60 000 €</p>
-                    <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Touareg">Voir plus...</a>
-<<<<<<< HEAD
-                    <a href="/supercar_project/Pages/connexion/page_connexion.php" class="btn-dark">Essayer</a>
-=======
-                    <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
->>>>>>> ad09751128c51b1adbf0be5a98e1f36f317a7702
-                </div>
-            </div>
-        </div>
-
-                         <!-- Modal pour Touareg-->
-          <!-- Modals -->
-                    <div id="Touareg" class="modal">
-                <div class="modal-content">
-                    <a href="#" class="close">&times;</a>
-                    <h2>À propos du Touareg</h2>
-                    <p>Le Volkswagen Touareg est un SUV haut de gamme, spacieux et performant, qui allie luxe, technologies de pointe et confort pour les longs trajets comme pour les aventures.</p>
-                    <div class="voiture-cadre">
-                        <img src="/supercar_project/assets/images/Voitures-Volkswagen-Touareg.jpg" alt="Volkswagen Touareg">
-                    </div>
-                    <br>
-                    <div class="tittle">
-                        <li><strong>Motorisations</strong> : Diesel V6, Essence V6/V8 et Hybride rechargeable (eHybrid)</li>
-                        <li><strong>Puissance</strong> : De 231 ch à 462 ch (Touareg R eHybrid)</li>
-                        <li><strong>Transmission</strong> : Boîte automatique Tiptronic à 8 rapports, transmission intégrale 4Motion</li>
-                    </div>
-                </div>
-            </div>
-
-
-
-        <!-- PASSAT -->
-        <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
-            <div class="car-card">
-                <img src="../../assets/images/Voitures-Volkswagen-Passat.jpg" alt="Volkswagen Passat">
-                <div class="content">
-                    <h3>Passat</h3>
-                    <p>à partir de 34 030 €</p>
-                    <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Passat">Voir plus...</a>
-<<<<<<< HEAD
-                    <a href="/supercar_project/Pages/connexion/page_connexion.php" class="btn-dark">Essayer</a>
-=======
-                    <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
->>>>>>> ad09751128c51b1adbf0be5a98e1f36f317a7702
-                </div>
-            </div>
-        </div>
-
-                    <!-- Modal pour passat-->
-          <!-- Modals -->
-          <div id="Passat" class="modal">
-                <div class="modal-content">
-                    <a href="#" class="close">&times;</a>
-                    <h2>À propos de la Passat</h2>
-                    <p>La Volkswagen Passat est une berline familiale élégante et spacieuse, idéale pour les longs trajets grâce à son confort et ses technologies avancées.</p>
-                    <div class="voiture-cadre">
-                        <img src="/supercar_project/assets/images/Voitures-Volkswagen-Passat.jpg" alt="Volkswagen Passat">
-                    </div>
-                    <br>
-                    <div class="tittle">
-                        <li><strong>Motorisations</strong> : Essence, Diesel et Hybride rechargeable (Passat GTE)</li>
-                        <li><strong>Puissance</strong> : De 120 ch à 218 ch (GTE hybride rechargeable)</li>
-                        <li><strong>Transmission</strong> : Boîte manuelle ou automatique DSG à 6 ou 7 rapports</li>
-                    </div>
-                </div>
-            </div>
-
-</div>
-</div>
-</div>
-    
-    
-    
-    
-        <!-- Troisième ligne de voitures -->
-        <div class="container">
-
-        <!-- T-ROC -->
-        <div class="car-card">
-            <img src="../../assets/images/Voitures-Volkswagen-T-Roc.jpg" alt="Volkswagen T-Roc">
-            <div class="content">
-                <h3>T-Roc</h3>
-                <p>À partir de 27 540 €</p>
-                <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#T-Roc">Voir plus...</a>
-<<<<<<< HEAD
-                <a href="/supercar_project/Pages/connexion/page_connexion.php" class="btn-dark">Essayer</a>
-=======
-                <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
->>>>>>> ad09751128c51b1adbf0be5a98e1f36f317a7702
-            </div>
-        </div>
-
-            <!-- Modal T-Roc -->
-            <div id="T-Roc" class="modal">
-                <div class="modal-content">
-                    <a href="#" class="close">&times;</a>
-                    <h2>À propos de la T-Roc</h2>
-                    <p>Un SUV compact stylé, pratique en ville comme sur route.</p>
-                    <div class="voiture-cadre">
-                        <img src="/supercar_project/assets/images/Voitures-Volkswagen-T-Roc.jpg" alt="Volkswagen T-Roc">
-                    </div>
-                    <br>
-                    <div class="tittle">
-                        <li><strong>Motorisations</strong> : Essence, diesel</li>
-                        <li><strong>Puissance</strong> : 110 à 190 ch</li>
-                        <li><strong>Transmission</strong> : Manuelle ou automatique (DSG)</li>
-                    </div>
-                </div>
-            </div>
-
-            <!-- T-CROSS -->
-            <div class="car-card">
-                <img src="../../assets/images/Voitures-Volkswagen-T-Cross.jpg" alt="Volkswagen T-Cross">
-                <div class="content">
-                    <h3>T-Cross</h3>
-                    <p>À partir de 24 000 €</p>
-                    <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#T-Cross">Voir plus...</a>
-<<<<<<< HEAD
-                    <a href="/supercar_project/Pages/connexion/page_connexion.php" class="btn-dark">Essayer</a>
-=======
-                    <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
->>>>>>> ad09751128c51b1adbf0be5a98e1f36f317a7702
-                </div>
-            </div>
-
-            <!-- Modal T-Cross -->
-            <div id="T-Cross" class="modal">
-                <div class="modal-content">
-                    <a href="#" class="close">&times;</a>
-                    <h2>À propos de la T-Cross</h2>
-                    <p>Un mini SUV urbain, maniable et fun à conduire.</p>
-                    <div class="voiture-cadre">
-                        <img src="/supercar_project/assets/images/Voitures-Volkswagen-T-Cross.jpg" alt="Volkswagen T-Cross">
-                    </div>
-                    <br>
-                    <div class="tittle">
-                        <li><strong>Motorisations</strong> : Essence</li>
-                        <li><strong>Puissance</strong> : 95 à 115 ch</li>
-                        <li><strong>Transmission</strong> : Manuelle ou automatique</li>
-                    </div>
-                </div>
-            </div>
-
-            <!-- JETTA -->
-            <div class="car-card">
-                <img src="../../assets/images/Voitures-Volkswagen-Jetta.jpg" alt="Volkswagen Jetta">
-                <div class="content">
-                    <h3>Jetta</h3>
-                    <p>À partir de 12 030 €</p>
-                    <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Jetta">Voir plus...</a>
-<<<<<<< HEAD
-                    <a href="/supercar_project/Pages/connexion/page_connexion.php" class="btn-dark">Essayer</a>
-=======
-                    <a href="/supercar_project/Pages/Clients/connexion/connexion.php" class="btn-dark">Essayer</a>
->>>>>>> ad09751128c51b1adbf0be5a98e1f36f317a7702
-                </div>
-            </div>
-
-            </div> <!-- fin du .container -->
-
-            <!-- Modal Jetta -->
-            <div id="Jetta" class="modal">
-            <div class="modal-content">
-                <a href="#" class="close">&times;</a>
-                <h2>À propos de la Jetta</h2>
-                <p>Une berline classique et sobre, surtout populaire hors Europe.</p>
-                <div class="voiture-cadre">
-                    <img src="/supercar_project/assets/images/Voitures-Volkswagen-Jetta.jpg" alt="Volkswagen Jetta">
-                </div>
-                <br>
-                <div class="tittle">
-                    <li><strong>Motorisations</strong> : Principalement essence</li>
-                    <li><strong>Puissance</strong> : Environ 110 à 150 ch</li>
-                    <li><strong>Transmission</strong> : Manuelle ou automatique</li>
-                </div>
-            </div>
-            </div>
-
-</html>
-                <br><br>
-
-                <?php
-                  include ('../footage/footage.php');
-                ?>
-
-
- 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+<?php include('../footage/footage.php'); ?>
 
 </body>
+</html>
+
+

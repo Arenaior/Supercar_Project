@@ -1,6 +1,7 @@
-
-  <?php 
+<?php 
+  include("../../requetedb/bdconnect.php");
   include("Admin-Navbar.php");
+  include("../barre/barre.php");
   ?>
   
 <!DOCTYPE html>
@@ -33,8 +34,4 @@
 
 </body>
 </html>
-
-        
-
-
 </html>

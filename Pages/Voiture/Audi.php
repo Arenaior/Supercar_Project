@@ -1,234 +1,268 @@
-<?php 
+<?php
 session_start();
 include ('../barre/barre.php');
+$requete = $bdd->query("SELECT id_voiture, marque, modele, prix, motorisation, puissance, transmission, image_illustration, img_illustr1, img_illustr2, img_illustr3 FROM voiture");
+$voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utiliser foreach
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="audi.css">
+    <!-- <link rel="stylesheet" href="audicss.php"> -->
     <title>Modèles Audi</title>
 </head>
 <body>
-<header>
-        <div class="descri">
-            Consultez nos dernières offres sur certains modèles Audi, pour les clients hautement qualifiés
-        </div>
-</header>
+<style>
+.vid {
+    height: 800px;
+    padding: 20px 0; 
+    text-align: center; 
+    color: rgb(245, 242, 242);
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../assets/images/fondaudi.avif');
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.vid .vid1{ 
+  position: relative;
+    z-index: 1;
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 170px;
+    padding: 66px 53px;
+    border-radius: 3px; 
+}
+
+.titre {
+    font-size: 70px;
+    font-weight: bold;
+    margin-top: 125px;
+}
+
+
+
+.descri {
+    font-size: 15px; /* Taille de police adaptée pour une lecture fluide */
+    color: rgb(248, 242, 242); 
+    text-align: left; 
+    line-height: 1.8; 
+    max-width: 800px; 
+    margin: 30px 0; 
+    padding-left: 20px; 
+    border-left: 4px solid rgb(248, 242, 242); 
+    font-weight:bold;
+    margin-top: 150px;
+    margin-right:600px;
+}
+.logo{
+    width: 40px;
+    height: 40px;
+}
+.voiture-container {
+    display: ruby;
+}
+
+.voiture-cadre {
+    width: 30%;   
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 11px;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.voiture-cadre img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.voiture-titre {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.voiture-button {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.button:hover {
+    background-color: #0056b3;
+}
+
+.specif {
+    font-size: 20px; /* Agrandir le texte */
+    font-weight: 500; /* Rendre le texte plus classe */
+    font-family: "Arial", sans-serif; /* Changer la police pour plus d’élégance */
+    color: #333; /* Couleur légèrement assombrie pour un effet premium */
+    background: linear-gradient(to right, #f8f8f8, #e0e0e0); 
+    padding: 15px;
+    border-radius: 10px; /* Coins arrondis pour un effet premium */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+.specif li {
+    margin-bottom: 10px; 
+    list-style: none; 
+    position: relative;
+    padding-left: 25px; 
+}
+
+.specif li::before {
+    content: "✓"; 
+    color: #007bff; 
+    font-size: 22px;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+    
+/* Style du modal (invisible par défaut) */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height:350px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.modal-cont {
+    background: white;
+    padding: 20px;
+    width: 300px; 
+    border-radius: 10px;
+    display: inline-block;
+    width: 80%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+/* Afficher le modal lorsque ciblé */
+.modal:target {
+    display: block;
+}
+
+.test{
+  display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+</style>
+<div class="vid">
+<div class="vid1">
+<center><h1 class="titre">AUDI</h1></center>
+    <div class="descri">
+    La puissance et le raffinement selon Audi.
+Offrez-vous l’excellence d’un véhicule qui conjugue design audacieux, technologie quattro et sensations uniques au volant.
+Repoussez les limites, affirmez votre différence.
+Avec Audi, conduisez le futur dès aujourd’hui.
+    </div></div>
+</div>
+
 <center>
     <div class="css">
-        <h1>Découvrez nos modeles avec Audi</h1>
+        <h1>Découvrez nos modèles avec Audi</h1>
         <img src="../../assets/images/Logo audi.png" style="width: 150px; height: auto;">
     </div>
 </center>
+
 <hr>
-    <main>
-        <div class="voiture-container">
-            <div class="voiture-cadre">
-                <img src="../../assets/images/Audi RS q8.jpeg" alt="Audi RS Q8">
-                <div class="voiture-titre">
-                    Audi RS Q8
-                </div>
-                <div class="voiture-titre">
-                    À partir de 
-                </div>
-                <div class="voiture-button">
-                <a href="#modal-rsq8" class="btn btn-dark">Voir plus...</a>
-                    <?php if (!isset($_SESSION['email'])):?>         
-                        <a href="../connexion/page_connexion.php"class="btn btn-dark">Essayer</a>               
-                    <?php else:?>
-                        <?php $prenom = htmlspecialchars($_SESSION['prenom']);
-                              $nom = htmlspecialchars($_SESSION['nom']);
-                              $telephone = htmlspecialchars($_SESSION['telephone']);
-                              $mail = htmlspecialchars($_SESSION['email']);?>
-                        <a href="../connexion/formulaire_essaie.php"class="btn btn-dark">Essayer</a>
-                    <?php endif;?>
-                </div>
+
+<main>
+
+<?php foreach ($voitures as $voiture): ?>
+  <div class="voiture-container">    
+        <div class="voiture-cadre">
+            <img src="<?= $voiture['image_illustration'] ?>" alt="<?= $voiture['modele'] ?>">
+            <div class="voiture-titre">
+                <?= $voiture['marque'] . ' ' . $voiture['modele']; ?>
             </div>
-            <div class="voiture-cadre">
-                <img src="../../assets/images/Audi rs7.jpeg" alt="Audi RS7">
-                <div class="voiture-titre">
-                    Audi RS7
-                </div>
-                <div class="voiture-titre">
-                    À partir de 
-                </div>
-                <div class="voiture-button">
-                <a href="#modal-rs7" class="btn btn-dark">Voir plus...</a>
-                <?php if (!isset($_SESSION['email'])):?>         
-                        <a href="../connexion/page_connexion.php"class="btn btn-dark">Essayer</a>               
-                    <?php else:?>
-                        <?php $prenom = htmlspecialchars($_SESSION['prenom']);
-                              $nom = htmlspecialchars($_SESSION['nom']);
-                              $telephone = htmlspecialchars($_SESSION['telephone']);
-                              $mail = htmlspecialchars($_SESSION['email']);?>
-                        <a href="../connexion/formulaire_essaie.php"class="btn btn-dark">Essayer</a>
-                    <?php endif;?>
-                </div>
+            <div class="voiture-titre">
+                À partir de <?= $voiture['prix'] ?> RS
             </div>
-            <div class="voiture-cadre">
-                <img src="../../assets/images/Audi S e-tron.jpeg" alt="Audi S e-tron">
-                <div class="voiture-titre">
-                    Audi S e-tron
-                </div>
-                <div class="voiture-titre">
-                    À partir de 
-                </div>
-                <div class="voiture-button">
-                <a href="#modal-etron" class="btn btn-dark">Voir plus...</a>
-                <?php if (!isset($_SESSION['email'])):?>         
-                        <a href="../connexion/page_connexion.php"class="btn btn-dark">Essayer</a>               
-                    <?php else:?>
-                        <?php $prenom = htmlspecialchars($_SESSION['prenom']);
-                              $nom = htmlspecialchars($_SESSION['nom']);
-                              $telephone = htmlspecialchars($_SESSION['telephone']);
-                              $mail = htmlspecialchars($_SESSION['email']);?>
-                        <a href="../connexion/formulaire_essaie.php"class="btn btn-dark">Essayer</a>
-                    <?php endif;?>
-                </div>
-            </div>
-            <div class="voiture-cadre">
-                <img src="../../assets/images/Audi S8.jpeg" alt="Audi S8">
-                <div class="voiture-titre">
-                    Audi S8
-                </div>
-                <div class="voiture-titre">
-                    À partir de 
-                </div>
-                <div class="voiture-button">
-                <a href="#modal-s8" class="btn btn-dark">Voir plus...</a>
-                <?php if (!isset($_SESSION['email'])):?>         
-                        <a href="../connexion/page_connexion.php"class="btn btn-dark">Essayer</a>               
-                    <?php else:?>
-                        <?php $prenom = htmlspecialchars($_SESSION['prenom']);
-                              $nom = htmlspecialchars($_SESSION['nom']);
-                              $telephone = htmlspecialchars($_SESSION['telephone']);
-                              $mail = htmlspecialchars($_SESSION['email']);?>
-                        <a href="../connexion/formulaire_essaie.php"class="btn btn-dark">Essayer</a>
-                    <?php endif;?>
-                </div>
-            </div>
-            <div class="voiture-cadre">
-                <img src="../../assets/images/Audi sq7.jpeg" alt="Audi SQ7">
-                <div class="voiture-titre">
-                    Audi SQ7
-                </div>
-                <div class="voiture-titre">
-                    À partir de 
-                </div>
-                <div class="voiture-button">
-                <a href="#modal-sq7" class="btn btn-dark">Voir plus...</a>
-                <?php if (!isset($_SESSION['email'])):?>         
-                        <a href="../connexion/page_connexion.php"class="btn btn-dark">Essayer</a>               
-                    <?php else:?>
-                        <?php $prenom = htmlspecialchars($_SESSION['prenom']);
-                              $nom = htmlspecialchars($_SESSION['nom']);
-                              $telephone = htmlspecialchars($_SESSION['telephone']);
-                              $mail = htmlspecialchars($_SESSION['email']);?>
-                        <a href="../connexion/formulaire_essaie.php"class="btn btn-dark">Essayer</a>
-                    <?php endif;?>
-                </div>
+            <div class="voiture-button">
+                <a href="#modal-<?= $voiture['id_voiture'] ?>" class="btn btn-dark">Voir plus...</a>
+                <?php if (!isset($_SESSION['email'])): ?>
+                    <a href="../connexion/page_connexion.php" class="btn btn-dark">Essayer</a>
+                <?php else: ?>
+                    <a href="../connexion/formulaire_essaie.php" class="btn btn-dark">Essayer</a>
+                <?php endif; ?>
             </div>
         </div>
-    </main>
+    </div>
 
-<?php 
- include ('../footage/footage.php');
-?>
-    <!-- Modal Audi RS Q8 -->
-<div id="modal-rsq8" class="modal">
-  <div class="modal-content">
-    <a href="#" class="close">&times;</a>
-    <h2>À propos de l'Audi RS Q8</h2>
-    <p>Le SUV sportif ultime d'Audi, alliant performance et luxe.</p>
-    <div class="voiture-cadre">
-      <img src="../../assets/images/Audi RS q8.jpeg" alt="Audi RS Q8">
+    <!-- Modal -->
+    <div id="modal-<?= $voiture['id_voiture'] ?>" class="modal">
+        <div class="modal-cont">
+            <a href="#" class="close">&times;</a>
+            <h2>À propos de l'<?= $voiture['marque'] . ' ' . $voiture['modele']; ?></h2>
+            <p>Le SUV sportif ultime d'Audi, alliant performance et luxe.</p>
+            <div class="test">
+            <div class="voiture-cadre">
+                <img src="<?= $voiture['img_illustr1'] ?>" alt="<?= $voiture['marque'] . ' ' . $voiture['modele']; ?>">
+            </div>
+            <div class="voiture-cadre">
+                <img src="<?= $voiture['img_illustr2'] ?>" alt="<?= $voiture['marque'] . ' ' . $voiture['modele']; ?>">
+            </div>
+            <div class="voiture-cadre">
+                <img src="<?= $voiture['img_illustr3'] ?>" alt="<?= $voiture['marque'] . ' ' . $voiture['modele']; ?>">
+            </div>
+            </div>
+            <br>
+            <div class="specif">
+                <li><strong>Motorisation :</strong> <?= $voiture['motorisation'] ?></li>
+                <li><strong>Puissance :</strong> <?= $voiture['puissance'] ?></li>
+                <li><strong>Transmission :</strong> <?= $voiture['transmission'] ?></li>
+            </div>
+        </div>
     </div>
-    <br>
-    <div class="specif">
-      <li><strong>Motorisation :</strong> V8 biturbo 4.0L</li>
-      <li><strong>Puissance :</strong> 600 ch</li>
-      <li><strong>Transmission :</strong> Quattro – Tiptronic 8 rapports</li>
-    </div>
-  </div>
-</div>
 
-<!-- Modal Audi RS7 -->
-<div id="modal-rs7" class="modal">
-  <div class="modal-content">
-    <a href="#" class="close">&times;</a>
-    <h2>À propos de l'Audi RS7</h2>
-    <p>Une berline coupé ultra-performante avec un style affirmé.</p>
-    <div class="voiture-cadre">
-      <img src="../../assets/images/Audi rs7.jpeg" alt="Audi RS7">
-    </div>
-    <br>
-    <div class="specif">
-      <li><strong>Motorisation :</strong> V8 biturbo 4.0L</li>
-      <li><strong>Puissance :</strong> 600 ch</li>
-      <li><strong>Transmission :</strong> Quattro – automatique 8 rapports</li>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Audi S e-tron -->
-<div id="modal-etron" class="modal">
-  <div class="modal-content">
-    <a href="#" class="close">&times;</a>
-    <h2>À propos de l'Audi S e-tron</h2>
-    <p>Le SUV 100% électrique qui allie sportivité et autonomie.</p>
-    <div class="voiture-cadre">
-      <img src="../../assets/images/Audi S e-tron.jpeg" alt="Audi S e-tron">
-    </div>
-    <br>
-    <div class="specif">
-      <li><strong>Motorisation :</strong> Électrique</li>
-      <li><strong>Puissance :</strong> 503 ch</li>
-      <li><strong>Autonomie :</strong> Jusqu’à 470 km (WLTP)</li>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Audi S8 -->
-<div id="modal-s8" class="modal">
-  <div class="modal-content">
-    <a href="#" class="close">&times;</a>
-    <h2>À propos de l'Audi S8</h2>
-    <p>Le summum de l’élégance et de la performance pour les berlines Audi.</p>
-    <div class="voiture-cadre">
-      <img src="../../assets/images/Audi S8.jpeg" alt="Audi S8">
-    </div>
-    <br>
-    <div class="specif">
-      <li><strong>Motorisation :</strong> V8 biturbo mild-hybrid</li>
-      <li><strong>Puissance :</strong> 571 ch</li>
-      <li><strong>Technologies :</strong> Suspension prédictive, conduite semi-autonome</li>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Audi SQ7 -->
-<div id="modal-sq7" class="modal">
-  <div class="modal-content">
-    <a href="#" class="close">&times;</a>
-    <h2>À propos de l'Audi SQ7</h2>
-    <p>Un SUV 7 places avec la puissance d’une sportive.</p>
-    <div class="voiture-cadre">
-      <img src="../../assets/images/Audi sq7.jpeg" alt="Audi SQ7">
-    </div>
-    <br>
-    <div class="specif">
-      <li><strong>Motorisation :</strong> V8 TFSI</li>
-      <li><strong>Puissance :</strong> 507 ch</li>
-      <li><strong>Transmission :</strong> Quattro – Boîte Tiptronic 8 rapports</li>
-    </div>
-  </div>
-</div>
-
-
+<?php endforeach; ?>
+</main>
+<br><br>
+<?php include('../footage/footage.php'); ?>
 
 </body>
 </html>
-
-

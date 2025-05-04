@@ -1,53 +1,27 @@
+<?php
+include ("../barre/barre.php");
 
-  <?php 
-  include("Admin-Navbar.php");
-  include("../requetedb/bdconnect.php");
-  ?>
+if (!empty($_POST["marque"]) && !empty($_POST["modele"]) && !empty($_POST["prix"]) && !empty($_POST["motorisation"]) && !empty($_POST["puissance"]) && !empty($_POST["transmission"]) && !empty($_FILES["image_illustration"]["name"]) && !empty($_FILES["img_illustr1"]["name"]) && !empty($_FILES["img_illustr2"]["name"]) && !empty($_FILES["img_illustr3"]["name"])) {
+  $marque  = $_POST["marque"];
+  $modele  = $_POST["modele"];
+  $prix = $_POST["prix"];
+  $motorisation = $_POST["motorisation"];
+  $puissance = $_POST["puissance"];
+  $transmission = $_POST["transmission"];
+  $emplacement_image = "../../assets/images/";
+  $image_illustration = $emplacement_image . basename($_FILES["image_illustration"]["name"]);
+  $img_illustr1 = $emplacement_image . basename($_FILES["img_illustr1"]["name"]);
+  $img_illustr2 = $emplacement_image . basename($_FILES["img_illustr2"]["name"]);
+  $img_illustr3 = $emplacement_image . basename($_FILES["img_illustr3"]["name"]);
 
-  
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajout de voiture </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  
+  move_uploaded_file($_FILES["image_illustration"]["tmp_name"], $image_illustration);
+  move_uploaded_file($_FILES["img_illustr1"]["tmp_name"], $img_illustr1);
+  move_uploaded_file($_FILES["img_illustr2"]["tmp_name"], $img_illustr2);
+  move_uploaded_file($_FILES["img_illustr3"]["tmp_name"], $img_illustr3);
 
-  <style>
-    .p1{
-        font-size:20px;
-    }
-  </style>
-
-  <div class="content">
-  <?php
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $_Marque = mysqli_real_escape_string($bdd, $_POST["Marque"]);
-    $_Modele = mysqli_real_escape_string($bdd, $_POST["Modèle"]);
-
-    $sql = "INSERT INTO Voitures (Marque, Modele) VALUES ('$_Marque', '$_Modele')";
-
-    if (mysqli_query($bdd, $sql)) {
-        echo "<div class='alert alert-success'>Voiture ajoutée avec succès !</div>";
-    } else {
-        echo "<div class='alert alert-danger'>Erreur : " . mysqli_error($bdd) . "</div>";
-    }
-
-    mysqli_close($bdd);
+  // Insertion dans la base
+  $requete = $bdd->prepare('INSERT INTO voiture(marque, modele, prix, motorisation, puissance, transmission, image_illustration, img_illustr1, img_illustr2, img_illustr3) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
+  $requete->execute([$marque, $modele, $prix, $motorisation, $puissance, $transmission, $image_illustration, $img_illustr1, $img_illustr2, $img_illustr3]);
 }
-?>
 
-<center>
-<H1><p>Voiture ajoutée avec succès</p></H1>
-<center>
-  </div>
-
-</body>
-</html>
-
-        
-
-
-</html>
+  ?>

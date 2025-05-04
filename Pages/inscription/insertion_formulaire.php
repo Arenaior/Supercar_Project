@@ -8,12 +8,12 @@ if(isset($_POST["nom"]) && isset($_POST["prenom"]) && isset($_POST["mdp"]) && is
     $telephone = $_POST["telephone"];
     $mail = $_POST["email"];
    
-    $verification = $bdd->prepare('SELECT COUNT(*) FROM client WHERE adresse_email = :email');
-    $verification->bindValue(":email", $mail);
-    $verification->execute();
-    $verification->fetch();
+    $requete = $bdd->prepare('SELECT COUNT(*) FROM client WHERE adresse_email = :email');
+    $requete->bindValue(":email", $mail);
+    $requete->execute();
+    $verification = $requete->fetchColumn();
     
-    if ($verification) {
+    if ($verification > 0) {
         echo "L'adresse email est déjà utilisé par un autre utilisateur";
     } else {
         

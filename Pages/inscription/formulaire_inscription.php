@@ -37,7 +37,7 @@ include ("../barre/barre.php");
                 <br>
                 <input type="text" class="form-control données" placeholder="Entrez votre Prénom" name="prenom" style="width: 350px;">
                 <br>
-                <input type="telephone" class="form-control données" placeholder="Entrez votre Numero telephone" name="telephone" style="width: 350px;">
+                <input type="tel" class="form-control données" placeholder="Entrez votre Numero telephone" name="telephone" style="width: 350px;">
                 <br>
                 <input type="mail" class="form-control données" placeholder="Entrez votre Adresse email" name="email" style="width: 350px;">
                 <br>

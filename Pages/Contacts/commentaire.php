@@ -94,7 +94,7 @@ include ("../barre/barre.php");
     </div>
 
     <div class="container mt-5">
-        <h1 class="H8" >Contactez Supercar </h1> <h2 class="H2"> Pour plus d'informations, obtenir de l'aide ou pour vos suggestions.</h2>
+        <h1 class="H8" >Contactez Supercar </h1> <h2 class="H2"> Pour plus d'informations, obtenir de l'aide ou pour vos donner votre avis.</h2>
     </div>
 
     <hr>
@@ -108,15 +108,16 @@ include ("../barre/barre.php");
     <br>
 
     <div class="container mt-5">
-    <form action="insertion_formulaire.php" method="POST">
-            <input type="text" class="form-control données w-50" placeholder="Entrez votre nom" name ="nom">
+    <form action="insertion_commentaire.php" method="POST">
+            <input type="text" class="form-control données w-50" placeholder="Votre Nom" name ="nom">
             <br>
-            <input type="text" class="form-control données w-50" placeholder="Entrez votre prénom" name="prénom" >
+            <input type="text" class="form-control données w-50" placeholder="Votre Prénom" name="prenom">
             <br>
-            <input type="mail" class="form-control données w-50" placeholder="Entrez votre adresse mail" name='mail'>
+            <input type="mail" class="form-control données w-50" placeholder="Votre adresse mail" name='email'>
             <br>
-            <input type="mail" class="form-control données w-50" placeholder="Entrez votre commentaire" name='commentaire'>
-            
+            <input type="tel" class="form-control données w-50" placeholder="Votre numero telephone" name='telephone'>
+            <br>
+            <textarea class="form-control w-75" name="commentaire" rows="7" placeholder="Dites-nous?"></textarea> 
          <br><br>
             <button type="submit" class="btn btn-dark">Envoyer</button>
             <button type="reset" class="btn btn-secondary-emphasis">Annuler</button>
@@ -130,32 +131,10 @@ include ("../barre/barre.php");
             <br><br>
             <p clase="p1"> SuperCar est une entreprise innovante située à Ébène, Maurice, spécialisée dans la vente et la location de voitures haut de gamme. Avec un service client exceptionnel et une flotte de véhicules de luxe, SuperCar s'engage à offrir une expérience unique à ses clients, alliant performance, élégance et confort.</p>
             <br>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2759.351178474387!2d57.48817801165706!3d-20.244420722809444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2smu!4v1734848647885!5m2!1sfr!2smu" 
-                width="660" height="400" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1573.9001167778467!2d57.460944072382404!3d-20.242802104542186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDE0JzM0LjgiUyA1N8KwMjcnNDAuOSJF!5e0!3m2!1sfr!2smu!4v1746176181912!5m2!1sfr!2smu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
-            <br><br>
-
-            <div class="container mt-5">
-    <h1 align="center">Nos coordonnées</h1>
-    <br><br><br><br>
-    <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
-        <h5 style="text-align: left; flex: 1;">
-            <img src="/supercar_project/assets/images/telephone.PNG" class="img3">Tel: 12345678
-        </h5>
-        <h5 style="text-align: center; flex: 1;">
-            <img src="/supercar_project/assets/images/gmail.png" class="img2">Email: supercar@gmail.mu
-        </h5>
-        <h5 style="text-align: right; flex: 1;">
-            <img src="/supercar_project/assets/images/epingle.png" class="img2">Adresse: 1, Rue des Fleurs, Ébène, Maurice
-        </h5>
-    </div>
-</div>
-
-
-
-        </div>
+            
           
 
   <br><br><br><br><br><br><br><br><br>

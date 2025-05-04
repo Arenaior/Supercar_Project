@@ -1,5 +1,9 @@
 <?php 
 include("../../requetedb/bdconnect.php");
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();  // Démarre la session si elle n'est pas déjà démarrée
+}
+$_SESSION['test'] = '';
 ?>
 
 <!DOCTYPE HTML>
@@ -18,9 +22,14 @@ include("../../requetedb/bdconnect.php");
   .nom{
     color: #ddd;
   }
+
+  header{
+    height: 100%;
+  }
 </style>
 </head>
-<body>
+
+<header>
 <!--déclaration de la barre de navigation avec couleur noire-->
 <nav class="navbar navbar-expand-lg bg-dark">
   <div class="container-fluid">
@@ -47,7 +56,11 @@ include("../../requetedb/bdconnect.php");
         </li>
 
         <li class="nav-item mx-3">
-          <a class="nav-link text-white" href="/supercar_project/Pages/connexion/page_connexion.php">Demande d'essai</a>
+        <?php if (!isset($_SESSION['email'])):?>         
+                        <a class="nav-link text-white" href="../connexion/page_connexion.php"class="btn btn-dark">Demande d'essai</a>               
+                    <?php else:?>
+                        <a class="nav-link text-white" href="../connexion/formulaire_essaie.php"class="btn btn-dark">Demande d'essai</a>
+                    <?php endif;?>
         </li>
 
         <li class="nav-item mx-3">
@@ -58,9 +71,7 @@ include("../../requetedb/bdconnect.php");
 
     <div class="user-info" style="float: right; margin-right: 20px;">
     <?php
-    if (session_status() === PHP_SESSION_NONE) {
-        session_start();  // Démarre la session si elle n'est pas déjà démarrée
-    }
+    
 
     // Vérifie si les données de l'utilisateur sont présentes dans la session
     if (isset($_SESSION['prenom']) && isset($_SESSION['nom'])) {
@@ -105,6 +116,7 @@ include("../../requetedb/bdconnect.php");
                  style="width: 40px; height: 40px;">
         </a>
     <?php } ?>
-</body>
+</header>
+
 </nav>
 </html>

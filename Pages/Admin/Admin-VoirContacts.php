@@ -1,7 +1,8 @@
 
   <?php 
+  include("../../requetedb/bdconnect.php");
   include("Admin-Navbar.php");
-  include("../requetedb/bdconnect.php");
+  
   ?>
   
 <!DOCTYPE html>
@@ -36,46 +37,49 @@
 
   <div class="content">
   <?php
-$sql = "SELECT * FROM Client";
-$curseur = mysqli_query($bdd, $sql);
 
-echo "<h2>Visualiser mes Clients !</h2>";
-echo "<table border='1'>"; // ouverture du tableau
+$requete = $bdd->query("SELECT id_client, nom, prenom, telephone, adresse_email FROM client");
+      
 
-// En-têtes du tableau
-echo "<tr>";
-echo "<th>ID</th>";
-echo "<th>     Nom</th>";
-echo "<th>Prénom</th>";
-echo "<th>    Mail</th>";
-echo "</tr>";
-
-while ($row = mysqli_fetch_assoc($curseur)) {
-    $id = $row["id"];
-    $nom = $row["Nom"];
-    $prénom = $row["Prénom"];
-    $mail = $row["Mail"];
-
-    echo "<tr>";
-    echo "<td>$id</td>";
-    echo "<td>$nom</td>";
-    echo "<td>$prénom</td>";
-    echo "<td>$mail</td>";
-    echo "</tr>";
-}
-
-echo "</table>"; // fermeture du tableau
-
-mysqli_free_result($curseur);
-mysqli_close($bdd);
 ?>
+<h2>Visualiser mes Clients !</h2>
+<table border>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Telephone</th>
+                <th>Adresse email</th>              
+            </tr>
+<?php
+// fetch permet de recuperer une entrer
+while($utilisateur = $requete->fetch(PDO::FETCH_ASSOC)) {
+?>       
+        <tr>
+            <td>
+                <?php echo $utilisateur["id_client"];?>
+            </td>
+            <td>
+                <?php echo $utilisateur["nom"];?>
+            </td>
+            <td>
+                <?php echo $utilisateur["prenom"];?>
+            </td>
+            <td>
+                <?php echo $utilisateur["telephone"];?>
+            </td>
+            <td>
+                <?php echo $utilisateur["adresse_email"];?>
+            </td>
+        </tr>
+<?php 
+}
+?>
+    </table>
+
+
 
   </div>
 
 </body>
-</html>
-
-        
-
-
 </html>
