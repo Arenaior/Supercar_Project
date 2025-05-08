@@ -67,7 +67,10 @@ $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utili
     height: 40px;
 }
 .voiture-container {
-    display: ruby;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-left: 69px;;
 }
 
 .voiture-cadre {
@@ -212,9 +215,8 @@ $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utili
 <hr>
 
 <main>
-
-<?php foreach ($voitures as $voiture): ?>
-  <div class="voiture-container">    
+<div class="voiture-container">
+<?php foreach ($voitures as $voiture): ?>    
         <div class="voiture-cadre">
             <img src="<?= $voiture['image_illustration'] ?>" alt="<?= $voiture['modele'] ?>">
             <div class="voiture-titre">
@@ -232,8 +234,9 @@ $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utili
                 <?php endif; ?>
             </div>
         </div>
+        <?php endforeach; ?>
     </div>
-
+    <?php foreach ($voitures as $voiture): ?>
     <!-- Modal -->
     <div id="modal-<?= $voiture['id_voiture'] ?>" class="modal">
         <div class="modal-cont">
