@@ -1,7 +1,7 @@
 <?php
 session_start();
 include ('../barre/barre.php');
-$requete = $bdd->query("SELECT id_voiture, marque, modele, prix, motorisation, puissance, transmission, image_illustration, img_illustr1, img_illustr2, img_illustr3 FROM voiture WHERE marque = 'Volkswagen'");
+$requete = $bdd->query("SELECT * FROM voiture WHERE marque LIKE '%Volkswagen%'");
 $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utiliser foreach
 ?>
 <!DOCTYPE html>
@@ -73,7 +73,7 @@ $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utili
 }
 
 .voiture-cadre {
-    width: 30%;   
+    width:75%;   
     background-color: white;
     border-radius: 10px;
     padding: 15px;
