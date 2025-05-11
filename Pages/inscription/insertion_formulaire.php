@@ -1,13 +1,13 @@
 <?php
 
 include ("../barre/barre.php");
-if(isset($_POST["nom"]) && isset($_POST["prenom"]) && isset($_POST["mdp"]) && isset($_POST["telephone"]) && isset($_POST["email"])){
+if(isset($_POST["nom"]) && isset($_POST["prenom"]) && isset($_POST["mdp"]) && isset($_POST["telephone"]) && isset($_POST["email"]) && empty($_POST["commentaire"])){
     $nom  = $_POST["nom"];
     $prenom  = $_POST["prenom"];
     $mdp = $_POST["mdp"];
     $telephone = $_POST["telephone"];
     $mail = $_POST["email"];
-   
+    $commentaire = $_POST["commentaire"];
     $requete = $bdd->prepare('SELECT COUNT(*) FROM client WHERE adresse_email = :email');
     $requete->bindValue(":email", $mail);
     $requete->execute();
@@ -17,8 +17,8 @@ if(isset($_POST["nom"]) && isset($_POST["prenom"]) && isset($_POST["mdp"]) && is
         echo "L'adresse email est déjà utilisé par un autre utilisateur";
     } else {
         
-        $requete = $bdd->prepare('INSERT INTO client(nom, prenom, telephone, adresse_email, mot_de_passe) VALUES(?, ?, ?, ?, ?)') or die(print_r($bdd->errorInfo()));
-        $requete->execute(array($nom, $prenom, $telephone, $mail, $mdp));
+        $requete = $bdd->prepare('INSERT INTO client(nom, prenom, telephone, adresse_email, mot_de_passe, commentaire) VALUES(?, ?, ?, ?, ?, ?)') or die(print_r($bdd->errorInfo()));
+        $requete->execute(array($nom, $prenom, $telephone, $mail, $mdp, $commentaire));
         ?>
 <!DOCTYPE HTML>
 <html lang=fr>

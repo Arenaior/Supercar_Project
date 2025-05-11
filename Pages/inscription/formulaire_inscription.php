@@ -60,7 +60,9 @@ include ("../barre/barre.php");
             <div class="mb-3">
                 <input type="password" class="form-control" placeholder="Entrez un Mot de passe" name="mdp" required>
             </div>
-
+            <div class="mb-3">
+                <input type="hidden" name="commentaire" >
+            </div>
             <div class="custom-checkbox mb-3">
                 <input type="checkbox" class="form-check-input me-2" required>
                 <label class="form-check-label">J'accepte les conditions d'utilisation de mes données *</label>
