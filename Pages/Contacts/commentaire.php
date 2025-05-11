@@ -109,15 +109,15 @@ include ("../barre/barre.php");
 
     <div class="container mt-5">
     <form action="insertion_commentaire.php" method="POST">
-            <input type="text" class="form-control données w-50" placeholder="Votre Nom" name ="nom">
+            <input type="text" class="form-control données w-50" placeholder="Votre Nom" name ="nom" required>
             <br>
-            <input type="text" class="form-control données w-50" placeholder="Votre Prénom" name="prenom">
+            <input type="text" class="form-control données w-50" placeholder="Votre Prénom" name="prenom" required>
             <br>
-            <input type="mail" class="form-control données w-50" placeholder="Votre adresse mail" name='email'>
+            <input type="mail" class="form-control données w-50" placeholder="Votre adresse mail" name='email' required>
             <br>
-            <input type="tel" class="form-control données w-50" placeholder="Votre numero telephone" name='telephone'>
+            <input type="tel" class="form-control données w-50" placeholder="Votre numero telephone" name='telephone' required>
             <br>
-            <textarea class="form-control w-75" name="commentaire" rows="7" placeholder="Dites-nous?"></textarea> 
+            <textarea class="form-control w-75" name="commentaire" rows="7" placeholder="Dites-nous?" required></textarea> 
          <br><br>
             <button type="submit" class="btn btn-dark">Envoyer</button>
             <button type="reset" class="btn btn-secondary-emphasis">Annuler</button>

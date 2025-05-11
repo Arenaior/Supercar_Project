@@ -2,7 +2,6 @@
 session_start();
 include ('../barre/barre.php');
 $requete = $bdd->query("SELECT * FROM voiture WHERE marque LIKE '%Audi%'");
-
 $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utiliser foreach
 ?>
 <!DOCTYPE html>
