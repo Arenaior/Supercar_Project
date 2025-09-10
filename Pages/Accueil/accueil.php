@@ -200,9 +200,15 @@
             <div class="col-md-6 gonflement">
                 <div class="card position-relative">
                     <img src="../../assets/images/Accueil-Demande.jpg" class="card-img-top" alt="Demande d’essai">
-                    <a href="../connexion/page_connexion.php" class="lien">Demande d'essai →</a>
+                    <?php if (!isset($_SESSION)) { session_start(); } ?>
+                    <?php if (!isset($_SESSION['email'])): ?>
+                        <a href="../connexion/page_connexion.php" class="lien">Demande d'essai →</a>
+                    <?php else: ?>
+                        <a href="../connexion/formulaire_essaie.php" class="lien">Demande d'essai →</a>
+                    <?php endif; ?>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
