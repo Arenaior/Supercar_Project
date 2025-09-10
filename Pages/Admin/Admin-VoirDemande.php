@@ -1,7 +1,7 @@
 
   <?php 
   include("Admin-Navbar.php");
-  include("../requetedb/bdconnect.php");
+  include("../../requetedb/bdconnect.php");
   ?>
   
 <!DOCTYPE html>
@@ -36,56 +36,63 @@
 
   <div class="content">
   <?php
-$sql = "SELECT * FROM Demandes";
-$curseur = mysqli_query($bdd, $sql);
+$sql = "SELECT * FROM essais";
+$curseur = $bdd->query($sql);
 
 echo "<h2>Voici les demandes d'essai pour Supercar:</h2>";
 echo "<table border='1'>"; // ouverture du tableau
 
 // En-têtes du tableau
 echo "<tr>";
-echo "<th>ID</th>";
+echo "<th>iD</th>";
 echo "<th> Nom</th>";
+echo "<th> Prénom</th>";
+echo "<th> Téléphone</th>";
 echo "<th>Mail</th>";
-echo "<th> Adresse</th>";
 echo "<th> Marque</th>";
 echo "<th> Modele</th>";
-echo "<th> Jour</th>";
-echo "<th> Heure de récupération</th>";
-echo "<th> Heure de dépôt</th>";
-echo "<th> Jour de retour</th>";
+echo "<th> Date d'essai </th>";
+echo "<th> Heure d'essai'</th>";
+echo "<th> Date de retour</th>";
+echo "<th> Heure de retour</th>";
 echo "</tr>";
 
-while ($row = mysqli_fetch_assoc($curseur)) {
-    $id = $row["id"];
-    $Nom = $row["Nom"];
-    $Mail = $row["Mail"];
-    $Adresse = $row["Adresse"];
-    $Marque = $row["Marque"];
-    $Modele = $row["Modele"];
-    $Jour = $row["Jour"];
-    $Heure = $row["Heure de récupération"];
-    $Retour = $row["Heure de dépôt"];
-    $Dretour = $row["Jour de retour"];
+while ($row = $curseur->fetch(PDO::FETCH_ASSOC))
+ {
+    $id = $row["id_client"];
+    $Nom = $row["nom"];
+    $Prénom = $row["prenom"];
+    $Telephone = $row["telephone"];
+    $Mail = $row["adresse_email"];
+    $Marque = $row["marque"];
+    $Modele = $row["modele"];
+    $date_essai = $row["date_essai"];
+    $heure_essai = $row["heure_essai"];
+    $date_retour = $row["date_retour"];
+    $heure_retour = $row["heure_retour"];
+    
 
     echo "<tr>";
     echo "<td>$id</td>";
     echo "<td>$Nom</td>";
+    echo "<td>$Prénom</td>";
+    echo "<td>$Telephone</td>";
     echo "<td>$Mail</td>";
-    echo "<td>$Adresse</td>";
     echo "<td>$Marque</td>";
     echo "<td>$Modele</td>";
-    echo "<td>$Jour</td>";
-    echo "<td>$Heure</td>";
-    echo "<td>$Retour</td>";
-    echo "<td>$Dretour</td>";
+    echo "<td>$date_essai</td>";
+    echo "<td>$heure_essai</td>";
+    echo "<td>$date_retour</td>";
+    echo "<td>$heure_retour</td>";
+
+   
     echo "</tr>";
 }
 
 echo "</table>"; // fermeture du tableau
 
-mysqli_free_result($curseur);
-mysqli_close($bdd);
+
+
 ?>
 
   </div>

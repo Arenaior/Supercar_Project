@@ -1,7 +1,7 @@
 
   <?php 
   include("Admin-Navbar.php");
-  include("../requetedb/bdconnect.php");
+  include("../../requetedb/bdconnect.php");
   ?>
   
 <!DOCTYPE html>
@@ -36,8 +36,8 @@
 
   <div class="content">
   <?php
-$sql = "SELECT * FROM Voitures";
-$curseur = mysqli_query($bdd, $sql);
+$sql = "SELECT * FROM Voiture";
+$curseur = $bdd->query($sql);
 
 echo "<h2>Voici les modèles de voitures de Supercar:</h2>";
 echo "<table border='1'>"; // ouverture du tableau
@@ -49,10 +49,10 @@ echo "<th> Marque</th>";
 echo "<th>Modele</th>";
 echo "</tr>";
 
-while ($row = mysqli_fetch_assoc($curseur)) {
-    $id = $row["id"];
-    $Marque = $row["Marque"];
-    $Modèle = $row["Modele"];
+while ($row = $curseur->fetch(PDO::FETCH_ASSOC)){
+    $id = $row["id_voiture"];
+    $Marque = $row["marque"];
+    $Modèle = $row["modele"];
 
     echo "<tr>";
     echo "<td>$id</td>";
@@ -63,8 +63,7 @@ while ($row = mysqli_fetch_assoc($curseur)) {
 
 echo "</table>"; // fermeture du tableau
 
-mysqli_free_result($curseur);
-mysqli_close($bdd);
+
 ?>
 
   </div>

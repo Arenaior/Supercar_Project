@@ -102,6 +102,21 @@ $client = $requete->fetch();
                 <label for="date_essai" class="form-label">Date de l'essai :</label>
                 <input type="date" class="form-control" id="date_essai" name="date_essai" required>
             </div>
+
+            <div class="mb-3">
+                <label for="heure_essai" class="form-label">Heure de l'essai :</label>
+                <input type="text" class="form-control" id="heure d'essai" name="heure_essai" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="date_retour" class="form-label">Date de retour :</label>
+                <input type="date" class="form-control" id="date_retour" name="date_retour" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="heure_retour" class="form-label">Heure de retour:</label>
+                <input type="text" class="form-control" id="heure_retour" name="heure_retour" required>
+            </div>
     
             <div class="d-grid">
                 <button type="submit" class="btn btn-dark">Envoyer la demande</button>

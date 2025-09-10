@@ -25,3 +25,4 @@ if (!empty($_POST["marque"]) && !empty($_POST["modele"]) && !empty($_POST["prix"
 }
 
   ?>
+  <center> <H1> Voiture ajoutée avec succès ! </H1> </center>

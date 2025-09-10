@@ -57,7 +57,7 @@ include("../barre/barre.php");
                     </div>
                     <div class="carousel-item">
                         <div class="row">
-                            <div class="col-md-4"><img src="../../assets/images/Voitures-Accueil-Range.jpg" class="d-block w-100 h-100 object-fit-cover" ></div>
+                            <div class="col-md-4"><a href="Land Rover.php"><img src="../../assets/images/Voitures-Accueil-Range.jpg" class="d-block w-100 h-100 object-fit-cover" ></a></div>
                             <div class="col-md-4"><img src="../../assets/images/Voitures-Accueil-Renault.jpg" class="d-block w-100 h-100 object-fit-cover"></div>
                             <div class="col-md-4"><img src="../../assets/images/Voitures-Accueil-Bmw1.jpg" class="d-block w-100 h-100 object-fit-cover" ></div>
                         </div>

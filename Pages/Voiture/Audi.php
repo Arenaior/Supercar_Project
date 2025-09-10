@@ -2,42 +2,40 @@
 session_start();
 include ('../barre/barre.php');
 $requete = $bdd->query("SELECT * FROM voiture WHERE marque LIKE '%Audi%'");
-$voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utiliser foreach
+$voitures = $requete->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="audicss.php"> -->
     <title>Modèles Audi</title>
 </head>
 <body>
 <style>
 .vid {
     height: 800px;
-    padding: 20px 0; 
-    text-align: center; 
+    padding: 20px 0;
+    text-align: center;
     color: rgb(245, 242, 242);
     font-size: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../../assets/images/fondaudi.avif');
-    
+    background-image: url('../../assets/images/fonaudi.avif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.vid .vid1{ 
-  position: relative;
+.vid .vid1 {
+    position: relative;
     z-index: 1;
     font-size: 60px;
     font-weight: bold;
     margin-top: 170px;
     padding: 66px 53px;
-    border-radius: 3px; 
+    border-radius: 3px;
 }
 
 .titre {
@@ -46,56 +44,46 @@ $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utili
     margin-top: 125px;
 }
 
-
-
 .descri {
-    font-size: 15px; /* Taille de police adaptée pour une lecture fluide */
-    color: rgb(248, 242, 242); 
-    text-align: left; 
-    line-height: 1.8; 
-    max-width: 800px; 
-    margin: 30px 0; 
-    padding-left: 20px; 
-    border-left: 4px solid rgb(248, 242, 242); 
+    font-size: 15px;
+    color: rgb(248, 242, 242);
+    text-align: left;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 30px 0;
+    padding-left: 20px;
+    border-left: 4px solid rgb(248, 242, 242);
     font-weight:bold;
     margin-top: 150px;
     margin-right:600px;
 }
-.logo{
-    width: 40px;
-    height: 40px;
-}
+
 .voiture-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-left: 69px;;
+    gap: 20px;
+    margin: 40px 60px;
 }
 
 .voiture-cadre {
-    width: 75%;   
-    background-color: white;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 11px;
-    text-align: center;
-    box-sizing: border-box;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
 .voiture-cadre img {
-    width: 100%;
-    height: auto;
+    height: 250px;
+    object-fit: cover;
     border-radius: 10px;
 }
-
 .voiture-titre {
+    margin-top: 10px;
     font-weight: bold;
-    margin-top: 10px;
+    font-size: 18px;
 }
-
 .voiture-button {
-    margin-top: 10px;
+    margin-top: auto;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -114,26 +102,26 @@ $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utili
 }
 
 .specif {
-    font-size: 20px; /* Agrandir le texte */
-    font-weight: 500; /* Rendre le texte plus classe */
-    font-family: "Arial", sans-serif; /* Changer la police pour plus d’élégance */
-    color: #333; /* Couleur légèrement assombrie pour un effet premium */
-    background: linear-gradient(to right, #f8f8f8, #e0e0e0); 
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Arial", sans-serif;
+    color: #333;
+    background: linear-gradient(to right, #f8f8f8, #e0e0e0);
     padding: 15px;
-    border-radius: 10px; /* Coins arrondis pour un effet premium */
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .specif li {
-    margin-bottom: 10px; 
-    list-style: none; 
+    margin-bottom: 10px;
+    list-style: none;
     position: relative;
-    padding-left: 25px; 
+    padding-left: 25px;
 }
 
 .specif li::before {
-    content: "✓"; 
-    color: #007bff; 
+    content: "\2713";
+    color: #007bff;
     font-size: 22px;
     font-weight: bold;
     position: absolute;
@@ -141,16 +129,13 @@ $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utili
     top: 0;
 }
 
-
-    
-/* Style du modal (invisible par défaut) */
 .modal {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 350px;
-    height:350px;
+    height: 350px;
     background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
 }
@@ -158,7 +143,7 @@ $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utili
 .modal-cont {
     background: white;
     padding: 20px;
-    width: 300px; 
+    width: 300px;
     border-radius: 10px;
     display: inline-block;
     width: 80%;
@@ -168,7 +153,6 @@ $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utili
     text-align: center;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
-
 
 .close {
     position: absolute;
@@ -180,33 +164,32 @@ $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utili
     color: black;
 }
 
-/* Afficher le modal lorsque ciblé */
 .modal:target {
     display: block;
 }
 
-.test{
-  display: flex;
+.test {
+    display: flex;
     overflow-x: auto;
     gap: 20px;
     padding: 20px;
 }
-
 </style>
+
 <div class="vid">
-<div class="vid1">
-<center><h1 class="titre">AUDI</h1></center>
-    <div class="descri">
-    La puissance et le raffinement selon Audi.
-Offrez-vous l’excellence d’un véhicule qui conjugue design audacieux, technologie quattro et sensations uniques au volant.
-Repoussez les limites, affirmez votre différence.
-Avec Audi, conduisez le futur dès aujourd’hui.
-    </div></div>
+    <div class="vid1">
+        <center><h1 class="titre">AUDI</h1></center>
+        <div class="descri">
+            L'excellence allemande dans chaque détail.<br>
+            Avec Audi, redécouvrez la puissance, l'élégance et l'innovation technologique.
+            Que ce soit pour les trajets quotidiens ou les grandes aventures, roulez avec assurance.
+        </div>
+    </div>
 </div>
 
 <center>
     <div class="css">
-        <h1>Découvrez nos modèles avec Audi</h1>
+        <h1>Découvrez nos modèles Audi</h1>
         <img src="../../assets/images/Logo audi.png" style="width: 150px; height: auto;">
     </div>
 </center>
@@ -214,16 +197,15 @@ Avec Audi, conduisez le futur dès aujourd’hui.
 <hr>
 
 <main>
-<div class="voiture-container">
-<?php foreach ($voitures as $voiture): ?>
-      
+    <div class="voiture-container">
+        <?php foreach ($voitures as $voiture): ?>
         <div class="voiture-cadre">
-            <img src="<?= $voiture['image_illustration'] ?>" alt="<?= $voiture['modele'] ?>">
+            <img src="../../assets/images/<?= htmlspecialchars($voiture['image_illustration']) ?>" alt="<?= htmlspecialchars($voiture['modele']) ?>">
             <div class="voiture-titre">
-                <?= $voiture['marque'] . ' ' . $voiture['modele']; ?>
+                <?= htmlspecialchars($voiture['marque'] . ' ' . $voiture['modele']); ?>
             </div>
             <div class="voiture-titre">
-                À partir de <?= $voiture['prix'] ?> RS
+                À partir de <?= htmlspecialchars($voiture['prix']) ?> RS
             </div>
             <div class="voiture-button">
                 <a href="#modal-<?= $voiture['id_voiture'] ?>" class="btn btn-dark">Voir plus...</a>
@@ -236,37 +218,35 @@ Avec Audi, conduisez le futur dès aujourd’hui.
         </div>
         <?php endforeach; ?>
     </div>
+
     <?php foreach ($voitures as $voiture): ?>
-    <!-- Modal -->
     <div id="modal-<?= $voiture['id_voiture'] ?>" class="modal">
         <div class="modal-cont">
             <a href="#" class="close">&times;</a>
-            <h2>À propos de l'<?= $voiture['marque'] . ' ' . $voiture['modele']; ?></h2>
-            <p>Le SUV sportif ultime d'Audi, alliant performance et luxe.</p>
+            <h2>Modèle <?= htmlspecialchars($voiture['marque'] . ' ' . $voiture['modele']); ?></h2>
+            <p>Roulez avec passion et précision. Vivez l'expérience Audi.</p>
             <div class="test">
-            <div class="voiture-cadre">
-                <img src="<?= $voiture['img_illustr1'] ?>" alt="<?= $voiture['marque'] . ' ' . $voiture['modele']; ?>">
-            </div>
-            <div class="voiture-cadre">
-                <img src="<?= $voiture['img_illustr2'] ?>" alt="<?= $voiture['marque'] . ' ' . $voiture['modele']; ?>">
-            </div>
-            <div class="voiture-cadre">
-                <img src="<?= $voiture['img_illustr3'] ?>" alt="<?= $voiture['marque'] . ' ' . $voiture['modele']; ?>">
-            </div>
+                <div class="voiture-cadre">
+                    <img src="../../assets/images/<?= htmlspecialchars($voiture['img_illustr1']) ?>" alt="image1">
+                </div>
+                <div class="voiture-cadre">
+                    <img src="../../assets/images/<?= htmlspecialchars($voiture['img_illustr2']) ?>" alt="image2">
+                </div>
+                <div class="voiture-cadre">
+                    <img src="../../assets/images/<?= htmlspecialchars($voiture['img_illustr3']) ?>" alt="image3">
+                </div>
             </div>
             <br>
             <div class="specif">
-                <li><strong>Motorisation :</strong> <?= $voiture['motorisation'] ?></li>
-                <li><strong>Puissance :</strong> <?= $voiture['puissance'] ?></li>
-                <li><strong>Transmission :</strong> <?= $voiture['transmission'] ?></li>
+                <li><strong>Motorisation :</strong> <?= htmlspecialchars($voiture['motorisation']) ?></li>
+                <li><strong>Puissance :</strong> <?= htmlspecialchars($voiture['puissance']) ?></li>
+                <li><strong>Transmission :</strong> <?= htmlspecialchars($voiture['transmission']) ?></li>
             </div>
         </div>
     </div>
     <?php endforeach; ?>
-
 </main>
-<br><br>
-<?php include('../footage/footage.php'); ?>
 
+<?php include('../footage/footage.php'); ?>
 </body>
 </html>

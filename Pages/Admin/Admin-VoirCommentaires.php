@@ -1,9 +1,8 @@
+<?php 
+include("Admin-Navbar.php");
+include('../../requetedb/bdconnect.php');
+?>
 
-  <?php 
-  include("Admin-Navbar.php");
-  include("../requetedb/bdconnect.php");
-  ?>
-  
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,73 +11,65 @@
     <title>Accueil-Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
+    <style>
+        .p1{
+            font-size:20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        tr {
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
 
-  <style>
-    .p1{
-        font-size:20px;
-    }
-    table {
-        border-collapse: collapse;
-        width: 100%;
-    }
+<div class="content">
+<?php
+$sql = "SELECT * FROM contacts"; // utilisation de la table contacts
+$requete = $bdd->query($sql); // On utilise PDO ici
 
-    th, td {
-        padding: 10px; /* augmente l’espace à l’intérieur des cases */
-        text-align: left;
-    }
-
-    tr {
-        height: 50px; /* espace entre les lignes */
-    }
-
-
-  </style>
-
-  <div class="content">
-  <?php
-$sql = "SELECT * FROM Contacts";
-$curseur = mysqli_query($bdd, $sql);
-
-echo "<h2>Voici les commentaires pour Supercar:</h2>";
-echo "<table border='1'>"; // ouverture du tableau
+echo "<h2>Voici les messages reçus :</h2>";
+echo "<table border='1'>";
 
 // En-têtes du tableau
 echo "<tr>";
-echo "<th>ID</th>";
-echo "<th> Nom</th>";
-echo "<th>Prénom</th>";
-echo "<th> Mail</th>";
-echo "<th> Commentaires</th>";
+echo "<th>id_client</th>";
+echo "<th>nom</th>";
+echo "<th>prenom</th>";
+echo "<th>adresse_email</th>";
+echo "<th>telephone</th>";
+echo "<th>commentaires</th>";
 echo "</tr>";
 
-while ($row = mysqli_fetch_assoc($curseur)) {
-    $id = $row["id"];
+// Boucle avec PDO
+while ($row = $requete->fetch(PDO::FETCH_ASSOC)) {
+    $id = $row["id_client"];
     $nom = $row["nom"];
-    $prénom = $row["prénom"];
-    $mail = $row["mail"];
-    $commentaires = $row["commentaires"];
+    $prenom = $row["prenom"];
+    $email = $row["adresse_email"];
+    $telephone = $row["telephone"];
+    $commentaires = $row["commentaire"];
 
     echo "<tr>";
     echo "<td>$id</td>";
     echo "<td>$nom</td>";
-    echo "<td>$prénom</td>";
-    echo "<td>$mail</td>";
+    echo "<td>$prenom</td>";
+    echo "<td>$email</td>";
+    echo "<td>$telephone</td>";
     echo "<td>$commentaires</td>";
     echo "</tr>";
 }
 
-echo "</table>"; // fermeture du tableau
-
-mysqli_free_result($curseur);
-mysqli_close($bdd);
+echo "</table>";
 ?>
-
-  </div>
+</div>
 
 </body>
-</html>
-
-        
-
-
 </html>

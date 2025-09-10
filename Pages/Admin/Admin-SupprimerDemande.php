@@ -1,7 +1,8 @@
 
   <?php 
   include("Admin-Navbar.php");
-  include("../requetedb/bdconnect.php");
+  include("../../requetedb/bdconnect.php");
+
   ?>
 
   
@@ -25,7 +26,7 @@
   $_id = $_POST ["id"];
 
 
-$sql= "DELETE FROM Demandes  WHERE id='$_id'"; 
+$sql= "DELETE FROM essais  WHERE id_essai='$_id'"; 
 $result = $bdd->query($sql);
 ?>
 <center>

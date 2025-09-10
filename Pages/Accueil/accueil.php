@@ -90,6 +90,16 @@
         .lien:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
+
+        .carousel-item {
+    pointer-events: auto;
+}
+
+.carousel-item .Voir {
+    pointer-events: auto;
+    z-index: 999;
+}
+
     </style>
 </head>
 <body>

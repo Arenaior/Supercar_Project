@@ -17,8 +17,8 @@ if(isset($_POST["nom"]) && isset($_POST["prenom"]) && isset($_POST["mdp"]) && is
         echo "L'adresse email est déjà utilisé par un autre utilisateur";
     } else {
         
-        $requete = $bdd->prepare('INSERT INTO client(nom, prenom, telephone, adresse_email, mot_de_passe, commentaire) VALUES(?, ?, ?, ?, ?, ?)') or die(print_r($bdd->errorInfo()));
-        $requete->execute(array($nom, $prenom, $telephone, $mail, $mdp, $commentaire));
+        $requete = $bdd->prepare('INSERT INTO client(nom, prenom, telephone, adresse_email, mot_de_passe) VALUES(?, ?, ?, ?, ?)') or die(print_r($bdd->errorInfo()));
+        $requete->execute(array($nom, $prenom, $telephone, $mail, $mdp ));
         ?>
 <!DOCTYPE HTML>
 <html lang=fr>
