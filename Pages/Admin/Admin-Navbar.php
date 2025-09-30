@@ -12,64 +12,82 @@
   <meta charset="UTF-8">
   <title>Navbar verticale</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-   .sidebar {
-  height: 100vh;
-  width: 250px;
-  position: fixed; /* pour qu’elle reste visible */
-  top: 0;
-  left: 0;
-  background-color: #343a40;
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column; /* aligne les liens verticalement */
-}
-
-.sidebar a {
-  color: white;
-  padding: 10px 20px;
-  display: block;
-  text-decoration: none;
-}
-
-.sidebar a:hover {
-  background-color: #495057;
-}
-
-.content {
-  margin-left: 250px;
-  padding: 20px;
-}
-
-.h4 {
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-}
-
-  </style>
-</head>
-<body>
-
-  <nav class="sidebar">
-    <a href="/supercar_project/Pages/Admin/Admin-Accueil.php">ADMIN</a>
-    <h4 class="h4"> CONTACTS </h4>
-    <a href="/supercar_project/Pages/admin/Admin-VoirContacts.php">Voir Contacts</a>
-    <a href="/supercar_project/Pages/Admin/Admin-SupprimerContacts.php">Supprimer Contacts</a>
-    <h4 class="h4"> COMMENTAIRES </h4>
-    <a href="/supercar_project/Pages/Admin/Admin-VoirCommentaires.php">Voir commentaires</a>
-    <a href="/supercar_project/Pages/Admin/Admin-SupprimerCommentaires-formulaire.php">Supprimer commentaires</a>
-    <h4 class="h4"> DEMANDES </h4>
-    <a href="/supercar_project/Pages/Admin/Admin-VoirDemande.php">Voir demandes d'essai</a>
-    <a href="/supercar_project/Pages/Admin/Admin-SupprimerDemande-formulaire.php">Supprimer demandes d'essai</a>
-    <h4 class="h4"> VOITURES </h4>
-    <a href="/supercar_project/Pages/Admin/Admin-AjouterVoiture-Formulaire.php">Ajouter une voiture</a>
-    <a href="/supercar_project/Pages/Admin/Admin-ModifierVoiture_Formulaire.php">Modifier une voiture</a>
-    <a href="/supercar_project/Pages/Admin/Admin-VoirVoitures.php">Voir les voiture</a>
-    <a href="/supercar_project/Pages/Admin/Admin-SupprimerVoiture-Formulaire.php">Supprimer une voiture</a>
-  </nav>
-
   
+<style>
+/* ================== SIDEBAR ================== */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dashboard-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar fixe à gauche */
+.sidebar {
+  width: 250px;
+  background: #2c3e50;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* prend toute la hauteur */
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.sidebar nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 12px;
+  transition: background 0.3s;
+  border-radius: 6px;
+}
+
+.sidebar nav a:hover {
+  background: #34495e;
+}
+
+b{
+  color: #686868ff;
+}
+
+/* Contenu à côté de la sidebar */
+.content {
+  flex: 1;
+  background: #f4f7fc;
+  padding: 20px;
+  overflow-x: auto;
+}
+</style>
+
+<div class="sidebar">
+    <h2>Supercar Admin</h2>
+    <nav>
+      <a href="Admin-Dashboard.php">Tableau de Bord</a>
+      <a href="Admin-VoirContacts.php">Clients</a>
+      <a href="Admin-Gestionimages.php">Gestion des images</a>
+      <a href="Admin-Voitures.php">Véhicules</a>
+      <a href="Admin-Demande.php">Demandes d'Essai</a>
+      <a href="admin_messages.php">Messages</a>
+      <a href="logout.php"><b>Déconnexion</b></a>
+    </nav>
+</div>
 
 </body>
 </html>

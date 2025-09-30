@@ -1,28 +1,59 @@
 <?php
-include ("../barre/barre.php");
+include("../../requetedb/bdconnect.php");
 
-if (!empty($_POST["marque"]) && !empty($_POST["modele"]) && !empty($_POST["prix"]) && !empty($_POST["motorisation"]) && !empty($_POST["puissance"]) && !empty($_POST["transmission"]) && !empty($_FILES["image_illustration"]["name"]) && !empty($_FILES["img_illustr1"]["name"]) && !empty($_FILES["img_illustr2"]["name"]) && !empty($_FILES["img_illustr3"]["name"])) {
-  $marque  = $_POST["marque"];
-  $modele  = $_POST["modele"];
-  $prix = $_POST["prix"];
-  $motorisation = $_POST["motorisation"];
-  $puissance = $_POST["puissance"];
-  $transmission = $_POST["transmission"];
-  $emplacement_image = "../../assets/images/";
-  $image_illustration = $emplacement_image . basename($_FILES["image_illustration"]["name"]);
-  $img_illustr1 = $emplacement_image . basename($_FILES["img_illustr1"]["name"]);
-  $img_illustr2 = $emplacement_image . basename($_FILES["img_illustr2"]["name"]);
-  $img_illustr3 = $emplacement_image . basename($_FILES["img_illustr3"]["name"]);
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $marque = $_POST["marque"];
+    $modele = $_POST["modele"];
+    $prix = $_POST["prix"];
+    $motorisation = $_POST["motorisation"];
+    $puissance = $_POST["puissance"];
+    $transmission = $_POST["transmission"];
 
-  move_uploaded_file($_FILES["image_illustration"]["tmp_name"], $image_illustration);
-  move_uploaded_file($_FILES["img_illustr1"]["tmp_name"], $img_illustr1);
-  move_uploaded_file($_FILES["img_illustr2"]["tmp_name"], $img_illustr2);
-  move_uploaded_file($_FILES["img_illustr3"]["tmp_name"], $img_illustr3);
+    // gestion des images uploadées
+    $targetDir = "../../assets/images/";
 
-  // Insertion dans la base
-  $requete = $bdd->prepare('INSERT INTO voiture(marque, modele, prix, motorisation, puissance, transmission, image_illustration, img_illustr1, img_illustr2, img_illustr3) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
-  $requete->execute([$marque, $modele, $prix, $motorisation, $puissance, $transmission, $image_illustration, $img_illustr1, $img_illustr2, $img_illustr3]);
+    function uploadImage($inputName, $targetDir) {
+        if (!empty($_FILES[$inputName]["name"])) {
+            $fileName = basename($_FILES[$inputName]["name"]);
+            $targetFilePath = $targetDir . $fileName;
+
+            if (move_uploaded_file($_FILES[$inputName]["tmp_name"], $targetFilePath)) {
+                return $fileName;
+            }
+        }
+        return null;
+    }
+
+    $image_illustration = uploadImage("image_illustration", $targetDir);
+    $img_illustr1 = uploadImage("img_illustr1", $targetDir);
+    $img_illustr2 = uploadImage("img_illustr2", $targetDir);
+    $img_illustr3 = uploadImage("img_illustr3", $targetDir);
+
+    // insertion en BDD
+    $sql = "INSERT INTO Voiture (marque, modele, prix, motorisation, puissance, transmission, image_illustration, img_illustr1, img_illustr2, img_illustr3) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+    $stmt = $bdd->prepare($sql);
+    $ok = $stmt->execute([
+        $marque,
+        $modele,
+        $prix,
+        $motorisation,
+        $puissance,
+        $transmission,
+        $image_illustration,
+        $img_illustr1,
+        $img_illustr2,
+        $img_illustr3
+    ]);
+
+    if ($ok) {
+        header("Location: Admin-Voitures.php?success=1");
+        exit;
+    } else {
+        echo "Erreur lors de l'insertion.";
+    }
+} else {
+    echo "Méthode non autorisée.";
 }
-
-  ?>
-  <center> <H1> Voiture ajoutée avec succès ! </H1> </center>
+?>

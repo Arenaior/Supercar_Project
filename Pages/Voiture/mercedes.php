@@ -9,8 +9,7 @@ $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utili
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="audicss.php"> -->
-    <title>Modèles Audi</title>
+    <title>Modèles Volkswagen</title>
 </head>
 <body>
 <style>
@@ -24,7 +23,6 @@ $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utili
     justify-content: center;
     align-items: center;
     background-image: url('../../assets/images/mercofond1.png');
-    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -37,7 +35,7 @@ $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utili
     font-weight: bold;
     margin-top: 170px;
     padding: 66px 53px;
-    border-radius: 3px;
+    border-radius: 3px; 
 }
 
 .titre {
@@ -46,10 +44,8 @@ $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utili
     margin-top: 125px;
 }
 
-
-
 .descri {
-    font-size: 15px; /* Taille de police adaptée pour une lecture fluide */
+    font-size: 15px;
     color: rgb(248, 242, 242); 
     text-align: left; 
     line-height: 1.8; 
@@ -61,6 +57,7 @@ $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utili
     margin-top: 150px;
     margin-right:600px;
 }
+
 .logo{
     width: 40px;
     height: 40px;
@@ -68,34 +65,29 @@ $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utili
 .voiture-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-left: 69px;;
+    gap: 20px;
+    margin: 40px 60px;
 }
 
 .voiture-cadre {
-    width:75%;   
-    background-color: white;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 11px;
-    text-align: center;
-    box-sizing: border-box;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
 .voiture-cadre img {
-    width: 100%;
-    height: auto;
+    height: 250px;
+    object-fit: cover;
     border-radius: 10px;
 }
-
 .voiture-titre {
+    margin-top: 10px;
     font-weight: bold;
-    margin-top: 10px;
+    font-size: 18px;
 }
-
 .voiture-button {
-    margin-top: 10px;
+    margin-top: auto;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -114,26 +106,26 @@ $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utili
 }
 
 .specif {
-    font-size: 20px; /* Agrandir le texte */
-    font-weight: 500; /* Rendre le texte plus classe */
-    font-family: "Arial", sans-serif; /* Changer la police pour plus d’élégance */
-    color: #333; /* Couleur légèrement assombrie pour un effet premium */
-    background: linear-gradient(to right, #f8f8f8, #e0e0e0); 
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Arial", sans-serif;
+    color: #333;
+    background: linear-gradient(to right, #f8f8f8, #e0e0e0);
     padding: 15px;
-    border-radius: 10px; /* Coins arrondis pour un effet premium */
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .specif li {
-    margin-bottom: 10px; 
-    list-style: none; 
+    margin-bottom: 10px;
+    list-style: none;
     position: relative;
-    padding-left: 25px; 
+    padding-left: 25px;
 }
 
 .specif li::before {
-    content: "✓"; 
-    color: #007bff; 
+    content: "✓";
+    color: #007bff;
     font-size: 22px;
     font-weight: bold;
     position: absolute;
@@ -141,8 +133,6 @@ $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utili
     top: 0;
 }
 
-
-    
 /* Style du modal (invisible par défaut) */
 .modal {
     display: none;
@@ -150,7 +140,7 @@ $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utili
     top: 0;
     left: 0;
     width: 350px;
-    height:350px;
+    height: 350px;
     background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
 }
@@ -158,7 +148,7 @@ $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utili
 .modal-cont {
     background: white;
     padding: 20px;
-    width: 300px; 
+    width: 300px;
     border-radius: 10px;
     display: inline-block;
     width: 80%;
@@ -168,7 +158,6 @@ $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utili
     text-align: center;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
-
 
 .close {
     position: absolute;
@@ -185,44 +174,45 @@ $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utili
     display: block;
 }
 
-.test{
-  display: flex;
+.test {
+    display: flex;
     overflow-x: auto;
     gap: 20px;
     padding: 20px;
 }
 
 </style>
+
 <div class="vid">
     <div class="vid1">
-<center><h1 class="titre">MERCEDES-BENZ</h1></center>
-    <div class="descri">
-    L'élégance et la performance exceptionnelles de Mercedes-Benz. 
-        Offrez-vous le luxe d'un véhicule d'exception, alliant design raffiné, technologie de pointe et conduite incomparable. 
-        Faites le choix de l'excellence dès aujourd'hui et prenez le volant de votre future Mercedes !
-    </div></div>
+        <center><h1 class="titre">MERCEDES</h1></center>
+        <div class="descri">
+            Mercedes, c’est plus qu’une voiture, c’est une expérience. 
+            Chaque modèle incarne un équilibre parfait entre puissance, élégance et confort. 
+            Avec son étoile emblématique, la marque illumine la route et redéfinit l’art de conduire.
+        </div>
+    </div>
 </div>
 
 <center>
     <div class="css">
-            <h1>Découvrez nos modeles avec Mercedes-Benz</h1>
-            <img src="../../assets/images/logomerco.jpg" style="width: 150px; height: auto;">
-    
-        </div>
+        <h1>Découvrez nos modèles Mercedes</h1>
+        <img src="../../assets/images/logomerco.jpg" style="width: 150px; height: auto;">
+    </div>
 </center>
 
 <hr>
 
 <main>
-<div class="voiture-container">
-<?php foreach ($voitures as $voiture): ?>    
+    <div class="voiture-container">
+        <?php foreach ($voitures as $voiture): ?>
         <div class="voiture-cadre">
-            <img src="<?= $voiture['image_illustration'] ?>" alt="<?= $voiture['modele'] ?>">
+            <img src="../../assets/images/<?= htmlspecialchars($voiture['image_illustration']) ?>" alt="<?= htmlspecialchars($voiture['modele']) ?>">
             <div class="voiture-titre">
-                <?= $voiture['marque'] . ' ' . $voiture['modele']; ?>
+                <?= htmlspecialchars($voiture['marque'] . ' ' . $voiture['modele']); ?>
             </div>
             <div class="voiture-titre">
-                À partir de <?= $voiture['prix'] ?> RS
+                À partir de <?= htmlspecialchars($voiture['prix']) ?> RS
             </div>
             <div class="voiture-button">
                 <a href="#modal-<?= $voiture['id_voiture'] ?>" class="btn btn-dark">Voir plus...</a>
@@ -235,34 +225,34 @@ $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utili
         </div>
         <?php endforeach; ?>
     </div>
+
     <?php foreach ($voitures as $voiture): ?>
     <!-- Modal -->
     <div id="modal-<?= $voiture['id_voiture'] ?>" class="modal">
         <div class="modal-cont">
             <a href="#" class="close">&times;</a>
-            <h2>À propos de l'<?= $voiture['marque'] . ' ' . $voiture['modele']; ?></h2>
-            <p>Le SUV sportif ultime d'Audi, alliant performance et luxe.</p>
+            <h2>À propos du modèle <?= htmlspecialchars($voiture['marque'] . ' ' . $voiture['modele']); ?></h2>
+            <p>Fiabilité, confort, style. C’est plus qu’une voiture, c’est une Volkswagen. </p>
             <div class="test">
-            <div class="voiture-cadre">
-                <img src="<?= $voiture['img_illustr1'] ?>" alt="<?= $voiture['marque'] . ' ' . $voiture['modele']; ?>">
-            </div>
-            <div class="voiture-cadre">
-                <img src="<?= $voiture['img_illustr2'] ?>" alt="<?= $voiture['marque'] . ' ' . $voiture['modele']; ?>">
-            </div>
-            <div class="voiture-cadre">
-                <img src="<?= $voiture['img_illustr3'] ?>" alt="<?= $voiture['marque'] . ' ' . $voiture['modele']; ?>">
-            </div>
+                <div class="voiture-cadre">
+                    <img src="../../assets/images/<?= htmlspecialchars($voiture['img_illustr1']) ?>" alt="<?= htmlspecialchars($voiture['marque'] . ' ' . $voiture['modele']); ?>">
+                </div>
+                <div class="voiture-cadre">
+                    <img src="../../assets/images/<?= htmlspecialchars($voiture['img_illustr2']) ?>" alt="<?= htmlspecialchars($voiture['marque'] . ' ' . $voiture['modele']); ?>">
+                </div>
+                <div class="voiture-cadre">
+                    <img src="../../assets/images/<?= htmlspecialchars($voiture['img_illustr3']) ?>" alt="<?= htmlspecialchars($voiture['marque'] . ' ' . $voiture['modele']); ?>">
+                </div>
             </div>
             <br>
             <div class="specif">
-                <li><strong>Motorisation :</strong> <?= $voiture['motorisation'] ?></li>
-                <li><strong>Puissance :</strong> <?= $voiture['puissance'] ?></li>
-                <li><strong>Transmission :</strong> <?= $voiture['transmission'] ?></li>
+                <li><strong>Motorisation :</strong> <?= htmlspecialchars($voiture['motorisation']) ?></li>
+                <li><strong>Puissance :</strong> <?= htmlspecialchars($voiture['puissance']) ?></li>
+                <li><strong>Transmission :</strong> <?= htmlspecialchars($voiture['transmission']) ?></li>
             </div>
         </div>
     </div>
-
-<?php endforeach; ?>
+    <?php endforeach; ?>
 </main>
 
 <?php include('../footage/footage.php'); ?>

@@ -233,7 +233,7 @@ $voitures = $requete->fetchAll(PDO::FETCH_ASSOC); // fetchAll pour pouvoir utili
         <div class="modal-cont">
             <a href="#" class="close">&times;</a>
             <h2>À propos du modèle <?= htmlspecialchars($voiture['marque'] . ' ' . $voiture['modele']); ?></h2>
-            <p>Fiabilité, confort, style. C’est plus qu’une voiture, c’est une Volkswagen. </p>
+            <p>Land Rover – Dominez tous les terrains avec élégance et puissance. » </p>
             <div class="test">
                 <div class="voiture-cadre">
                     <img src="../../assets/images/<?= htmlspecialchars($voiture['img_illustr1']) ?>" alt="<?= htmlspecialchars($voiture['marque'] . ' ' . $voiture['modele']); ?>">

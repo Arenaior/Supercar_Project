@@ -1,92 +1,69 @@
-<?php 
-include("Admin-Navbar.php");
-include("../../requetedb/bdconnect.php");
-?>
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modification de voiture</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>.p1 { font-size: 20px; }</style>
-</head>
-<body>
-
-<div class="content">
 <?php
-// Récupération des données du formulaire
-$_id = $_POST["id"];
-$_marque = $_POST["marque"];
-$_modele = $_POST["modele"];
-$_prix = $_POST["prix"];
-$_motorisation = $_POST["motorisation"];
-$_puissance = $_POST["puissance"];
-$_transmission = $_POST["transmission"];
+include("../../requetedb/bdconnect.php");
 
-$dossierDestination = '../../assets/images/';
-$images = ['image_illustration', 'img_illustr1', 'img_illustr2', 'img_illustr3'];
-$imageNames = [];
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $id = $_POST["id"];
+    $marque = $_POST["marque"];
+    $modele = $_POST["modele"];
+    $prix = $_POST["prix"];
+    $motorisation = $_POST["motorisation"];
+    $puissance = $_POST["puissance"];
+    $transmission = $_POST["transmission"];
 
-// Traitement des images
-foreach ($images as $imageField) {
-    if (!empty($_FILES[$imageField]['name'])) {
-        $imageName = basename($_FILES[$imageField]['name']);
-        $imageTmp = $_FILES[$imageField]['tmp_name'];
-        $cheminComplet = $dossierDestination . $imageName;
+    // dossier de destination
+    $targetDir = "../../assets/images/";
 
-        if (!move_uploaded_file($imageTmp, $cheminComplet)) {
-            echo "<p style='color:red;'>Erreur lors du téléchargement de l'image $imageField</p>";
-            exit();
+    function uploadImage($inputName, $targetDir, $oldFile = null) {
+        if (!empty($_FILES[$inputName]["name"])) {
+            $fileName = basename($_FILES[$inputName]["name"]);
+            $targetFilePath = $targetDir . $fileName;
+
+            if (move_uploaded_file($_FILES[$inputName]["tmp_name"], $targetFilePath)) {
+                return $fileName;
+            }
         }
-
-        $imageNames[$imageField] = $imageName;
-    } else {
-        // Image non modifiée, on récupère l'existante
-        $stmt = $bdd->prepare("SELECT $imageField FROM Voiture WHERE id_voiture = ?");
-        $stmt->execute([$_id]);
-        $data = $stmt->fetch();
-        $imageNames[$imageField] = $data[$imageField];
+        return $oldFile; // si aucune nouvelle image, on garde l'ancienne
     }
-}
 
-// Mise à jour
-$sql = "UPDATE Voiture SET 
-    marque = ?, 
-    modele = ?, 
-    prix = ?, 
-    motorisation = ?, 
-    puissance = ?, 
-    transmission = ?, 
-    image_illustration = ?, 
-    img_illustr1 = ?, 
-    img_illustr2 = ?, 
-    img_illustr3 = ?
-    WHERE id_voiture = ?";
+    // récupérer les anciennes valeurs
+    $stmt = $bdd->prepare("SELECT * FROM Voiture WHERE id_voiture = ?");
+    $stmt->execute([$id]);
+    $oldData = $stmt->fetch(PDO::FETCH_ASSOC);
 
-$stmt = $bdd->prepare($sql);
-$result = $stmt->execute([
-    $_marque,
-    $_modele,
-    $_prix,
-    $_motorisation,
-    $_puissance,
-    $_transmission,
-    $imageNames['image_illustration'],
-    $imageNames['img_illustr1'],
-    $imageNames['img_illustr2'],
-    $imageNames['img_illustr3'],
-    $_id
-]);
+    // uploader ou garder anciennes images
+    $image_illustration = uploadImage("image_illustration", $targetDir, $oldData["image_illustration"]);
+    $img_illustr1 = uploadImage("img_illustr1", $targetDir, $oldData["img_illustr1"]);
+    $img_illustr2 = uploadImage("img_illustr2", $targetDir, $oldData["img_illustr2"]);
+    $img_illustr3 = uploadImage("img_illustr3", $targetDir, $oldData["img_illustr3"]);
 
-if ($result) {
-    echo '<center><h1>Voiture modifiée avec succès</h1></center>';
+    // update BDD
+    $sql = "UPDATE Voiture 
+            SET marque=?, modele=?, prix=?, motorisation=?, puissance=?, transmission=?, 
+                image_illustration=?, img_illustr1=?, img_illustr2=?, img_illustr3=? 
+            WHERE id_voiture=?";
+
+    $stmt = $bdd->prepare($sql);
+    $ok = $stmt->execute([
+        $marque,
+        $modele,
+        $prix,
+        $motorisation,
+        $puissance,
+        $transmission,
+        $image_illustration,
+        $img_illustr1,
+        $img_illustr2,
+        $img_illustr3,
+        $id
+    ]);
+
+    if ($ok) {
+        header("Location: Admin-Voitures.php?updated=1");
+        exit;
+    } else {
+        echo "Erreur lors de la modification.";
+    }
 } else {
-    echo '<center><h1 style="color:red;">Erreur lors de la modification</h1></center>';
+    echo "Méthode non autorisée.";
 }
 ?>
-</div>
-
-</body>
-</html>

@@ -40,7 +40,7 @@ include("../barre/barre.php");
         <div class="col-md-4 text-section">
             <h2>TROUVEZ LA MARQUE QUI <span style="color: #1B3765;">VOUS CORRESPOND</span></h2>
             <p>Puissance, élégance, exclusivité… Quelle Supercar fera vibrer votre âme de pilote ? Faites votre choix et vivez l’exceptionnel.</p>
-            <p><strong>+ de 50 modèles disponibles</strong> | <strong>Top 5 des meilleures marques</strong> | <strong>Garantie:</strong> 3 ans</p>
+            <p><strong>+ de 20 modèles disponibles</strong> | <strong>Top 5 des meilleures marques</strong> | <strong>Garantie:</strong> 3 ans</p>
             <button class="btn btn-dark">Contactez-nous</button>
         </div>
 
@@ -58,8 +58,8 @@ include("../barre/barre.php");
                     <div class="carousel-item">
                         <div class="row">
                             <div class="col-md-4"><a href="Land Rover.php"><img src="../../assets/images/Voitures-Accueil-Range.jpg" class="d-block w-100 h-100 object-fit-cover" ></a></div>
-                            <div class="col-md-4"><img src="../../assets/images/Voitures-Accueil-Renault.jpg" class="d-block w-100 h-100 object-fit-cover"></div>
-                            <div class="col-md-4"><img src="../../assets/images/Voitures-Accueil-Bmw1.jpg" class="d-block w-100 h-100 object-fit-cover" ></div>
+                            <div class="col-md-4"><a href="Renault.php"><img src="../../assets/images/Voitures-Accueil-Renault.jpg" class="d-block w-100 h-100 object-fit-cover"></a></div>
+                            <div class="col-md-4"><a href="BMW.php"><img src="../../assets/images/Voitures-Accueil-Bmw1.jpg" class="d-block w-100 h-100 object-fit-cover" ></a></div>
                         </div>
                     </div>
                 </div>

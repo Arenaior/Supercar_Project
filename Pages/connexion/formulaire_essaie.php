@@ -90,6 +90,8 @@ $client = $requete->fetch();
                     <option value="Mercedes">Mercedes</option>
                     <option value="Volkswagen">Volkswagen</option>
                     <option value="Audi">Audi</option>
+                    <option value="Audi">Land Rover</option>
+                    <option value="Audi">BMW</option>
                 </select>
             </div>
     
