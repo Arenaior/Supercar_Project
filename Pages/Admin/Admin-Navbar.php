@@ -84,7 +84,7 @@ b{
       <a href="Admin-Gestionimages.php">Gestion des images</a>
       <a href="Admin-Voitures.php">Véhicules</a>
       <a href="Admin-Demande.php">Demandes d'Essai</a>
-      <a href="admin_messages.php">Messages</a>
+      <a href="Admin-VoirCommentaires.php">Messages</a>
       <a href="logout.php"><b>Déconnexion</b></a>
     </nav>
 </div>
